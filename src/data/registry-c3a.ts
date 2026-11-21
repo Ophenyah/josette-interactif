@@ -1,0 +1,822 @@
+import type { RegistryEntry } from './registry'
+
+const ROUTE_C3A = '/chap3/1-groupes-monogenes'
+
+export const REGISTRY_C3A: Record<string, RegistryEntry> = {
+  '3.1': {
+    id: '3.1',
+    label: 'Proposition (3.1)',
+    shortLabel: '(3.1)',
+    kind: 'prop',
+    chapter: 3,
+    section: 'III § 1 A',
+    page: 89,
+    route: ROUTE_C3A,
+    anchor: 'ref-3.1',
+    orderIndex: 700,
+    summaryTex:
+      'Toute image homomorphe d’un groupe monogène est monogène.',
+    dependsOn: ['1.40', '1.60']
+  },
+  '3.2': {
+    id: '3.2',
+    label: 'Corollaire (3.2)',
+    shortLabel: '(3.2)',
+    kind: 'cor',
+    chapter: 3,
+    section: 'III § 1 A',
+    page: 90,
+    route: ROUTE_C3A,
+    anchor: 'ref-3.2',
+    orderIndex: 702,
+    summaryTex:
+      'Quel que soit $n > 0$ dans $\\N$, le groupe $\\dfrac{\\Z}{n\\Z}$ est cyclique.',
+    dependsOn: ['1.13', '1.42', '1.62', '2.25', '3.1']
+  },
+  '3.3': {
+    id: '3.3',
+    label: 'Théorème (3.3)',
+    shortLabel: '(3.3)',
+    kind: 'thm',
+    chapter: 3,
+    section: 'III § 1 A',
+    page: 90,
+    route: ROUTE_C3A,
+    anchor: 'ref-3.3',
+    orderIndex: 704,
+    summaryTex:
+      'Si $G$ est un groupe monogène, alors soit $G \\simeq \\Z$ (monogène infini), soit il existe $n > 0$ dans $\\N$ tel que $G \\simeq \\dfrac{\\Z}{n\\Z}$ (cyclique d’ordre $n$).',
+    dependsOn: ['1.28', '1.40', '1.43', '2.27']
+  },
+  '3.4': {
+    id: '3.4',
+    label: 'Corollaire (3.4)',
+    shortLabel: '(3.4)',
+    kind: 'cor',
+    chapter: 3,
+    section: 'III § 1 A',
+    page: 91,
+    route: ROUTE_C3A,
+    anchor: 'ref-3.4',
+    orderIndex: 706,
+    summaryTex:
+      'Deux groupes monogènes infinis sont isomorphes. Deux groupes cycliques de même ordre $n$ sont isomorphes.',
+    dependsOn: ['3.3']
+  },
+  '3.5': {
+    id: '3.5',
+    label: 'Remarques (3.5)',
+    shortLabel: '(3.5)',
+    kind: 'rem',
+    chapter: 3,
+    section: 'III § 1 A',
+    page: 91,
+    route: ROUTE_C3A,
+    anchor: 'ref-3.5',
+    orderIndex: 708,
+    summaryTex:
+      '$1^\\circ$ Écriture d’un groupe cyclique d’ordre $n$ via l’isomorphisme $\\overline{\\psi} : \\dfrac{\\Z}{n\\Z} \\to G$, $\\overline{k} \\mapsto x^k$ ($G = \\{e, x, \\dots, x^{n-1}\\}$). $2^\\circ$ Caractérisation de l’ordre fini ou infini d’un élément $x \\in G$ via $\\langle x \\rangle \\simeq \\Z$ ou $\\dfrac{\\Z}{m\\Z}$.',
+    dependsOn: ['1.44', '2.27', '3.3']
+  },
+  'eq-3-1': {
+    id: 'eq-3-1',
+    label: 'Équation (1)',
+    shortLabel: '(1)',
+    kind: 'eq',
+    chapter: 3,
+    section: 'III § 1 A',
+    page: 91,
+    route: ROUTE_C3A,
+    anchor: 'ref-eq-3-1',
+    orderIndex: 710,
+    summaryTex:
+      'Écriture d’un groupe cyclique d’ordre $n$ en notation multiplicative : $G = \\{e, x, \\dots, x^{n-1}\\}$.',
+    dependsOn: ['3.5']
+  },
+  'eq-3-1-prime': {
+    id: 'eq-3-1-prime',
+    label: "Équation (1')",
+    shortLabel: "(1')",
+    kind: 'eq',
+    chapter: 3,
+    section: 'III § 1 A',
+    page: 92,
+    route: ROUTE_C3A,
+    anchor: 'ref-eq-3-1-prime',
+    orderIndex: 712,
+    summaryTex:
+      'Écriture d’un groupe cyclique d’ordre $n$ en notation additive : $G = \\{0, x, 2x, \\dots, (n - 1)x\\}$.',
+    dependsOn: ['1.9-1', '3.5', 'eq-3-1']
+  },
+  '3.6': {
+    id: '3.6',
+    label: 'Proposition (3.6)',
+    shortLabel: '(3.6)',
+    kind: 'prop',
+    chapter: 3,
+    section: 'III § 1 A',
+    page: 92,
+    route: ROUTE_C3A,
+    anchor: 'ref-3.6',
+    orderIndex: 714,
+    summaryTex:
+      'Si $G = \\langle x \\rangle$ est cyclique d’ordre $n$ d’élément neutre $e$, alors $(k \\in \\Z \\text{ et } x^k = e) \\iff k \\in n\\Z$, et $n$ est le plus petit entier strictement positif tel que $x^n = e$.',
+    dependsOn: ['1.28', '3.3', '3.5']
+  },
+  '3.7': {
+    id: '3.7',
+    label: 'Corollaire (3.7)',
+    shortLabel: '(3.7)',
+    kind: 'cor',
+    chapter: 3,
+    section: 'III § 1 A',
+    page: 93,
+    route: ROUTE_C3A,
+    anchor: 'ref-3.7',
+    orderIndex: 716,
+    summaryTex:
+      'Soient $G$ fini d’ordre $n$ et $x \\in G$ tel que $o(x) = m$ : $1)$ $(k \\in \\Z \\text{ et } x^k = e) \\iff k \\in m\\Z$ ; $2)$ $m$ est dans $\\N^*$ le plus petit entier tel que $x^m = e$ ; $3)$ $x^n = e$.',
+    dependsOn: ['2.9', '3.5', '3.6']
+  },
+  '3.8': {
+    id: '3.8',
+    label: 'Exemple (3.8)',
+    shortLabel: '(3.8)',
+    kind: 'ex',
+    chapter: 3,
+    section: 'III § 1 A',
+    page: 93,
+    route: ROUTE_C3A,
+    anchor: 'ref-3.8',
+    orderIndex: 718,
+    summaryTex:
+      'Pour tout entier $n > 0$, le groupe multiplicatif $U_n$ des racines $n$-ième de l’unité dans $\\C$ est cyclique d’ordre $n$, engendré par $z_1 = \\cos \\dfrac{2\\pi}{n} + i \\sin \\dfrac{2\\pi}{n}$.',
+    dependsOn: ['1.30', '3.7']
+  },
+  '3.9': {
+    id: '3.9',
+    label: 'Proposition (3.9)',
+    shortLabel: '(3.9)',
+    kind: 'prop',
+    chapter: 3,
+    section: 'III § 1 A',
+    page: 93,
+    route: ROUTE_C3A,
+    anchor: 'ref-3.9',
+    orderIndex: 720,
+    summaryTex:
+      'Tout groupe fini d’ordre premier $p$ est cyclique.',
+    dependsOn: ['2.9', '3.7']
+  },
+  '3.10': {
+    id: '3.10',
+    label: 'Théorème (3.10)',
+    shortLabel: '(3.10)',
+    kind: 'thm',
+    chapter: 3,
+    section: 'III § 1 B',
+    page: 93,
+    route: ROUTE_C3A,
+    anchor: 'ref-3.10',
+    orderIndex: 722,
+    summaryTex:
+      '$1^\\circ$ Tout sous-groupe, non réduit à l’élément neutre, d’un groupe monogène infini est monogène infini. $2^\\circ$ Tout sous-groupe d’un groupe cyclique est cyclique.',
+    dependsOn: ['1.28', '1.55', '3.1', '3.3']
+  },
+  '3.11': {
+    id: '3.11',
+    label: 'Proposition (3.11)',
+    shortLabel: '(3.11)',
+    kind: 'prop',
+    chapter: 3,
+    section: 'III § 1 B',
+    page: 95,
+    route: ROUTE_C3A,
+    anchor: 'ref-3.11',
+    orderIndex: 724,
+    summaryTex:
+      'Soient $n \\in \\N^*$ et $\\pi : \\Z \\to \\dfrac{\\Z}{n\\Z}$ l’épimorphisme canonique. Pour tout sous-groupe $K$ de $\\dfrac{\\Z}{n\\Z}$, il existe un unique diviseur $k$ de $n$ dans $\\N^*$ tel que $\\pi(k)$ engendre $K$ et $o(K) = \\dfrac{n}{k}$.',
+    dependsOn: ['1.28', '3.10']
+  },
+  '3.12': {
+    id: '3.12',
+    label: 'Corollaire (3.12)',
+    shortLabel: '(3.12)',
+    kind: 'cor',
+    chapter: 3,
+    section: 'III § 1 B',
+    page: 95,
+    route: ROUTE_C3A,
+    anchor: 'ref-3.12',
+    orderIndex: 726,
+    summaryTex:
+      'Le nombre des sous-groupes de $\\dfrac{\\Z}{n\\Z}$ ($n \\neq 0$ dans $\\N$) est égal au nombre des diviseurs de $n$ dans $\\N^*$.',
+    dependsOn: ['3.11']
+  },
+  '3.13': {
+    id: '3.13',
+    label: 'Exemple (3.13)',
+    shortLabel: '(3.13)',
+    kind: 'ex',
+    chapter: 3,
+    section: 'III § 1 B',
+    page: 95,
+    route: ROUTE_C3A,
+    anchor: 'ref-3.13',
+    orderIndex: 728,
+    summaryTex:
+      'Les quatre sous-groupes distincts de $\\dfrac{\\Z}{6\\Z}$ sont $\\langle \\overline{1} \\rangle = \\dfrac{\\Z}{6\\Z}$, $\\langle \\overline{2} \\rangle = \\{\\overline{2}, \\overline{4}, \\overline{0}\\}$, $\\langle \\overline{3} \\rangle = \\{\\overline{3}, \\overline{0}\\}$ et $\\langle \\overline{6} \\rangle = (\\overline{0})$.',
+    dependsOn: ['3.11', '3.12']
+  },
+  '3.14': {
+    id: '3.14',
+    label: 'Théorème (3.14)',
+    shortLabel: '(3.14)',
+    kind: 'thm',
+    chapter: 3,
+    section: 'III § 1 B',
+    page: 96,
+    route: ROUTE_C3A,
+    anchor: 'ref-3.14',
+    orderIndex: 730,
+    summaryTex:
+      '$G = \\langle x \\rangle$ étant un groupe cyclique d’ordre $n$, pour tout diviseur $d$ de $n$, il existe un et un seul sous-groupe d’ordre $d$ de $G$, engendré par $x^k$ où $k = \\dfrac{n}{d}$.',
+    dependsOn: ['3.5', '3.11', '3.12']
+  },
+  '3.15': {
+    id: '3.15',
+    label: 'Remarques (3.15)',
+    shortLabel: '(3.15)',
+    kind: 'rem',
+    chapter: 3,
+    section: 'III § 1 B',
+    page: 96,
+    route: ROUTE_C3A,
+    anchor: 'ref-3.15',
+    orderIndex: 732,
+    summaryTex:
+      '$1^\\circ$ En notation additive, $x^k$ devient $kx$. $2^\\circ$ Bijection entre diviseurs de $n$ et sous-groupes d’un groupe cyclique d’ordre $n$ (fausse pour un groupe fini quelconque).',
+    dependsOn: ['1.9-1', '3.14']
+  },
+  '3.16': {
+    id: '3.16',
+    label: 'Proposition (3.16)',
+    shortLabel: '(3.16)',
+    kind: 'prop',
+    chapter: 3,
+    section: 'III § 1 B',
+    page: 97,
+    route: ROUTE_C3A,
+    anchor: 'ref-3.16',
+    orderIndex: 734,
+    summaryTex:
+      'Un groupe $G \\neq (e)$ n’a pas d’autre sous-groupe que $G$ et $(e)$ si et seulement si $G$ est cyclique d’ordre premier.',
+    dependsOn: ['2.9', '3.3', '3.10']
+  },
+  'thm-bezout': {
+    id: 'thm-bezout',
+    label: 'Théorème de Bezout',
+    shortLabel: 'Théorème de Bezout',
+    kind: 'thm',
+    chapter: 3,
+    section: 'III § 1 C',
+    page: 97,
+    route: ROUTE_C3A,
+    anchor: 'ref-thm-bezout',
+    orderIndex: 736,
+    summaryTex:
+      'Deux entiers non nuls $a$ et $b$ sont premiers entre eux dans $\\Z$ si et seulement s’il existe $u$ et $v$ dans $\\Z$ tels que $au + bv = 1$.',
+    dependsOn: []
+  },
+  'eq-3-2': {
+    id: 'eq-3-2',
+    label: 'Équation (2)',
+    shortLabel: '(2)',
+    kind: 'eq',
+    chapter: 3,
+    section: 'III § 1 C',
+    page: 97,
+    route: ROUTE_C3A,
+    anchor: 'ref-eq-3-2',
+    orderIndex: 738,
+    summaryTex: 'Identité de Bezout : $au + bv = 1$.',
+    dependsOn: ['thm-bezout']
+  },
+  'not-3-coprime': {
+    id: 'not-3-coprime',
+    label: 'Notation — Entiers premiers entre eux',
+    shortLabel: '(a, b) = 1',
+    kind: 'not',
+    chapter: 3,
+    section: 'III § 1 C',
+    page: 97,
+    route: ROUTE_C3A,
+    anchor: 'ref-not-3-coprime',
+    orderIndex: 740,
+    summaryTex:
+      'Pour $a$ et $b$ non nuls dans $\\Z$, on écrit $(a, b) = 1$ pour exprimer que $a$ et $b$ sont premiers entre eux.',
+    dependsOn: ['thm-bezout']
+  },
+  'eq-3-3': {
+    id: 'eq-3-3',
+    label: 'Équation (3)',
+    shortLabel: '(3)',
+    kind: 'eq',
+    chapter: 3,
+    section: 'III § 1 C',
+    page: 97,
+    route: ROUTE_C3A,
+    anchor: 'ref-eq-3-3',
+    orderIndex: 742,
+    summaryTex: 'Notation des entiers premiers entre eux : $(a, b) = 1$.',
+    dependsOn: ['not-3-coprime']
+  },
+  '3.17': {
+    id: '3.17',
+    label: 'Remarque (3.17)',
+    shortLabel: '(3.17)',
+    kind: 'rem',
+    chapter: 3,
+    section: 'III § 1 C',
+    page: 98,
+    route: ROUTE_C3A,
+    anchor: 'ref-3.17',
+    orderIndex: 744,
+    summaryTex:
+      'Pour $G = \\langle x \\rangle$, $x^k$ est générateur de $G$ si et seulement si $x \\in \\langle x^k \\rangle$, c’est-à-dire $\\exists m \\in \\Z,\\; x^{km} = x$.',
+    dependsOn: ['1.40']
+  },
+  'eq-3-4': {
+    id: 'eq-3-4',
+    label: 'Équation (4)',
+    shortLabel: '(4)',
+    kind: 'eq',
+    chapter: 3,
+    section: 'III § 1 C',
+    page: 98,
+    route: ROUTE_C3A,
+    anchor: 'ref-eq-3-4',
+    orderIndex: 746,
+    summaryTex: '$x^k \\text{ générateur de } G \\iff \\exists m \\in \\Z,\\; x^{km} = x$.',
+    dependsOn: ['3.17']
+  },
+  '3.18': {
+    id: '3.18',
+    label: 'Théorème (3.18)',
+    shortLabel: '(3.18)',
+    kind: 'thm',
+    chapter: 3,
+    section: 'III § 1 C',
+    page: 98,
+    route: ROUTE_C3A,
+    anchor: 'ref-3.18',
+    orderIndex: 748,
+    summaryTex:
+      'Soit $G = \\langle x \\rangle$ : $1^\\circ$ si $G$ est infini, les seuls générateurs sont $x$ et $x^{-1}$ ; $2^\\circ$ si $G$ est cyclique d’ordre $n > 1$, les générateurs sont les $x^k$ tels que $k$ et $n$ sont premiers entre eux.',
+    dependsOn: ['1.42', '3.3', '3.6', 'thm-bezout', '3.17', 'eq-3-4']
+  },
+  '3.19': {
+    id: '3.19',
+    label: 'Remarque (3.19)',
+    shortLabel: '(3.19)',
+    kind: 'rem',
+    chapter: 3,
+    section: 'III § 1 C',
+    page: 98,
+    route: ROUTE_C3A,
+    anchor: 'ref-3.19',
+    orderIndex: 750,
+    summaryTex:
+      'Si $G = \\langle x \\rangle$ est cyclique d’ordre $n$, les générateurs de $G$ sont les $x^k$ tels que $k$ est premier avec $n$ et $1 \\leqslant k \\leqslant n - 1$.',
+    dependsOn: ['3.5', 'eq-3-3', '3.18']
+  },
+  '3.20': {
+    id: '3.20',
+    label: 'Définition (3.20)',
+    shortLabel: '(3.20)',
+    kind: 'def',
+    chapter: 3,
+    section: 'III § 1 C',
+    page: 99,
+    route: ROUTE_C3A,
+    anchor: 'ref-3.20',
+    orderIndex: 752,
+    summaryTex:
+      'La *fonction d’Euler* $\\varphi : \\N^* \\to \\N^*$ est définie par $\\varphi(1) = 1$ et $\\varphi(n) = \\card(E(n))$ pour $n > 1$, où $E(n) = \\{k \\in \\N ;\\; 1 \\leqslant k \\leqslant n - 1 \\text{ et } (k, n) = 1\\}$.',
+    dependsOn: ['eq-3-3', '3.19']
+  },
+  '3.21': {
+    id: '3.21',
+    label: 'Proposition (3.21)',
+    shortLabel: '(3.21)',
+    kind: 'prop',
+    chapter: 3,
+    section: 'III § 1 C',
+    page: 99,
+    route: ROUTE_C3A,
+    anchor: 'ref-3.21',
+    orderIndex: 754,
+    summaryTex:
+      'Le nombre des générateurs d’un groupe cyclique d’ordre $n$ est égal à $\\varphi(n)$, $\\varphi$ étant la fonction d’Euler.',
+    dependsOn: ['3.19', '3.20']
+  },
+  '3.22': {
+    id: '3.22',
+    label: 'Remarque (3.22)',
+    shortLabel: '(3.22)',
+    kind: 'rem',
+    chapter: 3,
+    section: 'III § 1 C',
+    page: 99,
+    route: ROUTE_C3A,
+    anchor: 'ref-3.22',
+    orderIndex: 756,
+    summaryTex:
+      '$1^\\circ$ Appellations « Indicateur » ou « Indicatrice » d’Euler. $2^\\circ$ Pour $p$ premier, $\\varphi(p) = p - 1$.',
+    dependsOn: ['3.20', '3.21']
+  },
+  '3.23': {
+    id: '3.23',
+    label: 'Remarque (3.23)',
+    shortLabel: '(3.23)',
+    kind: 'rem',
+    chapter: 3,
+    section: 'III § 1 C',
+    page: 99,
+    route: ROUTE_C3A,
+    anchor: 'ref-3.23',
+    orderIndex: 758,
+    summaryTex:
+      'Dans l’anneau commutatif unitaire $\\dfrac{\\Z}{n\\Z} = \\Zn{n}$ ($n > 1$), $\\overline{k}$ est *inversible* s’il existe $\\overline{k}\'$ tel que $\\overline{k}\\,\\overline{k}\' = \\overline{1}$.',
+    dependsOn: ['1.13']
+  },
+  '3.24': {
+    id: '3.24',
+    label: 'Proposition (3.24)',
+    shortLabel: '(3.24)',
+    kind: 'prop',
+    chapter: 3,
+    section: 'III § 1 C',
+    page: 100,
+    route: ROUTE_C3A,
+    anchor: 'ref-3.24',
+    orderIndex: 760,
+    summaryTex:
+      'Pour $n > 1$ dans $\\N$, les générateurs de $\\left(\\dfrac{\\Z}{n\\Z}, +\\right)$ sont les éléments inversibles de l’anneau $\\dfrac{\\Z}{n\\Z}$ et forment un groupe multiplicatif, abélien, d’ordre $\\varphi(n)$.',
+    dependsOn: ['thm-bezout', '3.18', '3.19', '3.21', '3.23']
+  },
+  '3.25': {
+    id: '3.25',
+    label: 'Remarque (3.25)',
+    shortLabel: '(3.25)',
+    kind: 'rem',
+    chapter: 3,
+    section: 'III § 1 C',
+    page: 100,
+    route: ROUTE_C3A,
+    anchor: 'ref-3.25',
+    orderIndex: 762,
+    summaryTex:
+      '$1^\\circ$ Si $p$ est premier, $G_p = \\dfrac{\\Z}{p\\Z} - \\{\\overline{0}\\}$ est d’ordre $p - 1$, confirmant que $\\dfrac{\\Z}{p\\Z}$ est un corps. $2^\\circ$ Les inversibles de tout anneau unitaire forment un groupe multiplicatif.',
+    dependsOn: ['3.22', '3.24']
+  },
+  '3.26': {
+    id: '3.26',
+    label: 'Remarque (3.26)',
+    shortLabel: '(3.26)',
+    kind: 'rem',
+    chapter: 3,
+    section: 'III § 1 D',
+    page: 101,
+    route: ROUTE_C3A,
+    anchor: 'ref-3.26',
+    orderIndex: 764,
+    summaryTex:
+      'Utilisation des morphismes, du produit direct et du $1^{\\text{er}}$ théorème d’isomorphisme (analogue à $(2.27)$) pour les anneaux unitaires $\\dfrac{\\Z}{n\\Z}$ ($n > 1$).',
+    dependsOn: ['2.27', '3.24']
+  },
+  'eq-3-5': {
+    id: 'eq-3-5',
+    label: 'Équation (5)',
+    shortLabel: '(5)',
+    kind: 'eq',
+    chapter: 3,
+    section: 'III § 1 D',
+    page: 101,
+    route: ROUTE_C3A,
+    anchor: 'ref-eq-3-5',
+    orderIndex: 766,
+    summaryTex:
+      'Intersection des sous-groupes $m\\Z$ et $n\\Z$ via le $\\mathrm{PPCM}$ $l > 0$ de $m$ et $n$ : $m\\Z \\cap n\\Z = l\\Z$.',
+    dependsOn: ['eq-3-3']
+  },
+  '3.27': {
+    id: '3.27',
+    label: 'Lemme (3.27)',
+    shortLabel: '(3.27)',
+    kind: 'lem',
+    chapter: 3,
+    section: 'III § 1 D',
+    page: 101,
+    route: ROUTE_C3A,
+    anchor: 'ref-3.27',
+    orderIndex: 768,
+    summaryTex:
+      'Si $m$ et $n$ sont deux entiers non nuls et positifs, alors $m\\Z \\cap n\\Z = mn\\Z \\iff (m, n) = 1$.',
+    dependsOn: ['eq-3-3', 'eq-3-5']
+  },
+  'eq-3-6': {
+    id: 'eq-3-6',
+    label: 'Équation (6)',
+    shortLabel: '(6)',
+    kind: 'eq',
+    chapter: 3,
+    section: 'III § 1 D',
+    page: 101,
+    route: ROUTE_C3A,
+    anchor: 'ref-eq-3-6',
+    orderIndex: 769,
+    summaryTex: '$m\\Z \\cap n\\Z = mn\\Z \\iff (m, n) = 1$.',
+    dependsOn: ['3.27']
+  },
+  '3.28': {
+    id: '3.28',
+    label: 'Remarque (3.28)',
+    shortLabel: '(3.28)',
+    kind: 'rem',
+    chapter: 3,
+    section: 'III § 1 D',
+    page: 102,
+    route: ROUTE_C3A,
+    anchor: 'ref-3.28',
+    orderIndex: 770,
+    summaryTex:
+      'Possibilité de démontrer directement le lemme $(3.27)$ à l’aide du théorème de Gauss.',
+    dependsOn: ['3.27']
+  },
+  'thm-gauss': {
+    id: 'thm-gauss',
+    label: 'Théorème de Gauss',
+    shortLabel: 'Théorème de Gauss',
+    kind: 'thm',
+    chapter: 3,
+    section: 'III § 1 D',
+    page: 102,
+    route: ROUTE_C3A,
+    anchor: 'ref-thm-gauss',
+    orderIndex: 771,
+    summaryTex:
+      '$a, b, c$ étant trois éléments non nuls de $\\Z$, si $a$ et $b$ sont premiers entre eux et $a$ divise $bc$, alors $a$ divise $c$.',
+    dependsOn: ['eq-3-3']
+  },
+  '3.29': {
+    id: '3.29',
+    label: 'Théorème (3.29)',
+    shortLabel: '(3.29)',
+    kind: 'thm',
+    chapter: 3,
+    section: 'III § 1 D',
+    page: 102,
+    route: ROUTE_C3A,
+    anchor: 'ref-3.29',
+    orderIndex: 772,
+    summaryTex:
+      'Si $m$ et $n$ sont deux entiers positifs non nuls, les anneaux unitaires (et groupes additifs) $\\dfrac{\\Z}{m\\Z} \\times \\dfrac{\\Z}{n\\Z}$ et $\\dfrac{\\Z}{mn\\Z}$ sont isomorphes si et seulement si $m$ et $n$ sont premiers entre eux.',
+    dependsOn: ['1.83', '2.27', '3.26', '3.27', 'eq-3-6']
+  },
+  'eq-3-7': {
+    id: 'eq-3-7',
+    label: 'Équation (7)',
+    shortLabel: '(7)',
+    kind: 'eq',
+    chapter: 3,
+    section: 'III § 1 D',
+    page: 102,
+    route: ROUTE_C3A,
+    anchor: 'ref-eq-3-7',
+    orderIndex: 773,
+    summaryTex: '$(m, n) = 1 \\iff \\Ker f = mn\\Z$.',
+    dependsOn: ['3.27', '3.29']
+  },
+  'eq-3-8': {
+    id: 'eq-3-8',
+    label: 'Équation (8)',
+    shortLabel: '(8)',
+    kind: 'eq',
+    chapter: 3,
+    section: 'III § 1 D',
+    page: 102,
+    route: ROUTE_C3A,
+    anchor: 'ref-eq-3-8',
+    orderIndex: 774,
+    summaryTex: '$(m, n) = 1 \\iff \\Im f \\simeq \\dfrac{\\Z}{mn\\Z}$.',
+    dependsOn: ['2.27', '3.29', 'eq-3-7']
+  },
+  'eq-3-9': {
+    id: 'eq-3-9',
+    label: 'Équation (9)',
+    shortLabel: '(9)',
+    kind: 'eq',
+    chapter: 3,
+    section: 'III § 1 D',
+    page: 103,
+    route: ROUTE_C3A,
+    anchor: 'ref-eq-3-9',
+    orderIndex: 775,
+    summaryTex: '$(m, n) = 1 \\iff f \\text{ surjectif}$.',
+    dependsOn: ['3.29', 'eq-3-8']
+  },
+  'eq-3-10': {
+    id: 'eq-3-10',
+    label: 'Équation (10)',
+    shortLabel: '(10)',
+    kind: 'eq',
+    chapter: 3,
+    section: 'III § 1 D',
+    page: 103,
+    route: ROUTE_C3A,
+    anchor: 'ref-eq-3-10',
+    orderIndex: 776,
+    summaryTex:
+      '$(m, n) = 1 \\iff \\dfrac{\\Z}{m\\Z} \\times \\dfrac{\\Z}{n\\Z} \\simeq \\dfrac{\\Z}{mn\\Z}$.',
+    dependsOn: ['3.29', 'eq-3-9']
+  },
+  '3.30': {
+    id: '3.30',
+    label: 'Corollaire (3.30)',
+    shortLabel: '(3.30)',
+    kind: 'cor',
+    chapter: 3,
+    section: 'III § 1 D',
+    page: 103,
+    route: ROUTE_C3A,
+    anchor: 'ref-3.30',
+    orderIndex: 777,
+    summaryTex:
+      'Le produit direct de deux groupes cycliques $\\mathrm{C}_m$ et $\\mathrm{C}_n$ est un groupe cyclique si et seulement si $m$ et $n$ sont premiers entre eux.',
+    dependsOn: ['1.83', '3.4', '3.29', 'eq-3-10']
+  },
+  '3.31': {
+    id: '3.31',
+    label: 'Remarques (3.31)',
+    shortLabel: '(3.31)',
+    kind: 'rem',
+    chapter: 3,
+    section: 'III § 1 D',
+    page: 103,
+    route: ROUTE_C3A,
+    anchor: 'ref-3.31',
+    orderIndex: 778,
+    summaryTex:
+      '$1^\\circ$ Démonstration directe de $(3.30)$ (ex. 1, chap. III). $2^\\circ$ Preuve explicite de $(9)$ (ex. 2, chap. III). $3^\\circ$ Généralisation à $k$ entiers $m_1, \\dots, m_k$.',
+    dependsOn: ['3.29', 'eq-3-9', '3.30']
+  },
+  '3.32': {
+    id: '3.32',
+    label: 'Corollaire (3.32)',
+    shortLabel: '(3.32)',
+    kind: 'cor',
+    chapter: 3,
+    section: 'III § 1 D',
+    page: 103,
+    route: ROUTE_C3A,
+    anchor: 'ref-3.32',
+    orderIndex: 779,
+    summaryTex:
+      'Pour $m_1, \\dots, m_k \\in \\N^*$ ($k \\geqslant 2$), $\\dfrac{\\Z}{m_1\\Z} \\times \\dots \\times \\dfrac{\\Z}{m_k\\Z} \\simeq \\dfrac{\\Z}{m_1\\dots m_k\\Z}$ (et $\\prod_{i=1}^k \\mathrm{C}_{m_i}$ est cyclique) ssi les $m_i$ sont deux à deux premiers entre eux.',
+    dependsOn: ['3.29', '3.30']
+  },
+  '3.33': {
+    id: '3.33',
+    label: 'Lemme (3.33)',
+    shortLabel: '(3.33)',
+    kind: 'lem',
+    chapter: 3,
+    section: 'III § 1 D',
+    page: 104,
+    route: ROUTE_C3A,
+    anchor: 'ref-3.33',
+    orderIndex: 780,
+    summaryTex:
+      'Multiplicativité de la fonction d’Euler : si $m$ et $n$ sont deux entiers positifs premiers entre eux, alors $\\varphi(mn) = \\varphi(m)\\,\\varphi(n)$.',
+    dependsOn: ['3.24', '3.29']
+  },
+  'eq-3-11': {
+    id: 'eq-3-11',
+    label: 'Équation (11)',
+    shortLabel: '(11)',
+    kind: 'eq',
+    chapter: 3,
+    section: 'III § 1 D',
+    page: 104,
+    route: ROUTE_C3A,
+    anchor: 'ref-eq-3-11',
+    orderIndex: 781,
+    summaryTex: '$\\varphi(mn) = \\varphi(m)\\,\\varphi(n)$ pour $(m, n) = 1$.',
+    dependsOn: ['3.33']
+  },
+  '3.34': {
+    id: '3.34',
+    label: 'Remarque (3.34)',
+    shortLabel: '(3.34)',
+    kind: 'rem',
+    chapter: 3,
+    section: 'III § 1 D',
+    page: 104,
+    route: ROUTE_C3A,
+    anchor: 'ref-3.34',
+    orderIndex: 782,
+    summaryTex:
+      '$1^\\circ$ Pour $m_1, \\dots, m_k$ deux à deux premiers entre eux, $\\varphi(m_1 \\dots m_k) = \\varphi(m_1)\\dots\\varphi(m_k)$. $2^\\circ$ Réduction à $\\varphi(p^\\alpha)$ via la décomposition primaire $n = p_1^{\\alpha_1}\\dots p_k^{\\alpha_k}$.',
+    dependsOn: ['3.32', '3.33', 'eq-3-11']
+  },
+  'eq-3-12': {
+    id: 'eq-3-12',
+    label: 'Équation (12)',
+    shortLabel: '(12)',
+    kind: 'eq',
+    chapter: 3,
+    section: 'III § 1 D',
+    page: 104,
+    route: ROUTE_C3A,
+    anchor: 'ref-eq-3-12',
+    orderIndex: 783,
+    summaryTex:
+      '$\\varphi(m_1 m_2 \\dots m_k) = \\varphi(m_1)\\varphi(m_2)\\dots\\varphi(m_k)$ pour des $m_i$ deux à deux premiers entre eux.',
+    dependsOn: ['3.34']
+  },
+  'eq-3-13': {
+    id: 'eq-3-13',
+    label: 'Équation (13)',
+    shortLabel: '(13)',
+    kind: 'eq',
+    chapter: 3,
+    section: 'III § 1 D',
+    page: 104,
+    route: ROUTE_C3A,
+    anchor: 'ref-eq-3-13',
+    orderIndex: 784,
+    summaryTex:
+      '$\\varphi(n) = \\varphi(p_1^{\\alpha_1})\\,\\varphi(p_2^{\\alpha_2})\\dots\\varphi(p_k^{\\alpha_k})$ pour $n = p_1^{\\alpha_1}\\dots p_k^{\\alpha_k}$.',
+    dependsOn: ['3.34', 'eq-3-12']
+  },
+  '3.35': {
+    id: '3.35',
+    label: 'Lemme (3.35)',
+    shortLabel: '(3.35)',
+    kind: 'lem',
+    chapter: 3,
+    section: 'III § 1 D',
+    page: 105,
+    route: ROUTE_C3A,
+    anchor: 'ref-3.35',
+    orderIndex: 785,
+    summaryTex:
+      'Si $p \\in \\N$ est premier et $\\alpha \\geqslant 1$ dans $\\N$, alors $\\varphi(p^\\alpha) = p^{\\alpha - 1}(p - 1)$.',
+    dependsOn: ['3.20']
+  },
+  'eq-3-14': {
+    id: 'eq-3-14',
+    label: 'Équation (14)',
+    shortLabel: '(14)',
+    kind: 'eq',
+    chapter: 3,
+    section: 'III § 1 D',
+    page: 105,
+    route: ROUTE_C3A,
+    anchor: 'ref-eq-3-14',
+    orderIndex: 786,
+    summaryTex: '$\\varphi(p^\\alpha) = p^{\\alpha - 1}(p - 1)$ ($p$ premier, $\\alpha \\geqslant 1$).',
+    dependsOn: ['3.35']
+  },
+  '3.36': {
+    id: '3.36',
+    label: 'Théorème (3.36)',
+    shortLabel: '(3.36)',
+    kind: 'thm',
+    chapter: 3,
+    section: 'III § 1 D',
+    page: 105,
+    route: ROUTE_C3A,
+    anchor: 'ref-3.36',
+    orderIndex: 787,
+    summaryTex:
+      'Pour $n = p_1^{\\alpha_1}\\dots p_k^{\\alpha_k} > 1$ ($p_i$ premiers distincts, $\\alpha_i \\geqslant 1$), $\\varphi(n) = n\\left(1 - \\dfrac{1}{p_1}\\right)\\left(1 - \\dfrac{1}{p_2}\\right)\\dots\\left(1 - \\dfrac{1}{p_k}\\right)$.',
+    dependsOn: ['3.34', 'eq-3-13', '3.35', 'eq-3-14']
+  },
+  'eq-3-15': {
+    id: 'eq-3-15',
+    label: 'Équation (15)',
+    shortLabel: '(15)',
+    kind: 'eq',
+    chapter: 3,
+    section: 'III § 1 D',
+    page: 105,
+    route: ROUTE_C3A,
+    anchor: 'ref-eq-3-15',
+    orderIndex: 788,
+    summaryTex:
+      '$\\varphi(n) = n\\left(1 - \\dfrac{1}{p_1}\\right)\\left(1 - \\dfrac{1}{p_2}\\right)\\dots\\left(1 - \\dfrac{1}{p_k}\\right)$.',
+    dependsOn: ['3.36']
+  }
+}

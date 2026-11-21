@@ -1,0 +1,680 @@
+/* ==========================================================================
+   Josette Calais v2 — Thème académique, clair/sombre, hors-ligne, responsive
+   ========================================================================== */
+
+:root {
+  --jc-navy: #1b365d;
+  --jc-navy-soft: #f2f5fa;
+  --jc-teal: #0f6d6a;
+  --jc-teal-soft: #eef8f7;
+  --jc-slate: #475569;
+  --jc-slate-soft: #f8fafc;
+  --jc-amber: #9a5b13;
+  --jc-amber-soft: #fdf8ee;
+  --jc-emerald: #136f47;
+  --jc-emerald-soft: #eefaf4;
+  --jc-crimson: #9f1239;
+  --jc-crimson-soft: #fff1f2;
+  --jc-violet: #5b21b6;
+  --jc-violet-soft: #f5f3ff;
+  --jc-border: #cbd5e1;
+  --jc-surface: #ffffff;
+  --jc-surface-muted: #f8fafc;
+  --jc-text: #0f172a;
+  --jc-text-muted: #475569;
+  --jc-radius: 10px;
+}
+
+.dark {
+  --jc-navy: #93c5fd;
+  --jc-navy-soft: #17253b;
+  --jc-teal: #5eead4;
+  --jc-teal-soft: #112a2b;
+  --jc-slate: #94a3b8;
+  --jc-slate-soft: #1e293b;
+  --jc-amber: #fbbf24;
+  --jc-amber-soft: #2b2112;
+  --jc-emerald: #34d399;
+  --jc-emerald-soft: #112b22;
+  --jc-crimson: #fb7185;
+  --jc-crimson-soft: #2e151d;
+  --jc-violet: #c4b5fd;
+  --jc-violet-soft: #241b3d;
+  --jc-border: #334155;
+  --jc-surface: #0f172a;
+  --jc-surface-muted: #1e293b;
+  --jc-text: #f1f5f9;
+  --jc-text-muted: #94a3b8;
+}
+
+/* Empêche tout débordement horizontal global sur mobile */
+.VPContent,
+.VPDoc,
+.VPDoc .container,
+.VPDoc .content,
+.VPDoc .content-container,
+.vp-doc {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.vp-doc {
+  line-height: 1.72;
+  overflow-wrap: anywhere;
+}
+
+.jc-math-box,
+.jc-proof-box,
+.jc-fold-content,
+.jc-panel {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.jc-math-box-body,
+.jc-proof-body,
+.jc-fold-content,
+.jc-exo-statement,
+.jc-step-card,
+.jc-panel {
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.katex-display,
+.katex-block-wrap {
+  display: block;
+  overflow-x: auto;
+  overflow-y: hidden;
+  width: 100%;
+  max-width: 100%;
+  padding: 0.25rem 0;
+}
+
+/* Repère de page originale (1984) */
+.jc-page-ref {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  font-family: var(--vp-font-family-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--jc-text-muted);
+  background: var(--jc-surface-muted);
+  border: 1px solid var(--jc-border);
+  border-radius: 999px;
+  padding: 0.02rem 0.42rem;
+  margin: 0.15rem 0.25rem;
+  vertical-align: middle;
+}
+
+/* Blocs sémantiques du cours */
+.jc-math-box {
+  margin: 1.1rem 0;
+  padding: 0.95rem 1.15rem;
+  border-radius: var(--jc-radius);
+  border-left: 4px solid var(--jc-slate);
+  background: var(--jc-slate-soft);
+  border-top: 1px solid var(--jc-border);
+  border-right: 1px solid var(--jc-border);
+  border-bottom: 1px solid var(--jc-border);
+}
+
+.jc-math-box.kind-def,
+.jc-math-box.kind-not {
+  border-left-color: var(--jc-teal);
+  background: var(--jc-teal-soft);
+}
+
+.jc-math-box.kind-thm {
+  border-left-color: var(--jc-navy);
+  background: var(--jc-navy-soft);
+}
+
+.jc-math-box.kind-prop,
+.jc-math-box.kind-cor,
+.jc-math-box.kind-lem {
+  border-left-color: #2c5282;
+  background: var(--jc-navy-soft);
+}
+
+.jc-math-box.kind-ex {
+  border-left-color: var(--jc-amber);
+  background: var(--jc-amber-soft);
+}
+
+.jc-math-box.kind-rem {
+  border-left-color: var(--jc-slate);
+  background: var(--jc-slate-soft);
+}
+
+.jc-math-box-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.6rem;
+  margin-bottom: 0.45rem;
+}
+
+.jc-math-box-title {
+  font-weight: 700;
+  color: var(--jc-navy);
+}
+
+.jc-math-box.kind-def .jc-math-box-title,
+.jc-math-box.kind-not .jc-math-box-title {
+  color: var(--jc-teal);
+}
+
+.jc-math-box.kind-ex .jc-math-box-title {
+  color: var(--jc-amber);
+}
+
+.jc-box-meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.78rem;
+  color: var(--jc-text-muted);
+}
+
+.jc-anchor-link {
+  text-decoration: none;
+  color: var(--jc-text-muted);
+  font-weight: 600;
+  opacity: 0.75;
+}
+
+.jc-anchor-link:hover {
+  opacity: 1;
+  color: var(--jc-navy);
+}
+
+.jc-math-box-body > :first-child {
+  margin-top: 0;
+}
+
+.jc-math-box-body > :last-child {
+  margin-bottom: 0;
+}
+
+/* Preuves */
+.jc-proof-box {
+  margin: 0.9rem 0 1.25rem;
+  padding: 0.9rem 1.15rem;
+  border-radius: var(--jc-radius);
+  border: 1px solid var(--jc-border);
+  border-left: 4px dashed var(--jc-slate);
+  background: var(--jc-surface);
+}
+
+.jc-proof-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.45rem;
+}
+
+.jc-proof-label {
+  font-weight: 700;
+  color: var(--jc-text);
+}
+
+.jc-proof-body > :last-child {
+  margin-bottom: 0;
+}
+
+.jc-proof-qed {
+  display: flex;
+  justify-content: flex-end;
+  font-weight: 700;
+  color: var(--jc-navy);
+  margin-top: 0.35rem;
+}
+
+.jc-step-card {
+  margin-top: 0.55rem;
+  padding: 0.65rem 0.85rem;
+  border-radius: 8px;
+  border: 1px solid var(--jc-border);
+  background: var(--jc-surface-muted);
+}
+
+.jc-why-box {
+  margin-top: 0.45rem;
+  padding: 0.45rem 0.7rem;
+  border-radius: 6px;
+  background: var(--jc-teal-soft);
+  border-left: 3px solid var(--jc-teal);
+  font-size: 0.9rem;
+}
+
+/* Encarts dépliables */
+.jc-fold {
+  margin: 0.9rem 0;
+  border: 1px solid var(--jc-border);
+  border-radius: var(--jc-radius);
+  background: var(--jc-surface);
+  overflow: hidden;
+}
+
+.jc-fold.kind-prepa {
+  border-left: 4px solid var(--jc-navy);
+}
+
+.jc-fold.kind-intuition {
+  border-left: 4px solid var(--jc-teal);
+}
+
+.jc-fold.kind-piege {
+  border-left: 4px solid var(--jc-crimson);
+}
+
+.jc-fold.kind-edition {
+  border-left: 4px solid var(--jc-amber);
+}
+
+.jc-fold.kind-indice {
+  border-left: 4px solid var(--jc-violet);
+}
+
+.jc-fold.kind-correction {
+  border-left: 4px solid var(--jc-emerald);
+}
+
+.jc-fold-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 0.65rem 0.95rem;
+  background: var(--jc-surface-muted);
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-weight: 600;
+  color: var(--jc-text);
+  font-size: 0.95rem;
+}
+
+.jc-fold-summary:hover {
+  filter: brightness(0.97);
+}
+
+.jc-fold-badge {
+  font-size: 0.74rem;
+  font-weight: 700;
+  padding: 0.1rem 0.5rem;
+  border-radius: 999px;
+  border: 1px solid var(--jc-border);
+  background: var(--jc-surface);
+  color: var(--jc-text-muted);
+  flex-shrink: 0;
+}
+
+.jc-fold-content {
+  padding: 0.85rem 1rem;
+  border-top: 1px solid var(--jc-border);
+}
+
+.jc-fold-content > :first-child {
+  margin-top: 0;
+}
+
+.jc-fold-content > :last-child {
+  margin-bottom: 0;
+}
+
+/* Renvois interactifs & Glossaire (infobulles au survol / focus / tap) */
+.jc-ref-wrap,
+.jc-glossary-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+.jc-ref-link {
+  color: var(--jc-navy);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.jc-glossary-btn {
+  background: none;
+  border: none;
+  border-bottom: 1.5px dashed var(--jc-teal);
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  cursor: help;
+}
+
+.jc-fn-btn {
+  background: none;
+  border: none;
+  padding: 0 0.1rem;
+  margin: 0;
+  font: inherit;
+  color: var(--jc-navy);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.jc-popover {
+  position: absolute;
+  left: 0;
+  bottom: calc(100% + 8px);
+  z-index: 40;
+  width: min(360px, 86vw);
+  padding: 0.75rem 0.9rem;
+  border-radius: 8px;
+  border: 1px solid var(--jc-border);
+  background: var(--jc-surface);
+  color: var(--jc-text);
+  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.22);
+  font-size: 0.88rem;
+  line-height: 1.5;
+  text-align: left;
+  font-weight: 400;
+}
+
+.jc-popover-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  font-weight: 700;
+  color: var(--jc-navy);
+  margin-bottom: 0.35rem;
+}
+
+.jc-popover-page {
+  font-size: 0.76rem;
+  color: var(--jc-text-muted);
+}
+
+/* Tables de Cayley & laboratoires */
+.cayley-wrap {
+  overflow-x: auto;
+  max-width: 100%;
+  margin: 0.75rem 0;
+}
+
+table.jc-cayley-table {
+  border-collapse: collapse;
+  margin: 0 auto;
+  background: var(--jc-surface);
+  font-size: 0.93rem;
+}
+
+.vp-doc table.jc-cayley-table {
+  display: table;
+  margin: 0 auto;
+}
+
+.vp-doc table.jc-cayley-table tr {
+  background: transparent;
+  border-top: none;
+}
+
+table.jc-cayley-table th,
+table.jc-cayley-table td {
+  border: 1px solid var(--jc-border);
+  padding: 0.4rem 0.65rem;
+  text-align: center;
+  min-width: 2.4rem;
+}
+
+table.jc-cayley-table thead th,
+table.jc-cayley-table tbody th {
+  background: var(--jc-navy-soft);
+  color: var(--jc-navy);
+  font-weight: 700;
+}
+
+table.jc-cayley-table thead th:first-child {
+  background: var(--jc-navy);
+  color: var(--jc-surface);
+}
+
+table.jc-cayley-table td.cell-asym {
+  background: var(--jc-crimson-soft);
+}
+
+table.jc-cayley-table td.cell-neutral {
+  background: var(--jc-emerald-soft);
+}
+
+table.jc-cayley-table td.cell-witness {
+  outline: 2px solid var(--jc-crimson);
+}
+
+.jc-lab-card,
+.jc-exo-card,
+.jc-challenge-card {
+  margin: 1.35rem 0;
+  border: 1px solid var(--jc-border);
+  border-radius: var(--jc-radius);
+  background: var(--jc-surface);
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
+  overflow: hidden;
+}
+
+.jc-card-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background: var(--jc-navy-soft);
+  border-bottom: 1px solid var(--jc-border);
+}
+
+.jc-card-title {
+  font-weight: 700;
+  color: var(--jc-navy);
+  font-size: 1rem;
+}
+
+.jc-card-body {
+  padding: 1rem;
+}
+
+.jc-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.9rem;
+  align-items: center;
+  padding: 0.65rem 0.85rem;
+  border-radius: 8px;
+  border: 1px solid var(--jc-border);
+  background: var(--jc-surface-muted);
+  margin-bottom: 0.9rem;
+}
+
+.jc-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.34rem 0.72rem;
+  border-radius: 6px;
+  border: 1px solid var(--jc-border);
+  background: var(--jc-surface);
+  color: var(--jc-text);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.jc-btn:hover {
+  border-color: var(--jc-navy);
+}
+
+.jc-btn.active,
+.jc-btn.primary {
+  background: var(--jc-navy);
+  border-color: var(--jc-navy);
+  color: var(--jc-surface);
+  font-weight: 600;
+}
+
+.jc-btn.teal.active {
+  background: var(--jc-teal);
+  border-color: var(--jc-teal);
+  color: var(--jc-surface);
+}
+
+.jc-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  align-items: start;
+}
+
+.jc-panel {
+  padding: 0.75rem 0.9rem;
+  border-radius: 8px;
+  border: 1px solid var(--jc-border);
+  background: var(--jc-surface-muted);
+  font-size: 0.9rem;
+}
+
+.jc-status-ok {
+  color: var(--jc-emerald);
+  font-weight: 700;
+}
+
+.jc-status-err {
+  color: var(--jc-crimson);
+  font-weight: 700;
+}
+
+/* Atelier d'exercices */
+.jc-exo-statement {
+  padding: 0.95rem 1.05rem;
+  border-radius: 8px;
+  border: 1px solid var(--jc-border);
+  background: var(--jc-surface-muted);
+  margin-bottom: 0.9rem;
+}
+
+.jc-exo-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-bottom: 0.5rem;
+}
+
+.jc-sym-btn {
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+  border: 1px solid var(--jc-border);
+  background: var(--jc-surface-muted);
+  color: var(--jc-text);
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.jc-textarea,
+.jc-doubts-input {
+  width: 100%;
+  border: 1px solid var(--jc-border);
+  border-radius: 8px;
+  padding: 0.65rem 0.8rem;
+  font-family: var(--vp-font-family-mono);
+  font-size: 0.88rem;
+  background: var(--jc-surface);
+  color: var(--jc-text);
+  box-sizing: border-box;
+}
+
+.jc-textarea {
+  min-height: 135px;
+  resize: vertical;
+}
+
+.jc-preview-box {
+  margin-top: 0.55rem;
+  padding: 0.75rem 0.9rem;
+  border-radius: 8px;
+  border: 1px dashed var(--jc-border);
+  background: var(--jc-surface-muted);
+  min-height: 2.6rem;
+  overflow-x: auto;
+}
+
+.katex-live-error {
+  display: inline-block;
+  padding: 0.1rem 0.45rem;
+  border-radius: 4px;
+  background: var(--jc-crimson-soft);
+  color: var(--jc-crimson);
+  font-size: 0.85em;
+}
+
+.jc-export-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  margin-top: 0.85rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--jc-border);
+}
+
+.jc-select {
+  padding: 0.32rem 0.55rem;
+  border-radius: 6px;
+  border: 1px solid var(--jc-border);
+  background: var(--jc-surface);
+  color: var(--jc-text);
+  font-size: 0.85rem;
+}
+
+.jc-toast {
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--jc-emerald);
+}
+
+@media (max-width: 768px) {
+  .jc-card-body {
+    padding: 0.75rem;
+  }
+  .jc-math-box,
+  .jc-proof-box {
+    padding: 0.75rem 0.85rem;
+  }
+  .jc-popover {
+    position: fixed;
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    width: auto;
+  }
+}
+
+@media print {
+  .VPNav,
+  .VPSidebar,
+  .VPDocAside,
+  .VPDocFooter,
+  .jc-exo-toolbar,
+  .jc-export-bar,
+  .jc-controls {
+    display: none !important;
+  }
+  .jc-math-box,
+  .jc-proof-box,
+  .jc-exo-card,
+  .jc-lab-card {
+    break-inside: avoid;
+    box-shadow: none;
+  }
+}

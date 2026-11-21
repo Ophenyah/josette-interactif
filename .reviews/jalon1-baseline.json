@@ -1,0 +1,882 @@
+{
+  "course_blocks": {
+    "docs/chap1/1-notion-de-groupe.md": [
+      {
+        "tag": "MathBlock",
+        "sha256": "42ebccaf0a5e85275af073a93fa129e37656621b3eb4d1bddd1813cdd8c53982",
+        "text": "Étant donné un ensemble $E$, on appelle *loi de composition interne* sur $E$ toute application de $E \\times E$ dans $E$, où $E \\times E = \\{(x, y) ;\\; x \\in E \\text{ et } y \\in E\\}$.\n\nSupposons $E \\neq \\varnothing$ et désignons par $(E, \\cdot)$ l’ensemble $E$ muni de la loi de composition définie par l’application :\n\n$$(x, y) \\mapsto x \\cdot y.$$\n\n*a)* Dans $E$, la loi $\\cdot$ est dite :\n\n*associative* si, $(x \\cdot y) \\cdot z = x \\cdot (y \\cdot z)$, quels que soient $x, y, z$ dans $E$ ;\n\n*commutative* si, $x \\cdot y = y \\cdot x$, quels que soient $x, y$ dans $E$.\n\n*b)* S’il existe $e \\in E$ tel que, quel que soit $x \\in E$,\n\n$$x \\cdot e = e \\cdot x = x,$$\n\non dit que $e$ est *élément neutre* dans $(E, \\cdot)$.\n\n*c)* Si $(E, \\cdot)$ possède un élément neutre $e$, alors un élément $x \\in E$ est dit *symétrisable*, s’il existe $x' \\in E$ tel que :\n\n$$x' \\cdot x = x \\cdot x' = e \\,;$$\n\n$x'$ est alors appelé *symétrique* de $x$ dans $(E, \\cdot)$."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "0e47aaa28615cdfc4b9179a7413cb2310f82522cc239c4a776d88266c88414df",
+        "text": "*Si un élément neutre $e$ existe dans $(E, \\cdot)$, il est unique et il est son propre symétrique.*\n\nEn effet, supposons $e$ et $e_1$ éléments neutres dans $(E, \\cdot)$, $e$ élément neutre $\\Rightarrow e_1 \\cdot e = e_1$ ; $e_1$ élément neutre $\\Rightarrow e_1 \\cdot e = e$, d’où $e_1 = e$.\n\nD’autre part, $e \\cdot e = e$ implique $e$ symétrique de $e$."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "ddfad8793e0b04a9913e51c10a4aa2ac0b41c1766a1620a0a61a41f401135dde",
+        "text": "Soit $\\N = \\{0, 1, 2, \\dots\\}$ l’ensemble des entiers naturels et $\\Z$ l’ensemble des entiers rationnels (entiers positifs, négatifs ou nul).\n\nDans $\\N$ et dans $\\Z$ les opérations habituelles d’addition et de multiplication sont des lois de composition internes associatives et commutatives ; $0$ et $1$ sont, respectivement, élément neutre pour l’addition et pour la multiplication.\n\nDans $(\\N, +)$, aucun élément non nul n’est symétrisable.\n\nDans $(\\N, \\times)$, aucun élément différent de $1$ n’est symétrisable.\n\nDans $(\\Z, +)$, tout élément est symétrisable ($-x$ est symétrique de $x$).\n\nDans $(\\Z, \\times)$, seuls $1$ et $-1$ sont symétrisables."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "ed725f49109ce9cf080e90851c8d8b6b59fa9dfe1206d7703c010b233f1a647c",
+        "text": "Soit $G$ un ensemble non vide, muni d’une *loi de composition interne* définie par : $(x, y) \\mapsto x \\cdot y$.\n\nOn dit que la loi $\\cdot$ définit sur $G$ une *structure de groupe*, ou que $G$ est un *groupe* relativement à cette loi, si les trois axiomes suivants sont vérifiés :\n\n- $(\\mathrm{G}_1)$ : la loi $\\cdot$ est associative ;\n- $(\\mathrm{G}_2)$ : il existe dans $(G, \\cdot)$ un élément neutre $e$ ;\n- $(\\mathrm{G}_3)$ : tout élément de $(G, \\cdot)$ est symétrisable."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "fb3d44f68b3a0fd298391613150db1d8b0c4de1a0ba31bc9fafc31762ba53683",
+        "text": "$1^\\circ$ *D’après la remarque $(1.2)$, un groupe $G$ a un unique élément neutre $e$.*\n\n$2^\\circ$ *Dans un groupe $G$, tout élément $x$ a un unique symétrique $x'$.*\n\nSupposons $x'$ et $x'_1$ symétriques de $x$ dans le groupe $(G, \\cdot)$.\n\n$$x' \\cdot x = e \\Rightarrow (x' \\cdot x) \\cdot x'_1 = x'_1 \\,; \\qquad x \\cdot x'_1 = e \\Rightarrow x' \\cdot (x \\cdot x'_1) = x' \\,;$$\n\nla loi $\\cdot$ étant associative (axiome $(\\mathrm{G}_1)$), on a $x'_1 = x'$."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "af3f854f68ba616778d93b6db40c54e9fc4514ee0b50a55982b13e9977458d49",
+        "text": "Un groupe $G$ est dit *abélien*<BookFootnote num=\"1\" text=\"Du nom du mathématicien norvégien N. H. Abel (1802-1829).\" /> (ou *commutatif*) si la loi de composition interne de $G$ est commutative."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "595d51f34ae8ce2c61049c8e691d1b6ba6771f5c112cae6c7b8a50fc4d2f7760",
+        "text": "$(\\Z, +)$ est un groupe abélien dont l’élément neutre est $0$. Nous verrons plus loin d’autres exemples de groupes, dont certains ne sont pas abéliens."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "9831b6600f148b746aafc974f59309443a9ca4778fbba3903ed6802f0bf0af3c",
+        "text": "Pour deux éléments $x$ et $y$ d’un groupe non abélien $(G, \\cdot)$, on a en général $x \\cdot y \\neq y \\cdot x$. Cependant, si $y = e$, on a $x \\cdot e = e \\cdot x$, quel que soit $x \\in G$ ; la commutativité peut donc être vérifiée pour certains couples d’éléments."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "51f7f57ec2e4f7e8b371502cc860fef30410734e9608d583ebafb34afa9717b8",
+        "text": "Dans un ensemble $(E, \\cdot)$, on dit que deux éléments $x$ et $y$ *commutent* (ou sont *permutables*) si $x \\cdot y = y \\cdot x$."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "df83d2da08fba7643e03961bc5e0e132590ed9fd148fb5513c071e4fddacfffb",
+        "text": "Un groupe $G$ est dit *fini* s’il n’a qu’un nombre fini d’éléments. Dans ce cas, le cardinal de $G$ s’appelle *l’ordre du groupe* $G$ ; il est noté $o(G)$ *(ou $|G|$)*."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "fcf59d31592fec40a0ef30425b6584aa995016d59710d4461dfc3fc9493902d6",
+        "text": "Par analogie avec les notations utilisées dans les ensembles de nombres pour les opérations habituelles de multiplication et d’addition, la loi de composition interne d’un groupe $G$ sera couramment notée\n\n- « multiplicativement » : $(x, y) \\mapsto xy$\n- ou « additivement » : $(x, y) \\mapsto x + y$.\n\nDans le premier cas, $xy$ s’appelle le *produit* de $x$ et $y$ pris dans cet ordre ; l’élément neutre se note, en général, $e$ ou $1$ et s’appelle *l’élément unité* du groupe ; le symétrique d’un élément $x \\in G$ s’écrit $x^{-1}$ et est appelé *inverse* de $x$ ; en abrégé, on dira que le groupe $G$ est « *multiplicatif* ».\n\nDans le second cas, $x + y$ s’appelle la *somme* de $x$ et $y$ pris dans cet ordre ; l’élément neutre est en général noté $0$ ; le symétrique <PageRef :page=\"20\" /> de $x \\in G$ s’écrit $-x$ et est appelé *opposé* de $x$ ; en abrégé, on dira que le groupe $G$ est « *additif* ».\n\n*C’est la notation multiplicative que nous adopterons pour énoncer et démontrer les propriétés générales des groupes.*\n\n*Cependant, selon l’usage, c’est la notation additive qui sera employée pour l’étude des groupes abéliens (chap. VIII).*"
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "b40b5ac97dd654f3c601c76e157855a2764389c46bad1eddf3f0480c68a98039",
+        "text": "$1^\\circ$ Si le groupe $G$ n’est pas abélien, pour $x$ et $y$ dans $G$, on a, en général\n\n$$(xy)^n \\neq x^n y^n.$$\n\nCependant, *si $x$ et $y$ commutent*, alors\n\n<span id=\"ref-eq-1-4\"></span>\n\n$$(xy)^n = xy \\, xy \\dots xy = x^n y^n \\tag{4}$$\n\net\n\n$$x^m y^n = y^n x^m$$\n\n$2^\\circ$ Le calcul du produit d’un nombre quelconque d’éléments de $G$, ainsi que de la puissance $n$-ième d’un élément, résulte uniquement de l’application de l’axiome $(\\mathrm{G}_1)$ ; *ces règles de calcul sont donc valables dans tout ensemble non vide muni d’une loi de composition interne associative* ; un tel ensemble est appelé un *demi-groupe*.\n\nUn demi-groupe avec élément neutre est un *monoïde* (ou demi-groupe unitaire). Par exemple, $(\\N, +)$ et $(\\N, \\times)$ sont des monoïdes ; tout groupe est *a fortiori* un monoïde.\n\n<PageRef :page=\"22\" />\n\n$3^\\circ$ En notation additive, les formules $(2)$ et $(3)$ s’écrivent respectivement :\n\n<span id=\"ref-eq-1-2p\"></span>\n\n$$mx + nx = (m + n)x \\tag{2'}$$\n\n<span id=\"ref-eq-1-3p\"></span>\n\n$$n(mx) = nmx \\tag{3'}$$"
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "4654b4c07d79934f16f11d2c13d47f816ab6ae700c3afd4b16181128c04dad59",
+        "text": "Si, pour $x \\in G$, il existe $x'$ (resp<sup>t</sup> $x''$) dans $G$ tel que $xx' = e$ (resp. $x''x = e$), alors $x' = x^{-1}$ (resp<sup>t</sup> $x'' = x^{-1}$).\n\nEn effet,\n\n$$xx' = e \\Rightarrow x^{-1}(xx') = x^{-1},$$\n\n$$\\text{mais} \\quad x^{-1}(xx') = (x^{-1}x)x' = ex' = x'$$\n\n(même raisonnement avec $x''$)."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "77888f65568fdf0fed9354f1aeca43ba2dc529dee39a09a8d7b7bb2c8e2ec1b4",
+        "text": "Si $x$ et $y$ ne commutent pas, on a $x^{-1} y^{-1} \\neq (xy)^{-1}$ ; par contre, si $x$ et $y$ commutent, alors $x^{-1}$ et $y^{-1}$ aussi, car, dans ce cas\n\n$$x^{-1} y^{-1} = (yx)^{-1} = (xy)^{-1} = y^{-1} x^{-1}.$$"
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "da43b6d4e3cc61cd795cbfacfc7868996334254fae573b1faf39aa822ea54fe8",
+        "text": "Nous avons déjà signalé que $(\\Z, +)$ était un groupe abélien.\n\n$\\Q$, $\\R$ et $\\C$ désignant respectivement l’ensemble des nombres rationnels, réels et complexes, $(\\Q, +)$, $(\\R, +)$ et $(\\C, +)$ sont des groupes abéliens d’élément neutre $0$.\n\nPosons $\\Q^* = \\Q - \\{0\\}$ et définissons de même $\\R^*$ et $\\C^*$ ; alors $(\\Q^*, \\times)$, $(\\R^*, \\times)$ et $(\\C^*, \\times)$ sont des groupes abéliens d’élément neutre $1$. On remarque que $(\\Q, \\times)$, par exemple, n’est pas un groupe, car $0$ n’a pas d’inverse dans $\\Q$."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "8737abbfaf189a157f353bcdc9a53317e02325ff26350203187e2974e016bd4a",
+        "text": "Rappelons tout d’abord qu’étant donné un ensemble non vide $E$ et une relation binaire $\\mathscr{R}$ définie dans $E$ on dit que $\\mathscr{R}$ est une *relation d’équivalence* si $\\mathscr{R}$ est :\n\nréflexive : $x \\mathscr{R} x$, quel que soit $x \\in E$,\n\nsymétrique : $x \\mathscr{R} y \\Rightarrow y \\mathscr{R} x$, quels que soient $x, y$ dans $E$,\n\ntransitive : $x \\mathscr{R} y$ et $y \\mathscr{R} z \\Rightarrow x \\mathscr{R} z$, quels que soient $x, y, z$ dans $E$.\n\nÀ tout $x \\in E$, on associe alors sa *classe d’équivalence* modulo $\\mathscr{R}$ : $\\cl_{\\mathscr{R}}(x)$, souvent notée $\\overline{x}$, lorsqu’il n’y a pas d’ambiguïté possible ; avec cette notation :\n\n$$\\overline{x} = \\{y \\in E ;\\; y \\mathscr{R} x\\} \\quad \\text{et} \\quad y \\in \\overline{x} \\Leftrightarrow \\overline{y} = \\overline{x}.$$\n\n<PageRef :page=\"24\" />\n\nLes classes distinctes de $E$ modulo $\\mathscr{R}$ forment une partition de $E$ ; l’ensemble de ces classes s’appelle *l’ensemble quotient* de $E$ par la relation d’équivalence $\\mathscr{R}$, on le note $\\dfrac{E}{\\mathscr{R}}$.\n\nÉtant donné $C \\in \\dfrac{E}{\\mathscr{R}}$, pour tout $x \\in C$, on peut écrire $C = \\overline{x}$ ; autrement dit, tout élément $x \\in C$ peut être choisi comme *représentant* de la classe d’équivalence $C$.\n\nSi $\\{x_i\\}_{i \\in I}$ est une famille de représentants des classes distinctes de $E$ modulo $\\mathscr{R}$, on pourra écrire\n\n$$\\dfrac{E}{\\mathscr{R}} = \\{\\overline{x}_i ;\\; i \\in I\\}.$$\n\nSoit $n > 0$ dans $\\Z$. Deux éléments $x$ et $y$ de $\\Z$ sont dits *congrus modulo $n$* si $x - y$ est un multiple de $n$ dans $\\Z$. Symboliquement, on écrit\n\n$$x \\equiv y \\pmod{n}$$\n\n$$\\text{et} \\qquad x \\equiv y \\pmod{n} \\Leftrightarrow \\exists k \\in \\Z, \\quad x - y = kn.$$\n\nL’existence de la division euclidienne dans $\\Z$ implique que pour tout $x \\in \\Z$ il existe $q$ et $r$ dans $\\Z$, tels que\n\n$$x = nq + r \\quad \\text{avec } 0 \\leqslant r < n \\,;$$\n\n$$\\text{donc} \\qquad \\overline{x} = \\overline{r} \\quad \\text{où } 0 \\leqslant r < n.$$\n\nOn en déduit que $\\{0, 1, \\dots, n - 1\\}$ forme une famille de représentants des classes distinctes modulo $n$.\n\nL’ensemble quotient de $\\Z$ par la congruence modulo $n$ est noté $\\Zn{n}$, d’où :\n\n<span id=\"ref-eq-1-9\"></span>\n\n$$\\Zn{n} = \\{\\overline{0}, \\overline{1}, \\dots, \\overline{n - 1}\\}. \\tag{9}$$\n\nMontrons que la correspondance $\\lambda$ définie par\n\n$$\\lambda : \\Zn{n} \\times \\Zn{n} \\to \\Zn{n}$$\n\n$$(\\overline{x}, \\overline{y}) \\mapsto \\overline{x + y}$$\n\nest une *application* ; il s’agit de prouver que\n\n$$\\overline{x'} = \\overline{x} \\text{ et } \\overline{y'} = \\overline{y} \\Rightarrow \\overline{x' + y'} = \\overline{x + y}.$$\n\n$$\\overline{x'} = \\overline{x} \\Leftrightarrow \\exists k \\in \\Z, \\quad x' - x = kn,$$\n\n$$\\overline{y'} = \\overline{y} \\Leftrightarrow \\exists l \\in \\Z, \\quad y' - y = ln \\,;$$\n\n<PageRef :page=\"25\" />\n\n$$\\text{alors} \\quad (\\overline{x'} = \\overline{x} \\text{ et } \\overline{y'} = \\overline{y}) \\Rightarrow x' + y' - (x + y) = (k + l)n,$$\n\n$$\\text{donc} \\qquad \\overline{x' + y'} = \\overline{x + y}.$$\n\nL’application $(\\overline{x}, \\overline{y}) \\mapsto \\overline{x + y}$ définit une loi de composition interne dans $\\Zn{n}$, induite par l’addition du groupe $\\Z$.\n\nCette loi est encore notée $+$ et quels que soient $\\overline{x}, \\overline{y}$ dans $\\Zn{n}$, on a :\n\n$$\\overline{x} + \\overline{y} = \\overline{x + y}$$\n\n$(\\Z, +)$ étant un groupe abélien, on vérifie facilement qu’il en est de même de $\\left(\\Zn{n}, +\\right)$ ; $\\overline{0}$ est l’élément neutre de ce groupe ; l’opposé d’un élément $\\overline{x}$ est $-\\overline{x} = \\overline{-x}$.\n\n*En conclusion (compte tenu de $(9)$) : le groupe $\\Zn{n}$ des classes de congruence de $\\Z$ modulo $n$ est un groupe abélien fini d’ordre $n$.*\n\n*Nous verrons plus loin (exemple $(2.5)$) une autre interprétation de ce groupe.*"
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "1bc9a413a576bfe0a047fab45c3052cbe4c4786f2c5acfc721b0b2a900b6f388",
+        "text": "Soit $E$ un ensemble non vide ; notons $S_E$ l’ensemble des *permutations* de $E$ (c’est-à-dire des bijections de $E$ dans lui-même). On sait que si $f$ et $g$ sont deux éléments de $S_E$, alors $f \\circ g \\in S_E$.\n\nLa composition des applications est donc une loi de composition interne dans $S_E$ ; or cette loi est associative et si $\\id_E$ désigne l’application « identité » de $E$, on a :\n\n$$\\id_E \\circ f = f \\circ \\id_E = f, \\qquad \\text{pour tout } f \\in S_E \\,;$$\n\nde plus, toute permutation $f$ de $E$ admet une application réciproque $f^{-1}$ qui est aussi une permutation de $E$ et qui vérifie $f^{-1} \\circ f = f \\circ f^{-1} = \\id_E$.\n\nOn en déduit que $(S_E, \\circ)$ est un groupe.\n\nLe groupe $S_E$ est appelé *groupe symétrique de $E$*.\n\nSi $E = \\{1, 2, \\dots, n\\}$, le groupe symétrique $S_E$ est noté $S_n$ et s’appelle le *groupe symétrique de degré $n$*.\n\nOn sait, d’après un résultat d’analyse combinatoire (voir par <PageRef :page=\"26\" /> exemple [16]), que le nombre des permutations d’un ensemble de $n$ éléments est $n!$ ; par suite :\n\n*$S_n$ est un groupe fini d’ordre $n!$*."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "d96430ac0f126ec28e5f1459d2063392ed51973768dc1b4d38c320a2444237b7",
+        "text": "Un élément $\\sigma \\in S_n$ s’écrit :\n\n$$\\sigma = \\begin{pmatrix} 1 & 2 & \\dots & n \\\\ \\sigma(1) & \\sigma(2) & \\dots & \\sigma(n) \\end{pmatrix}.$$\n\nAinsi, les $6$ éléments de $S_3$ peuvent s’écrire :\n\n$$e = \\begin{pmatrix} 1 & 2 & 3 \\\\ 1 & 2 & 3 \\end{pmatrix}, \\quad \\sigma_1 = \\begin{pmatrix} 1 & 2 & 3 \\\\ 2 & 3 & 1 \\end{pmatrix}, \\quad \\sigma_2 = \\begin{pmatrix} 1 & 2 & 3 \\\\ 3 & 1 & 2 \\end{pmatrix}$$\n\n$$\\tau_1 = \\begin{pmatrix} 1 & 2 & 3 \\\\ 1 & 3 & 2 \\end{pmatrix}, \\quad \\tau_2 = \\begin{pmatrix} 1 & 2 & 3 \\\\ 3 & 2 & 1 \\end{pmatrix}, \\quad \\tau_3 = \\begin{pmatrix} 1 & 2 & 3 \\\\ 2 & 1 & 3 \\end{pmatrix}.$$\n\nPour $\\sigma$ et $\\tau$ dans $S_n$, $\\sigma \\circ \\tau$ est appelé produit de $\\tau$ par $\\sigma$ dans $S_n$ et\n\n$$\\sigma \\circ \\tau = \\begin{pmatrix} 1 & 2 & \\dots & n \\\\ \\sigma \\circ \\tau(1) & \\sigma \\circ \\tau(2) & \\dots & \\sigma \\circ \\tau(n) \\end{pmatrix},$$\n\noù $\\sigma \\circ \\tau(i) = \\sigma(\\tau(i))$."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "7bf26c9f273f85255ffed9f81063d671be4b3f58797c15d036aea5fb5b49c3f4",
+        "text": "On vérifiera que l’ensemble des $8$ matrices ci-dessous, dans lesquelles $i$ est le nombre complexe tel que $i^2 = -1$, est un groupe par rapport à la multiplication des matrices carrées d’ordre $2$ sur $\\C$ :\n\n$$\\left\\{ \\begin{array}{cccc} \\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix}, & \\begin{pmatrix} -1 & 0 \\\\ 0 & -1 \\end{pmatrix}, & \\begin{pmatrix} 0 & 1 \\\\ -1 & 0 \\end{pmatrix}, & \\begin{pmatrix} 0 & -1 \\\\ 1 & 0 \\end{pmatrix} \\\\[8pt] \\begin{pmatrix} 0 & i \\\\ i & 0 \\end{pmatrix}, & \\begin{pmatrix} 0 & -i \\\\ -i & 0 \\end{pmatrix}, & \\begin{pmatrix} -i & 0 \\\\ 0 & i \\end{pmatrix}, & \\begin{pmatrix} i & 0 \\\\ 0 & -i \\end{pmatrix} \\end{array} \\right\\}.$$\n\nCe groupe est appelé *groupe des quaternions*, il se note en général $Q_8$ :\n\n*$Q_8$ est un groupe d’ordre $8$, non abélien.*"
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "53b751941a898526157d67fab3feee6e557cec69a4e4b39489d18f405e6c0637",
+        "text": "$E$ étant un espace vectoriel sur un corps commutatif $K$, on démontre en algèbre linéaire que l’ensemble des automorphismes $K$-linéaires de $E$ est un groupe par rapport à la loi $\\circ$ de composition des applications.\n\nCe groupe est appelé *groupe linéaire général de $E$* et est noté $\\GL(E)$ [23].\n\nPour tout entier $n > 0$ et tout corps commutatif $K$, l’ensemble des matrices carrées d’ordre $n$ inversibles est un groupe par rapport à la multiplication des matrices ; ce groupe se note $\\GL(n, K)$ et est appelé *groupe linéaire général des matrices carrées inversibles d’ordre $n$ sur $K$* [50] ; il est non abélien pour $n \\geqslant 2$."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "96e7d17349b68a577437d4e439494e27f3c0e957ed3df1ba27d6ce9c1e9e8367",
+        "text": "Tables des groupes (additifs) $\\Zn{2}$, $\\Zn{3}$, $\\Zn{4}$ :\n\n<CayleyTable :group=\"BOOK_TABLES_T1.z2\" caption=\"Table du groupe additif ℤ/(2)\" />\n\n<CayleyTable :group=\"BOOK_TABLES_T1.z3\" caption=\"Table du groupe additif ℤ/(3)\" />\n\n<CayleyTable :group=\"BOOK_TABLES_T1.z4\" caption=\"Table du groupe additif ℤ/(4)\" />\n\nLes trois groupes ci-dessus étant *abéliens*, chacune des tables est *symétrique par rapport à la diagonale principale* du carré (diagonale nord-ouest, sud-est). Cette symétrie n’existe plus dans le cas d’un groupe non abélien, tel qu’en particulier $S_3$, dont la table est écrite ci-dessous en tenant compte des notations $(1.15)$ :\n\n<span id=\"ref-table-10\"></span>\n\n<CayleyTable :group=\"BOOK_TABLES_T1.table10\" caption=\"Table (10) — Groupe symétrique S₃\" />"
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "54a6f418bae05facdad2d4e7a3e0fe85bdd8c58fe26c16a74cad4d271c95dce1",
+        "text": "$1^\\circ$ Un groupe fini peut éventuellement être défini par la donnée d’une table de multiplication. Considérons par exemple la table suivante :\n\n<span id=\"ref-table-11\"></span>\n\n<CayleyTable :group=\"BOOK_TABLES_T1.table11\" caption=\"Table (11)\" />\n\n<PageRef :page=\"29\" />\n\nL’examen de la $1^{\\text{re}}$ ligne et de la $1^{\\text{re}}$ colonne montre que $e$ est *élément unité* ; d’autre part, $a^2 = b^2 = c^2 = e$ implique que $a, b, c$ *sont inversibles* et chacun d’eux est égal à son inverse. La table étant symétrique par rapport à la diagonale principale, la loi de composition considérée est commutative. Il reste à vérifier que la loi est *associative*, ce qui, ici, ne présente pas de difficultés ; ainsi *la table $(11)$ définit un groupe abélien d’ordre $4$*.\n\n$2^\\circ$ Une table de Cayley dont chaque ligne et chaque colonne est formée par les mêmes éléments dans un certain ordre est appelée un *carré latin* [20].\n\nDans un groupe, quels que soient $a$ et $b$, on sait qu’il existe un unique $x$ et un unique $y$ tels que\n\n$$ax = b \\quad \\text{et} \\quad ya = b \\,;$$\n\non en déduit que *la table de multiplication d’un groupe fini est toujours un carré latin* ; mais la *réciproque est fausse*, car un carré latin ne vérifie pas toujours la règle d’associativité.\n\nConsidérons par exemple le carré latin :\n\n<span id=\"ref-table-12\"></span>\n\n<CayleyTable :group=\"BOOK_TABLES_T1.table12\" caption=\"Table (12)\" />\n\nOn a $(ab)c = dc = a$ et $a(bc) = ad = c$, la table $(12)$ ne définit donc pas un groupe."
+      }
+    ],
+    "docs/chap1/2-sous-groupes.md": [
+      {
+        "tag": "MathBlock",
+        "sha256": "bc34d121229aa89e783ccbadf56f47c3541fb43db30d2edd38a34fea83f6b9b3",
+        "text": "$G$ étant un groupe, une partie non vide $H$ de $G$ est un *sous-groupe* de $G$ si\n\n<span id=\"ref-eq-1-13\"></span>\n<span id=\"ref-eq-1-14\"></span>\n\n$$\\begin{align}\n&(x, y) \\in H \\times H \\Rightarrow xy \\in H \\tag{13} \\\\\n&x \\in H \\Rightarrow x^{-1} \\in H \\tag{14}\n\\end{align}$$"
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "f03c4bfaea5bebd50ae40fc47e1082dea724a0ae1c7c08fe83b0b454b2845049",
+        "text": "$1^\\circ$ Les conditions $(13)$ et $(14)$ impliquent $e \\in H$.\n\n$2^\\circ$ Tout sous-groupe $H$ d’un groupe $G$ est un groupe relativement à la loi de composition induite dans $H$ par celle de $G$.\n\n$3^\\circ$ Un groupe ayant plus d’un élément a au moins deux sous-groupes, $G$ et le sous-groupe réduit à l’élément neutre, *que l’on notera $(e)$*."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "63726c7f0f74d328842929fce959800870034a0aeb5b1242b9b02828337b19e6",
+        "text": "On appelle *sous-groupe propre* d’un groupe $G$ tout sous-groupe de $G$ *distinct* de $G$."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "a631744cacb5e19e70ec15ce9e90d0303193d505532ab07b157b031d1785cdae",
+        "text": "On écrira :\n\n$$\\begin{aligned}\nH \\leqslant G &\\quad \\text{pour exprimer que } H \\text{ } \\textit{est un sous-groupe de} \\text{ } G, \\\\\nH < G &\\quad \\text{si } H \\text{ est un sous-groupe } \\textit{propre} \\text{ de } G.\n\\end{aligned}$$"
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "93ed44aef5c1788a3d536f7b5908d723bd0dac05fa133fef51719cd8f1e914e6",
+        "text": "*Soit $H$ une partie non vide d’un groupe $G$, alors $H$ est un sous-groupe de $G$ si et seulement si*\n\n<span id=\"ref-eq-1-15\"></span>\n\n$$\\forall (x, y) \\, \\bigl[(x, y) \\in H \\times H \\Rightarrow xy^{-1} \\in H\\bigr] \\tag{15}$$"
+      },
+      {
+        "tag": "ProofBlock",
+        "sha256": "e0a076b33e67ba14a3b01ff53c4dea84edf6f96018e714d8e4a2491a2eabc39c",
+        "text": "$1^\\circ$ Supposons $H \\leqslant G$ ; soit $(x, y) \\in H \\times H$, alors $y \\in H \\Rightarrow y^{-1} \\in H$, d’après $(14)$ ; par suite\n\n$$(x, y^{-1}) \\in H \\times H \\Rightarrow xy^{-1} \\in H, \\quad \\text{d’après } (13) \\,;$$\n\non en déduit $(15)$.\n\n$2^\\circ$ Supposons $(15)$ vérifié ; soit $(x, y) \\in H \\times H$.\n\n$$\\begin{aligned}\nx \\in H \\Rightarrow (x, x) \\in H \\times H, &\\quad \\text{d’où } xx^{-1} = e \\in H \\,; \\\\\ne \\in H \\text{ et } x \\in H \\Rightarrow (e, x) \\in H \\times H, &\\quad \\text{d’où } ex^{-1} = x^{-1} \\in H \\,;\n\\end{aligned}$$\n\non en déduit que $(15) \\Rightarrow (14)$. Par suite,\n\n$$(x, y) \\in H \\times H \\Rightarrow (x, y^{-1}) \\in H \\times H, \\quad \\text{d’où } xy \\in H,$$\n\ndonc $(15) \\Rightarrow (13)$."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "9366f982a17b38dd339302ce3d2ee58fe2594e664b53662e44b2b3eb4cecefb2",
+        "text": "En notation additive, $(15)$ s’écrit :\n\n<span id=\"ref-eq-1-15p\"></span>\n\n$$\\forall (x, y) \\, \\bigl[(x, y) \\in H \\times H \\Rightarrow (x - y) \\in H\\bigr] \\tag{15'}$$"
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "c34f26afb79c8c58804d1a18b8fdc1330784f869ae6bc9cda599e410b9a7e807",
+        "text": "*Soit $G$ un groupe et $\\{H_i\\}_{i \\in I}$ une famille de sous-groupes de $G$ ; alors, quel que soit l’ensemble non vide $I$, $\\bigcap_{i \\in I} H_i$ est un sous-groupe de $G$.*"
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "1aaca3d166c9fa477fcf7731fe99013d64f94c304713f2434c43b1a9e1679cde",
+        "text": "En général, $\\bigcup_{i \\in I} H_i$ n’est pas un sous-groupe de $G$. En effet, on peut vérifier, par exemple, que dans le groupe $(\\Z, +)$, $3\\Z = \\{3x ;\\; x \\in \\Z\\}$ et $8\\Z$ sont des sous-groupes ; or $3 + 8 = 11$ et $11 \\notin 3\\Z \\cup 8\\Z$, donc $3\\Z \\cup 8\\Z$ n’est pas un sous-groupe de $\\Z$."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "805e8471ded6983c7cc220f068bf206231a91e4266ce6fe5624cc36ea52a0341",
+        "text": "*Si, dans un groupe $G$, $\\{H_i\\}_{i \\in I}$ est une famille de sous-groupes totalement ordonnée par l’inclusion, alors $\\bigcup_{i \\in I} H_i$ est un sous-groupe de $G$.*"
+      },
+      {
+        "tag": "ProofBlock",
+        "sha256": "35e0170ac446022f8415b2fd5181b492c70f02fc14b8f9b4cec935858ae14e55",
+        "text": "Soient $x$ et $y$ dans $\\bigcup_{i \\in I} H_i$ ; il existe $j$ et $k$ dans $I$ tels que $x \\in H_j$ et $y \\in H_k$. La famille des $H_i$ étant totalement ordonnée par l’inclusion, on a $H_j \\subseteq H_k$ ou $H_k \\subseteq H_j$. Plaçons-nous, par exemple, dans le premier cas ; on a alors $x$ et $y$ dans $H_k$, d’où $xy^{-1}$ dans $H_k$ et par suite $xy^{-1} \\in \\bigcup_{i \\in I} H_i$. On en conclut, d’après le théorème $(1.24)$, que $\\bigcup_{i \\in I} H_i$ est un sous-groupe de $G$."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "72e8a839f976389c1dff20a5c6b9b24b892b6e04ef08dc587fcd016541bb674b",
+        "text": "*Pour tout entier $n \\in \\N$, $n\\Z = \\{nx ;\\; x \\in \\Z\\}$ est un sous-groupe de $\\Z$ et tout sous-groupe de $\\Z$ est de cette forme.*\n\nOn vérifie facilement que pour tout $n \\in \\N$, $n\\Z$ est un sous-groupe de $\\Z$. Montrons que, quel que soit $H$ sous-groupe de $\\Z$, il existe un *unique* $n \\in \\N$ tel que $H = n\\Z$.\n\nSi $H = (0)$, $H = 0\\Z$ ; supposons $H \\neq (0)$. Il existe $x \\neq 0$ dans $H$ ; $x \\in H$ implique $-x \\in H$ ; on en déduit qu’il existe au moins un entier strictement positif dans $H$. Posons <PageRef :page=\"32\" /> $E = \\{x \\in H ;\\; x > 0\\}$ ; $E$ est une partie non vide de $\\N$, donc il existe dans $E$ un plus petit élément $n$ ; on en déduit que $n\\Z \\subseteq H$.\n\nD’autre part, soit $x \\in H$ ; supposons $x > 0$, alors $x \\in E$, donc $x \\geqslant n$. La division euclidienne dans $\\Z$ permet d’écrire :\n\n$$\\begin{aligned}\n&x = nq + r, \\quad \\text{avec } q \\text{ et } r \\text{ dans } \\Z \\quad \\text{et} \\quad 0 \\leqslant r < n. \\\\\n&n \\in H \\Rightarrow nq \\in H, \\quad \\text{par suite } x - nq = r \\in H.\n\\end{aligned}$$\n\nOr on a $0 \\leqslant r < n$ et $n$ est le plus petit entier positif contenu dans $H$, donc $r = 0$ et $x \\in n\\Z$ ; on en conclut que $H = n\\Z$.\n\nD’autre part, $m$ et $n$ entiers positifs et $m\\Z = n\\Z$ implique $m = n$, d’où l’unicité de l’entier $n$ tel que $H = n\\Z$."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "3089a4402f011bd1f1568ed6901d6267951a5ae331df675160e893d23544d1a2",
+        "text": "$1^\\circ$ Les groupes additifs $\\Z$, $\\Q$, $\\R$, $\\C$ sont tels que\n\n$$\\Z < \\Q < \\R < \\C \\quad (\\text{notation } (1.23)).$$\n\n$2^\\circ$ Les groupes multiplicatifs $\\Q^*$, $\\R^*$, $\\C^*$ vérifient :\n\n$$\\Q^* < \\R^* < \\C^*.$$\n\n$3^\\circ$ Si $\\Q^*_+ = \\{x \\in \\Q ;\\; x > 0\\}$ et $\\R^*_+ = \\{x \\in \\R ;\\; x > 0\\}$, on a :\n\n$$\\Q^*_+ < \\Q^*, \\quad \\R^*_+ < \\R^* \\quad \\text{et} \\quad \\Q^*_+ < \\R^*_+.$$"
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "960e9b252974d9fff40f398b6d3e914982b892f210835368fd2b86cd6d01ec83",
+        "text": "Soit $U$ l’ensemble des *nombres complexes de module $1$* ; $|z|$ désignant le module de $z \\in \\C$, on sait que $|zz'| = |z|\\,|z'|$ quels que soient $z$ et $z'$ dans $\\C$ ; on vérifie alors facilement que *$U$ est un sous-groupe multiplicatif de $\\C^*$*.\n\nD’autre part, pour tout entier $n > 0$, désignons par $U_n$ l’ensemble des *racines $n$-ième de l’unité dans $\\C$*.\n\nOn sait que $U_n = \\{z_0, z_1, \\dots, z_{n-1}\\}$ où $z_k = \\cos \\dfrac{2k\\pi}{n} + i \\sin \\dfrac{2k\\pi}{n}$.\n\nOn a $z_0 = 1$, $U_n \\subset U$ et $\\card U_n = n$ ; d’autre part, quels que soient $z_k$ et $z_{k'}$ dans $U_n$ :\n\n$$\\begin{aligned}\n(z_k^n = 1 \\text{ et } z_{k'}^n = 1) &\\Rightarrow (z_k z_{k'})^n = 1 \\\\\n\\text{et } z_k^n = 1 &\\Rightarrow (z_k^{-1})^n = 1 \\,;\n\\end{aligned}$$\n\npar suite, *$U_n$ est un sous-groupe fini d’ordre $n$ de $U$, donc de $\\C^*$*."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "1c24419164bb421d424b06630b086042bb41cc53e9f69f4094e17fb8dfc3023a",
+        "text": "Le groupe linéaire général $\\GL(E)$ d’un espace vectoriel $E$ [exemple $(1.17)$] est un *sous-groupe du groupe symétrique $S_E$*."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "b53f353ab0c0be0db3c39e227801e8d7f362f6fb986948e37f88fee8553bc6c7",
+        "text": "Considérons l’espace vectoriel euclidien $\\R^2$ ; le produit scalaire de deux vecteurs $x$ et $y$ de $\\R^2$ étant noté $(x \\mid y)$, on appelle *similitude* de $\\R^2$ tout élément $u \\in \\GL(\\R^2)$ tel qu’il existe $\\lambda_u \\in \\R^*_+$ vérifiant :\n\n<span id=\"ref-eq-1-16\"></span>\n\n$$(u(x) \\mid u(y)) = \\lambda_u (x \\mid y), \\quad \\forall (x, y) \\in \\R^2 \\times \\R^2 \\tag{16}$$\n\n$\\lambda_u$ s’appelle le *rapport à la similitude $u$*.\n\nOn démontre [23] que l’ensemble des similitudes de $\\R^2$ forme un *sous-groupe de $\\GL(\\R^2)$*, noté $\\operatorname{GO}(\\R^2)$ et appelé *groupe des similitudes linéaires de $\\R^2$*."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "127ac8e31746183398b1f525f5185b784643ee4c494d2236b8f3711756333685",
+        "text": "$1^\\circ$ La définition du groupe $\\operatorname{GO}(\\R^2)$ se généralise à celle du groupe $\\operatorname{GO}(E)$ des similitudes d’un espace vectoriel euclidien $E$ de dimension finie quelconque [23].\n\n$2^\\circ$ La notion de similitude peut aussi être envisagée dans le plan affine euclidien ([14] et [23]) et plus généralement dans un espace affine euclidien $\\mathscr{E}$ de dimension finie quelconque, d’où la notion de *groupe des similitudes affines de $\\mathscr{E}$* [23]."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "fd5ebdc54830de6c43282a90f44a3be670d57e6a6f2f5111d4bdd3662d0fdf3f",
+        "text": "Soit $P$ le plan affine euclidien ; on désigne par $d(x, y)$ la distance de deux points $x$ et $y$ du plan $P$. On appelle *isométrie* du plan $P$ toute application $f : P \\to P$ qui conserve les distances, c’est-à-dire telle que :\n\n$$\\forall (x, y) \\in P \\times P, \\quad d(f(x), f(y)) = d(x, y).$$\n\nOn démontre ([1], exercice 26, chap. $\\mathrm{I}^{\\mathrm{er}}$) que toute isométrie est une bijection, donc appartient au groupe symétrique $S_P$ et que l’ensemble $\\mathscr{I}(2)$ de ces isométries est un *sous-groupe de $S_P$*, appelé *groupe des isométries du plan $P$*.\n\nOn définit de façon analogue le groupe $\\mathscr{I}(3)$ des isométries de l’espace affine euclidien de dimension $3$ ([1] et [23]), et plus généralement on peut considérer le groupe $\\mathscr{I}(n)$ des isométries d’un espace affine euclidien de dimension $n \\geqslant 1$ quelconque [23]."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "365ac33d3bf2446f6bd5871c4386841445356e8fb54e8e69629dc45c0e339925",
+        "text": "Soit $G$ un groupe quelconque, posons :\n\n$$Z(G) = \\{x \\in G ;\\; xa = ax, \\; \\forall a \\in G\\} \\,;$$\n\n$Z(G)$ est l’ensemble des éléments $x \\in G$ qui commutent avec tout élément de $G$. $Z(G)$ est appelé le *centre du groupe $G$* et on vérifie facilement que c’est un *sous-groupe de $G$*. On remarque que $Z(G)$ est un sous-groupe *propre* de $G$ si et seulement si $G$ est *non abélien*."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "1acea0c8ee1f7c727157150098515ba4910ed31a1542b72df69520a38a664c32",
+        "text": "Soient $G$ un groupe et $S$ une partie non vide de $G$ ; désignons par $\\mathscr{H}_S$ l’ensemble des sous-groupes de $G$ contenant $S$ et posons\n\n$$\\langle S \\rangle = \\bigcap_{H \\in \\mathscr{H}_S} H.$$\n\n$\\langle S \\rangle$ est un sous-groupe de $G$ (proposition $(1.25)$) appelé *sous-groupe de $G$ engendré par $S$*."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "40f28078efe8c5d4d277b30b924eca86ec89f8f6a1720428ef989dd21984e59b",
+        "text": "Dans l’ensemble des sous-groupes de $G$ ordonné par l’inclusion, *$\\langle S \\rangle$ est le plus petit sous-groupe de $G$ contenant $S$*."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "3dbc5f1fd2f14994ddfba0029f0fec3e143573a812cc0775e30d9b04a4e8f703",
+        "text": "*$S$ étant une partie non vide d’un groupe $G$, on a :*\n\n<span id=\"ref-eq-1-17\"></span>\n\n$$\\langle S \\rangle = \\{x_1 x_2 \\dots x_n ;\\; n \\in \\N^*, \\; x_i \\in S \\text{ } \\textit{ou} \\text{ } x_i^{-1} \\in S, \\; \\forall i \\, (1 \\leqslant i \\leqslant n)\\} \\tag{17}$$"
+      },
+      {
+        "tag": "ProofBlock",
+        "sha256": "c274832a977a668fa9d63ffadadf193ef541c7b1876fc2a3b54a234ff058f292",
+        "text": "Désignons par $H$ le second membre de $(17)$ et démontrons que $H = \\langle S \\rangle$. On remarque que tout $x$ de $S$ appartient à $H$, d’où $S \\subseteq H$.\n\nMontrons que $H$ est un sous-groupe de $G$. Considérons $x = x_1 x_2 \\dots x_n$ et $y = y_1 y_2 \\dots y_p$ dans $H$ ; alors\n\n$$xy^{-1} = x_1 x_2 \\dots x_n y_p^{-1} y_{p-1}^{-1} \\dots y_1^{-1}$$\n\nappartient à $H$. On en déduit que $H$ est un élément de l’ensemble $\\mathscr{H}_S$, d’où $\\langle S \\rangle \\subseteq H$.\n\n<PageRef :page=\"35\" />\n\nD’autre part, tout sous-groupe de $G$ contenant $S$ contient nécessairement tous les éléments de $H$, par suite $H = \\langle S \\rangle$."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "8d0eaa6ac911208ccb9eed6f38b639490c4ecb47cdd6cc8676bdaf783769d89e",
+        "text": "Si la loi de composition du groupe $G$ est notée *additivement*, les formules $(17)$ et $(19)$ deviennent respectivement :\n\n<span id=\"ref-eq-1-17p\"></span>\n<span id=\"ref-eq-1-19p\"></span>\n\n$$\\begin{align}\n\\langle S \\rangle &= \\left\\{ \\sum_{i=1}^n x_i ;\\; n \\in \\N^*, \\; x_i \\in S \\text{ ou } -x_i \\in S, \\; \\forall i \\, (1 \\leqslant i \\leqslant n) \\right\\} \\tag{17'} \\\\\n\\langle x \\rangle &= \\{nx ;\\; n \\in \\Z\\} \\tag{19'}\n\\end{align}$$"
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "1fef0e7137cd8283c0366960eee896fdfed222ebd8aee8920c1f76c2525b56f0",
+        "text": "Soit $G$ un groupe.\n\n$1^\\circ$ Si $S$ est une partie non vide de $G$ telle que $\\langle S \\rangle = G$, on dit que $S$ est une *partie génératrice* du groupe $G$, ou que $S$ est un *ensemble de générateurs* de $G$, ou encore que $S$ *engendre* $G$.\n\n$2^\\circ$ S’il existe $x \\in G$ tel que $\\langle x \\rangle = G$, le groupe $G$ est dit *monogène*.\n\nPlus généralement, s’il existe une partie non vide et finie de $G$, $S = \\{x_1, x_2, \\dots, x_n\\}$, telle que $\\langle S \\rangle = G$, on dit que le groupe $G$ est de *type fini*. Un groupe fini est nécessairement de type fini, mais la réciproque est fausse (voir exemple $(1.42)$ $1^\\circ$)."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "48cc55f69f3155437e9ceee54f7cc02ff69c3cc2f2ffb9e1f7ad759208a577d1",
+        "text": "Considérons le groupe symétrique $S_3$.\n\n$$S_3 = \\{e, \\sigma_1, \\sigma_2, \\tau_1, \\tau_2, \\tau_3\\} \\quad (\\text{notations } (1.15)).$$\n\n<PageRef :page=\"36\" />\n\nLa table $(10)$ montre que $\\sigma_1^2 = \\sigma_2$ et $\\sigma_1^3 = e$, d’où\n\n$$\\langle \\sigma_1 \\rangle = \\{\\sigma_1, \\sigma_2, e\\}.$$\n\nD’autre part, $\\sigma_1 \\circ \\tau_3 = \\tau_2$, $\\tau_3 \\circ \\sigma_1 = \\tau_1$, par suite\n\n$$\\langle \\sigma_1, \\tau_3 \\rangle = \\{\\sigma_1, \\sigma_2, \\tau_1, \\tau_2, \\tau_3, e\\} = S_3 \\,;$$\n\ndonc *$\\{\\sigma_1, \\tau_3\\}$ est une partie génératrice de $S_3$*."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "824bad733ad39a0ede9ffe833f2c906a3bd3380aafa614757dc9e7452b6a0b51",
+        "text": "$1^\\circ$ Puisque tout $n \\in \\Z$ s’écrit $1 + 1 + \\dots + 1$ si $n > 0$, $(-1) + (-1) + \\dots + (-1)$ si $n < 0$ et $0 = 1 + (-1)$, *$\\Z$ est un groupe monogène engendré par $1$*.\n\nOn remarque que $\\Z$ peut aussi être considéré comme engendré par $-1$.\n\n$2^\\circ$ Considérons le groupe $\\Zn{4}$ dont la table d’addition est explicitée dans l’exemple $(1.18)$ ; celle-ci permet de montrer que le groupe $\\Zn{4}$ est monogène engendré par $\\overline{1}$ et que $\\Zn{4}$ peut aussi être considéré comme engendré par $\\overline{3}$ ; donc *$\\Zn{4}$ est un groupe monogène fini*."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "d9d5ef3aef09d5a8a17e7ea34bf150b2ed2b963d4d823570b7abc293102ba343",
+        "text": "On appellera *groupe cyclique* tout groupe monogène fini.\n\n*Les groupes monogènes et en particulier les groupes cycliques seront étudiés en détail au chapitre III.*"
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "56b2b15270a39d618d3799556096f6bcad3b895d446dfdd3d6e386d4d9b8bad9",
+        "text": "Soit $G$ un groupe quelconque et $x$ un élément de $G$.\n\n*$a)$* Si le sous-groupe de $G$ engendré par $x$ est de cardinal infini, on dit que *$x$ est d’ordre infini* dans $G$.\n\n*$b)$* Si le sous-groupe de $G$ engendré par $x$ est fini, on dit que *$x$ est d’ordre fini dans $G$* et le cardinal du sous-groupe $\\langle x \\rangle$ s’appelle *l’ordre de $x$ dans $G$* ; on le note *$o(x)$*."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "14ef4af254f6795a47272fe240739b32791d844124c740ed673bf4a511b5c470",
+        "text": "$1^\\circ$ Dans tout groupe $G$, l’élément neutre est le seul élément d’ordre $1$.\n\n$2^\\circ$ Dans $\\Z$, tout élément $x \\neq 0$ est d’ordre infini.\n\n$3^\\circ$ Dans le groupe symétrique $S_3$, $\\tau_1$, $\\tau_2$, $\\tau_3$ sont d’ordre $2$ et $\\sigma_1$, $\\sigma_2$ sont d’ordre $3$ (voir la table $(10)$)."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "de43d754f21ef4c2af2b3ecff78bcd7aa01c9a5cfc650b4ab27f49efdba69e4a",
+        "text": "Étant donné deux parties non vides $X$ et $Y$ d’un groupe $G$, on pose :\n\n<span id=\"ref-eq-1-20\"></span>\n\n$$XY = \\{xy ;\\; (x, y) \\in X \\times Y\\} \\tag{20}$$\n\nsi $Y = X$, on écrit $X^2 = \\{xy ;\\; (x, y) \\in X \\times X\\}$.\n\nSi le groupe $G$ est noté additivement, $XY$ est remplacé par\n\n<span id=\"ref-eq-1-20p\"></span>\n\n$$X + Y = \\{x + y ;\\; (x, y) \\in X \\times Y\\} \\tag{20'}$$\n\n*Cas particuliers :*\n\n*$a)$* $X = \\{x\\}$, $x \\in G$ et $Y = G$ ; on a alors *$XY = xG = G$*, car $x$ est inversible et on a aussi *$YX = Gx = G$*.\n\n*$b)$* $X = G = Y$ ; alors *$G^2 = G$*.\n\n*$c)$* *$X < G$ et $Y < G$* ; l’exemple ci-dessous montre qu’en général on a *$XY \\neq YX$ et ni $XY$, ni $YX$ ne sont des sous-groupes de $G$*.\n\nEn effet, dans le groupe symétrique $S_3$, posons\n\n$$H = \\langle \\tau_1 \\rangle = \\{e, \\tau_1\\} \\quad \\text{et} \\quad K = \\langle \\tau_2 \\rangle = \\{e, \\tau_2\\} \\,;$$\n\nalors :\n\n$$\\begin{aligned}\nHK &= \\{e, \\tau_1, \\tau_2, \\tau_1 \\circ \\tau_2 = \\sigma_1\\} \\\\\n\\text{et} \\quad KH &= \\{e, \\tau_1, \\tau_2, \\tau_2 \\circ \\tau_1 = \\sigma_2\\}.\n\\end{aligned}$$\n\n$$\\sigma_1 \\neq \\sigma_2 \\Rightarrow HK \\neq KH.$$\n\n$$\\sigma_1^{-1} = \\sigma_2 \\quad \\text{et} \\quad \\sigma_2 \\notin HK \\,; \\qquad \\sigma_2^{-1} = \\sigma_1 \\quad \\text{et} \\quad \\sigma_1 \\notin KH,$$\n\npar suite ni $HK$, ni $KH$ ne sont des sous-groupes de $G$."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "fa0b08f7cc2beec4d379ae45436dc47089129f1b6b96bf2aba454f3fea58ef23",
+        "text": "*$H$ et $K$ étant deux sous-groupes d’un groupe $G$, alors $HK$ est un sous-groupe de $G$ si et seulement si $HK = KH$.*"
+      },
+      {
+        "tag": "ProofBlock",
+        "sha256": "bb86be1528cebb9deb50afa82af78e66650379f304acfaa4b3da9427f0bed6a3",
+        "text": "$1^\\circ$ Supposons $HK \\leqslant G$. Soit $x \\in H$ et $y \\in K$, on peut écrire\n\n$$yx = (x^{-1} y^{-1})^{-1}$$\n\n*$yx$ est l’inverse d’un élément du sous-groupe $HK$*, donc $yx \\in HK$, d’où $KH \\subseteq HK$.\n\nSoit $z \\in HK$, alors $z^{-1} \\in HK$, donc il existe $x' \\in H$ et $y' \\in K$ tels que $z^{-1} = x'y'$ ; par suite $z = {y'}^{-1} {x'}^{-1} \\in KH$, d’où $HK \\subseteq KH$.\n\nOn en conclut que $HK$ sous-groupe de $G$ implique $HK = KH$.\n\n$2^\\circ$ Réciproquement, supposons $HK = KH$ ; on remarque que $e \\in HK$ implique $HK \\neq \\varnothing$. Soient $x$ et $x_1$ dans $H$, $y$ et $y_1$ dans $K$ ;\n\n$$\\begin{aligned}\n&(xy)(x_1 y_1)^{-1} = x(y y_1^{-1} x_1^{-1}), \\\\\n&(y y_1^{-1} x_1^{-1} \\in KH \\text{ et } HK = KH) \\Rightarrow \\exists (x_2, y_2) \\in H \\times K, \\\\\n&y y_1^{-1} x_1^{-1} = x_2 y_2 \\,;\n\\end{aligned}$$\n\nalors, $(xy)(x_1 y_1)^{-1} = x x_2 y_2 \\in HK$ et d’après le théorème $(1.24)$, $HK$ est un sous-groupe de $G$."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "506f1724b2444049efd5f026cb4f0806f6a0f6eed5dc3b87bd63816d463718c5",
+        "text": "$1^\\circ$ Si $HK$ est un sous-groupe de $G$, alors $HK$ est le sous-groupe de $G$ engendré par $H \\cup K$.\n\n$2^\\circ$ *Si $G$ est abélien, quels que soient les sous-groupes $H$ et $K$ de $G$, $HK$ est un sous-groupe de $G$.*"
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "4af9be6b519948a8b02e4052a80ca6b513c40daca4137180d18577f9e16885c1",
+        "text": "*Soit $\\{H_i\\}_{1 \\leqslant i \\leqslant n}$ une famille finie de sous-groupes de $G$. Si, quel que soit $(i, j)$ tel que $1 \\leqslant i < j \\leqslant n$, $H_i H_j$ est un sous-groupe de $G$, alors*\n\n$$H_1 H_2 \\dots H_n = \\{x_1 x_2 \\dots x_n ;\\; x_i \\in H_i, \\; \\forall i \\, (1 \\leqslant i \\leqslant n)\\}$$\n\n*est un sous-groupe de $G$.*"
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "a230a476017c61b37a995af67725d46295b8d8f30d72c87831d0e5af4a99c473",
+        "text": "Compte tenu des notations ci-dessus, le sous-groupe $G' = H + K$ est dit *somme directe* des sous-groupes $H$ et $K$, si *$H \\cap K = (0)$*.\n\nDans ce cas, on écrit *$G' = H \\oplus K$*."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "589ce342d7e07fe00d6e629031e926cdb2bb717d3ebbce5f1deffe8d468f1887",
+        "text": "*$(G, +)$ étant un groupe abélien, la somme des deux sous-groupes $H$ et $K$ est directe, si et seulement si tout élément de $H + K$ s’écrit de façon unique : $x + y$, où $x \\in H$ et $y \\in K$.*"
+      },
+      {
+        "tag": "ProofBlock",
+        "sha256": "4b972946dc21fc2da3c69de6f66e99fa8713377f74c4b8bc6aa9240e6f801db1",
+        "text": "$1^\\circ$ Supposons la somme $H + K$ directe, c’est-à-dire que l’on a $H \\cap K = (0)$. Soit $z \\in H \\oplus K$ tel que $z = x + y = x' + y'$, où $x$ et $x'$ sont dans $H$ et $y, y'$ dans $K$ ; alors\n\n$$x - x' = y' - y \\text{ est dans } H \\cap K = (0),$$\n\npar suite $x = x'$ et $y = y'$.\n\n$2^\\circ$ Réciproquement, on suppose que tout $z \\in H + K$ s’écrive de façon unique $z = x + y$ où $x \\in H$, $y \\in K$.\n\nSoit $z \\in H \\cap K$, alors $z \\in H + K$ et on peut écrire :\n\n$$\\begin{aligned}\n& z = z + 0, && \\text{avec } z \\in H \\text{ et } 0 \\in K \\\\\n\\text{ou} \\quad & z = 0 + z, && \\text{avec } 0 \\in H \\text{ et } z \\in K.\n\\end{aligned}$$\n\nL’hypothèse implique alors $z = 0$, d’où $H \\cap K = (0)$."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "cac383eaa4bc06515cbe6446e46a6861e53f49a8b58be2ea9467f62821beff59",
+        "text": "Pour un élément $x \\in \\sum_{i \\in I} H_i$ ($I$ infini), on pourra écrire :\n\n$$x = \\sum_{i \\in I} x_i, \\quad \\text{où } x_i = 0, \\quad \\text{sauf pour un nombre fini d’indices } i \\,;$$\n\ncette condition s’exprime aussi par la formule : « *les $x_i$ étant presque tous nuls* »."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "c7a024668b430b27f9b8821200dedf83902f0347394167ac93a490d1ac2f4255",
+        "text": "$(G, +)$ étant un groupe *abélien* et $\\{H_i\\}_{i \\in I}$ une famille quelconque de sous-groupes de $G$, le sous-groupe $\\sum_{i \\in I} H_i$ est dit *somme directe* des sous-groupes $H_i$, si :\n\n<span id=\"ref-eq-1-21\"></span>\n\n$$\\forall j \\in I, \\quad H_j \\cap \\sum_{\\substack{i \\in I \\\\ i \\neq j}} H_i = (0) \\tag{21}$$\n\nLa somme directe des $H_i$, $i \\in I$, est notée : $\\bigoplus_{i \\in I} H_i$."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "364eeeed468580d3c07419dd40ed352c914a9b12ce473f673a78b5970c591b98",
+        "text": "*$I$ étant un ensemble non vide et $\\{H_i\\}_{i \\in I}$ une famille de sous-groupes d’un groupe abélien $(G, +)$, le sous-groupe $G' = \\sum_{i \\in I} H_i$ est somme directe des $H_i$, si et seulement si tout $x \\in G'$ s’écrit de façon unique :*\n\n$$x = \\sum_{1 \\leqslant k \\leqslant n} x_{i_k},$$\n\n*où $n \\in \\N^*$, $\\{i_1, \\dots, i_n\\} \\subseteq I$ et $x_{i_k} \\in H_{i_k}$, $\\forall k \\, (1 \\leqslant k \\leqslant n)$.*"
+      }
+    ],
+    "docs/chap1/3-morphismes.md": [
+      {
+        "tag": "MathBlock",
+        "sha256": "f3ac81f2e12ccd319c874dfd108954b1ca5490e1069b085481e190873cd10fb7",
+        "text": "Etant donné deux groupes $(G, \\cdot)$ et $(G', *)$, *un morphisme de groupes* de $G$ dans $G'$ est une application $f : G \\to G'$ telle que, quels que soient $x$ et $y$ dans $G$, on ait :\n\n<span id=\"ref-eq-1-22\"></span>\n\n$$f(x \\cdot y) = f(x) * f(y) \\tag{22}$$\n\nUn morphisme de groupes est aussi appelé *homomorphisme* de groupes.\n\nL’ensemble des morphismes d’un groupe $G$ dans un groupe $G'$ sera noté $\\operatorname{Hom}(G, G')$.\n\nUn morphisme d’un groupe $G$ dans lui-même est appelé *endomorphisme* de groupe.\n\nL’ensemble des endomorphismes d’un groupe $G$ sera noté $\\operatorname{End}(G)$."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "6c0e5e7b1fba73f1e19fb405bf717553a5fa437062d71648bdaee019722e2f4b",
+        "text": "*Tout $f \\in \\operatorname{Hom}(G, G')$ vérifie les propriétés suivantes :*\n\n- $1^\\circ$ $f(e) = e'$.\n- $2^\\circ$ $f(x^{-1}) = (f(x))^{-1}$, *quel que soit $x$ dans $G$.*\n- $3^\\circ$ $f(x^n) = (f(x))^n$, *quels que soient $x$ dans $G$ et $n$ dans $\\Z$.*\n- $4^\\circ$ $H \\leqslant G \\Rightarrow f(H) \\leqslant G'$.\n- $5^\\circ$ $H' \\leqslant G' \\Rightarrow f^{-1}(H') \\leqslant G$, *où $f^{-1}(H') = \\{x \\in G ; f(x) \\in H'\\}$.*"
+      },
+      {
+        "tag": "ProofBlock",
+        "sha256": "5d60d5497f8266417589602418fda91a16c803821a8c0a71c5d9356d18595d70",
+        "text": "$1^\\circ$ Pour tout $x \\in G$, on a $f(x) = f(xe) = f(x)f(e)$ ; or,\n\n$$f(x) \\in G' \\Rightarrow f(x) = f(x)e'.$$\n\nLa règle de simplification dans $G'$ implique alors :\n\n$$f(e) = e'.$$\n\n<PageRef :page=\"42\" />\n\n$2^\\circ$ Quel que soit $x \\in G$, $f(xx^{-1}) = f(x)f(x^{-1}) = f(e)$ ; or,\n\n$$f(e) = e' = f(x)(f(x))^{-1},$$\n\nd’où $(f(x))^{-1} = f(x^{-1})$.\n\n$3^\\circ$ Pour $n = 0$, $x^0 = e$ et $(f(x))^0 = e'$ ; on est ramené au $1^\\circ$.\n\nPour $n > 0$, $x^n = xx \\dots x$ ($n$ fois), d’où\n\n$$f(x^n) = f(x)f(x) \\dots f(x) \\quad (n \\text{ fois}),$$\n\ndonc $f(x^n) = (f(x))^n$.\n\nPour $n < 0$, on pose $n = -n'$, $n' > 0$ ;\n\n$$\n\\begin{aligned}\nx^n = (x^{-1})^{n'} \\Rightarrow f(x^n) &= (f(x^{-1}))^{n'} \\\\\n&= ((f(x))^{-1})^{n'} = (f(x))^{-n'}\n\\end{aligned}\n$$\n\nd’où $f(x^n) = f(x)^n$.\n\n$4^\\circ$ $f(H) = \\{f(x) ; x \\in H\\}$. Soient $y_1$ et $y_2$ dans $f(H)$ ; il existe $x_1$ et $x_2$ dans $H$ tels que $y_1 = f(x_1)$, $y_2 = f(x_2)$.\n\n$$y_1 y_2^{-1} = f(x_1)(f(x_2))^{-1} = f(x_1)f(x_2^{-1}),$$\n\nd’où $y_1 y_2^{-1} = f(x_1 x_2^{-1})$.\n\n$$(x_1 \\in H,\\; x_2 \\in H \\text{ et } H \\leqslant G) \\Rightarrow x_1 x_2^{-1} \\in H ;$$\n\npar suite $y_1 y_2^{-1} \\in f(H)$, donc $f(H) \\leqslant G'$.\n\n$5^\\circ$ Soient $x_1$ et $x_2$ dans $f^{-1}(H')$ ; alors $f(x_1) \\in H'$ et $f(x_2) \\in H'$ ; $H'$ étant un sous-groupe de $G'$, on a\n\n$$f(x_1)(f(x_2))^{-1} = f(x_1)f(x_2^{-1}) = f(x_1 x_2^{-1}) \\text{ dans } H',$$\n\nd’où $x_1 x_2^{-1} \\in f^{-1}(H')$ et par suite $f^{-1}(H')$ *est un sous-groupe de $G$.*"
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "efa163b47b8184b2443d96fda68832cac72354dddb4953b36852d6729dc59809",
+        "text": "*Soit $f \\in \\operatorname{Hom}(G, G')$, alors :*\n\n- $1^\\circ$ *$f(G)$ est un sous-groupe de $G'$.*\n- $2^\\circ$ *$f^{-1}(e') = \\{x \\in G ; f(x) = e'\\}$ est un sous-groupe de $G$.*\n\nCes propriétés découlent de l’application de la proposition (1.55) aux cas particuliers : $H = G$ et $H' = (e')$."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "649f631d747bb3b5e32d6cea791de22d9b0905d7bca77032bfc81aa66b447d9e",
+        "text": "Soit $f \\in \\operatorname{Hom}(G, G')$.\n\n$f(G)$ est appelé *image de $f$* et est noté $\\Im f$.\n\n$f^{-1}(e')$ est appelé *noyau de $f$* et est noté $\\Ker f$."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "33b4c756ae59713542a6eab38816f4d245d7ad0eb816c93a3299974e9cd44f14",
+        "text": "*Pour $f \\in \\operatorname{Hom}(G, G')$, on a :*\n\n- $1^\\circ$ *$f$ surjectif $\\Leftrightarrow \\Im f = G'$.*\n- $2^\\circ$ *$f$ injectif $\\Leftrightarrow \\Ker f = (e)$.*"
+      },
+      {
+        "tag": "ProofBlock",
+        "sha256": "e026b0c2a3627b8efe97f1d055d2b27a10cb3f7c3f2edd21958ffc52021a224a",
+        "text": "La première propriété est immédiate puisque, par définition, $f$ est surjectif si $f(G) = G'$.\n\nDémontrons la seconde propriété ; rappelons que $f$ est injectif si et seulement si, quels que soient $x$ et $x'$ dans $G$, $f(x) = f(x')$ implique $x = x'$.\n\n— Supposons $f$ injectif ; soit $x \\in \\Ker f$, alors $f(x) = e' = f(e)$, d’où $x = e$ et par suite $\\Ker f = (e)$ ;\n\n— Supposons $\\Ker f = (e)$ ; soient $x$ et $x'$ dans $G$ tels que $f(x) = f(x')$ ; on en déduit :\n\n$$e' = (f(x))^{-1}f(x') = f(x^{-1})f(x'), \\qquad \\text{d’où } e' = f(x^{-1}x'),$$\n\nce qui implique $x^{-1}x' \\in \\Ker f$ ;\n\n$$\\Ker f = (e) \\Rightarrow x^{-1}x' = e, \\qquad \\text{d’où } x' = x ;$$\n\n$f$ est donc injectif."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "6068965a73e336ff6ae2a638a3172f024e5c07abad71ec5b0edf91ef09db2384",
+        "text": "*Soient $G$, $G'$, $G''$ trois groupes, alors $f \\in \\operatorname{Hom}(G, G')$ et $g \\in \\operatorname{Hom}(G', G'')$ implique $g \\circ f \\in \\operatorname{Hom}(G, G'')$.*"
+      },
+      {
+        "tag": "ProofBlock",
+        "sha256": "e479caf8eff5273fd29d5038adfc0ecb99d7addc4bfc266c3fe73814ab90d2e7",
+        "text": "Soient $x$ et $y$ dans $G$ ;\n\n$$\n\\begin{aligned}\ng \\circ f(xy) &= g(f(xy)) \\\\\ng \\circ f(xy) &= g(f(x)f(y)), \\qquad \\text{car } f \\in \\operatorname{Hom}(G, G') ; \\\\\ng \\circ f(xy) &= g(f(x))\\,g(f(y)), \\qquad \\text{car } g \\in \\operatorname{Hom}(G', G'') \\\\\n\\text{d’où} \\quad g \\circ f(xy) &= (g \\circ f(x))\\,(g \\circ f(y)).\n\\end{aligned}\n$$"
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "dffae2578521340afd8237dc1116092b11b4f7f17b228ed6f451bd48bdd22464",
+        "text": "Un groupe $G'$ est dit *image homomorphe* d’un groupe $G$, s’il existe un morphisme surjectif $f \\in \\operatorname{Hom}(G, G')$."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "f864d3ebf0efb4bf0fdd60b788b11ea3f92dcc3252d08c181af26c4601b4a6d9",
+        "text": "$1^\\circ$ Soient $G$ un groupe et $H$ un sous-groupe de $G$.\n\n*L’injection canonique*\n\n$$\n\\begin{aligned}\ni : H &\\to G \\\\\nx &\\mapsto x\n\\end{aligned}\n$$\n\nest un *morphisme injectif* de groupes.\n\n$2^\\circ$ Soient deux groupes $G$ et $G'$ ; l’application\n\n$$\n\\begin{aligned}\nh : G &\\to G' \\\\\nx &\\mapsto e'\n\\end{aligned}\n$$\n\nest un morphisme de groupes tel que $\\Ker h = G$.\n\nLorsque le groupe $G'$ est additif et que $e'$ est noté $0$, $h$ est appelé : *morphisme nul* de $G$ dans $G'$."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "ed6a49da5f87235428de244600a992e9420cfee367d6d75b2382a50637db9bb0",
+        "text": "Soit $n > 0$ dans $\\Z$ ; la *surjection canonique* de $\\Z$ dans $\\Zn{n}$, c’est-à-dire l’application :\n\n$$\n\\begin{aligned}\n\\pi : \\Z &\\to \\Zn{n} \\\\\nx &\\mapsto \\overline{x} \\text{ (classe de } x \\text{ modulo } n\\text{)},\n\\end{aligned}\n$$\n\nest un *morphisme surjectif* de groupes.\n\nEn effet, compte tenu de la définition de l’addition dans $\\Zn{n}$ (exemple (1.13), formule 10), on a, quels que soient $x$ et $y$ dans $\\Z$, $\\pi(x + y) = \\pi(x) + \\pi(y)$."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "d4400b6d95ee21ea67fe7ca35aa475f0be9e6befff6c95d827ba91b06c66b906",
+        "text": "Soit $n > 1$ dans $\\N$ ; en associant à toute matrice $A$ du groupe $\\GL(n, \\R)$ son *déterminant* : $\\det A$, on définit une application, que nous noterons $d$, de $\\GL(n, \\R)$ dans le groupe multiplicatif $\\R^*$, car toute matrice de $\\GL(n, \\R)$ est inversible, donc de déterminant non nul ; de plus, quels que soient $A$ et $B$ dans $\\GL(n, \\R)$, on a $\\det AB = \\det A \\det B$ (voir [31] ou [50]) ; par suite, l’application\n\n$$\n\\begin{aligned}\nd : \\GL(n, \\R) &\\to \\R^* \\\\\nA &\\mapsto \\det A\n\\end{aligned}\n$$\n\nest un morphisme de groupes.\n\n$$\\Ker d = \\{A \\in \\GL(n, \\R) ; \\det A = 1\\}.$$\n\n$\\Ker d$ est un sous-groupe de $\\GL(n, \\R)$ appelé : *groupe linéaire spécial* des matrices carrées d’ordre $n$ sur $\\R$ et noté $\\SL(n, \\R)$ ; <PageRef :page=\"45\" /> plus généralement, on peut définir $\\SL(n, K)$, où $K$ est un corps commutatif quelconque [51]."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "a3628f1c75495642cf46bf4cf2595fb22f0cb0253d8761b35160f48a960815f3",
+        "text": "Soit $\\operatorname{GO}(\\R^2)$ le groupe des similitudes de l’espace vectoriel euclidien $\\R^2$ (exemple (1.32)).\n\nL’application\n\n$$\n\\begin{aligned}\n\\lambda : \\operatorname{GO}(\\R^2) &\\to \\R_+^* \\\\\nu &\\mapsto \\lambda_u\n\\end{aligned}\n$$\n\noù $\\lambda_u$ est le rapport de la similitude $u$ est un *morphisme de groupes* (le vérifier à partir de la relation (16)).\n\n$$\\Ker \\lambda = \\{u \\in \\operatorname{GO}(\\R^2) ; \\lambda_u = 1\\}$$\n\n$\\Ker \\lambda$ est un sous-groupe de $\\operatorname{GO}(\\R^2)$, appelé *groupe orthogonal de $\\R^2$* et noté $\\operatorname{O}(\\R^2)$.\n\nPour tout espace vectoriel euclidien de dimension finie $E$, on peut définir de même le groupe orthogonal $\\operatorname{O}(E)$ ([23], [51])."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "714c967e195d7e731fcca1e6ba2d601e0b4d2591d80eb317034372a6632760f6",
+        "text": "Une application $f$ d’un groupe $G$ dans un groupe $G'$ est un *isomorphisme de groupe* si $f \\in \\operatorname{Hom}(G, G')$ et s’il existe $g \\in \\operatorname{Hom}(G', G)$ tel que\n\n<span id=\"ref-eq-1-23\"></span>\n\n$$g \\circ f = \\id_G \\quad \\text{et} \\quad f \\circ g = \\id_{G'} \\tag{23}$$"
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "fc18b8aad2177401322f792d23c283238fcae6b25e34e4b4a8360beb063e342d",
+        "text": "*Soient deux groupes $G$ et $G'$ :*\n\n- $1^\\circ$ *Si $f$ est une application de $G$ dans $G'$, alors : $f$ est un isomorphisme de groupes $\\Leftrightarrow f \\in \\operatorname{Hom}(G, G')$ et $f$ bijectif.*\n- $2^\\circ$ *$f$ isomorphisme de $G$ sur $G' \\Rightarrow f^{-1}$ isomorphisme de $G'$ sur $G$.*"
+      },
+      {
+        "tag": "ProofBlock",
+        "sha256": "ba58d8791ad399cc1260de9d3d6028a4fd7dc5a22d3ea47b99c5af8bfd4b14e9",
+        "text": "$1^\\circ$ *a)* Supposons $f$ isomorphisme de groupes ; d’après la définition (1.65), $f \\in \\operatorname{Hom}(G, G')$ et il existe $g \\in \\operatorname{Hom}(G', G)$ vérifiant les relations (23).\n\nMontrons que $f$ est surjectif ; soit $y \\in G'$, on a\n\n$$y = \\id_{G'}(y) = f \\circ g(y) = f(g(y)),$$\n\ndonc $G' = \\Im f$.\n\n<PageRef :page=\"46\" />\n\nMontrons que $f$ est injectif ; supposons $x$ et $x'$ dans $G$ tels que $f(x) = f(x')$ ; on a alors : $g \\circ f(x) = g \\circ f(x')$, c’est-à-dire $\\id_G(x) = \\id_G(x')$, donc $x = x'$.\n\nOn en conclut que $f$ est *bijectif*.\n\n*b)* Supposons $f \\in \\operatorname{Hom}(G, G')$ et $f$ bijectif. $f$ admet une application réciproque $f^{-1}$ qui est une bijection de $G'$ sur $G$ et qui vérifie\n\n$$f^{-1} \\circ f = \\id_G \\quad \\text{et} \\quad f \\circ f^{-1} = \\id_{G'}.$$\n\nMontrons que $f^{-1}$ est un morphisme de groupes.\n\nSoient $y_1$ et $y_2$ dans $G'$, posons $x = f^{-1}(y_1 y_2)$ ; on a $f(x) = y_1 y_2$ ; d’autre part, il existe $x_1$ et $x_2$ uniques dans $G$ tels que $y_1 = f(x_1)$ et $y_2 = f(x_2)$, d’où\n\n$$f(x) = f(x_1)f(x_2) = f(x_1 x_2), \\qquad \\text{car } f \\in \\operatorname{Hom}(G, G').$$\n\n$f$ bijectif implique $f$ injectif, par suite $x = x_1 x_2$ ; or, $x_1 = f^{-1}(y_1)$, $x_2 = f^{-1}(y_2)$, on en déduit :\n\n$$f^{-1}(y_1 y_2) = f^{-1}(y_1)f^{-1}(y_2) ;$$\n\nalors, $g = f^{-1}$ satisfait aux conditions (23), donc $f$ *est isomorphisme*.\n\nLe $2^\\circ$ de la proposition (1.66) résulte directement de la démonstration précédente."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "50e22da52e31c002e471986735ff5b6cc83c860db9fc40a4c361176b52b466e7",
+        "text": "S’il existe un isomorphisme d’un groupe $G$ sur un groupe $G'$, on dit que $G$ et $G'$ sont des groupes *isomorphes* ; dans ce cas on écrit : $G \\simeq G'$."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "0ce580ce9726d2aa59f676d4323964dc0e14db4e9154ba421e4dae423e6a0bcb",
+        "text": "$1^\\circ$ Un isomorphisme étant une bijection, deux groupes isomorphes sont équipotents, c’est-à-dire sont de même cardinal [28]. En particulier, *deux groupes finis isomorphes sont de même ordre ; la réciproque de cette propriété est fausse.*\n\nConsidérons par exemple le groupe $\\Zn{4}$ et le groupe $V$ *défini par la table (11)* ; ils sont de même ordre $4$.\n\nSupposons qu’une bijection $f$ de $V$ sur $\\Zn{4}$ soit un isomorphisme ; on aurait :\n\n$$\\Zn{4} = \\{f(e) = \\overline{0}, f(a), f(b), f(c)\\} ;$$\n\n<PageRef :page=\"47\" />\n\nmais la table (11) montre que dans $V$ tout élément $x \\neq e$ est d’ordre $2$ ; par suite, dans $\\Zn{4}$ tout élément, autre que $\\overline{0}$, devrait être d’ordre $2$ ; or nous savons que $\\overline{1}$ et $\\overline{3}$ sont d’ordre $4$ ; on en conclut que *les groupes $\\Zn{4}$ et $V$ ne sont pas isomorphes et, en particulier, le groupe $V$ n’est pas cyclique.* (La notation $V$ vient du nom allemand : *Vierergruppe*.)\n\n$2^\\circ$ Même si deux groupes $G$ et $G'$ sont isomorphes, une bijection de $G$ sur $G'$ n’est pas nécessairement un isomorphisme (voir remarque (1.76) $1^\\circ$).\n\n$3^\\circ$ *$(f \\in \\operatorname{Hom}(G, G') \\text{ et } f \\text{ injectif}) \\Rightarrow G \\simeq \\Im f$.*\n\nEn effet, la restriction surjective de $f$, c’est-à-dire l’application\n\n$$\n\\begin{aligned}\nf_1 : G &\\to \\Im f \\\\\nx &\\mapsto f_1(x) = f(x)\n\\end{aligned}\n$$\n\nest un isomorphisme de groupes d’après la proposition (1.66) $1^\\circ$."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "8b0993b5b17a4b7470ee0e0d62465974fd32e962a8a8b5af0ba686a063d6a247",
+        "text": "$G$ étant un groupe, un isomorphisme de $G$ sur lui-même est appelé un *automorphisme* du groupe $G$.\n\nL’ensemble des automorphismes d’un groupe $G$ est noté $\\operatorname{Aut}(G)$."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "a5c8d430fb6145a1afa31fc1b1a23dbc957829adc545d145061afa285ff83da6",
+        "text": "*Pour tout groupe $G$, $\\operatorname{Aut}(G)$ est un sous-groupe du groupe symétrique $S_G$.*\n\nCe résultat se déduit des propositions (1.59) et (1.66)."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "8df9ee37e9111e6e3c52ec6bd58f9bc909698b5448034a1d2149923cd3f3c3d9",
+        "text": "$G$, $G'$, $G''$ désignant des groupes, les propositions (1.59) et (1.66) impliquent :\n\n- *a)* $G \\simeq G$ ;\n- *b)* $G \\simeq G' \\Rightarrow G' \\simeq G$ ;\n- *c)* $(G \\simeq G' \\text{ et } G' \\simeq G'') \\Rightarrow G \\simeq G''$."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "1fdf493c8e61b0954ae9c7f98686d3f35ba3836098e3f371afe9612b440874f9",
+        "text": "On a défini (exemple (1.17)) les groupes linéaires $\\GL(E)$ et les groupes de matrices $\\GL(n, K)$. On démontre en algèbre <PageRef :page=\"48\" /> linéaire (voir par exemple [49]) que si $E$ est un espace vectoriel de dimension finie $n$ sur un corps $K$, alors les groupes *$\\GL(E)$ et $\\GL(n, K)$ sont isomorphes* et toute base $b = \\{e_1, e_2, \\dots, e_n\\}$ de $E$ sur $K$ permet de définir un *isomorphisme*\n\n$$\n\\begin{aligned}\nM_b : \\GL(E) &\\to \\GL(n, K) \\\\\nu &\\mapsto M_b(u)\n\\end{aligned}\n$$\n\noù $M_b(u)$ est *la matrice de $u$ dans la base $b$*, c’est-à-dire la matrice carrée d’ordre $n$ dont les colonnes sont respectivement formées par les composantes dans la base $b$ des vecteurs $u(e_1), u(e_2), \\dots, u(e_n)$."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "d214d7ab313cb2a8a3e02b8bf6c1cc51d1eb028c09bdb4cd7e06f5974427b24a",
+        "text": "*Automorphismes intérieurs d’un groupe $G$.*\n\nA tout $g \\in G$, associons l’application :\n\n$$\n\\begin{aligned}\n\\sigma_g : G &\\to G \\\\\nx &\\mapsto gxg^{-1}.\n\\end{aligned}\n$$\n\nPour $x$ et $y$ dans $G$, $\\sigma_g(xy) = gxyg^{-1} = (gxg^{-1})(gyg^{-1})$, $\\sigma_g(xy) = \\sigma_g(x)\\sigma_g(y)$, donc $\\sigma_g \\in \\operatorname{End}(G)$.\n\nD’autre part, la règle de simplification à droite et à gauche implique l’injectivité de $\\sigma_g$.\n\nEnfin, quel que soit $y \\in G$, on peut écrire :\n\n$$y = g(g^{-1}yg)g^{-1} = \\sigma_g(g^{-1}yg),$$\n\ndonc $\\sigma_g$ est surjectif.\n\nOn en conclut que $\\sigma_g \\in \\operatorname{Aut}(G)$.\n\n$\\sigma_g$ est appelé : *automorphisme intérieur* de $G$ défini par $g$.\n\nPosons $\\operatorname{Int}(G) = \\{\\sigma_g ; g \\in G\\}$ et montrons que *$\\operatorname{Int}(G)$ est un sous-groupe de $\\operatorname{Aut}(G)$.*\n\n$$\\sigma_e = \\id_G \\Rightarrow \\operatorname{Int}(G) \\neq \\varnothing.$$\n\nSoient $g_1$ et $g_2$ dans $G$ ; pour tout $x \\in G$, on a\n\n$$\\sigma_{g_1} \\circ \\sigma_{g_2}(x) = g_1(g_2 x g_2^{-1})g_1^{-1} = (g_1 g_2)x(g_1 g_2)^{-1},$$\n\nd’où $\\sigma_{g_1} \\circ \\sigma_{g_2} = \\sigma_{g_1 g_2}$, donc $\\sigma_{g_1} \\circ \\sigma_{g_2} \\in \\operatorname{Int}(G)$.\n\nDe plus, pour tout $g \\in G$,\n\n$$(\\sigma_g \\circ \\sigma_{g^{-1}} = \\sigma_e = \\id_G) \\Rightarrow (\\sigma_g)^{-1} = \\sigma_{g^{-1}} ;$$\n\npar suite, $(\\sigma_g)^{-1} \\in \\operatorname{Int}(G)$, d’où *$\\operatorname{Int} G \\leqslant \\operatorname{Aut}(G)$.*"
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "09cd70d6b470946a93918fe8a428c47940f08f4325683687c5ffd1d15921dcd5",
+        "text": "*Soient $E$ et $E'$ deux ensembles non vides ; $S_E$ et $S_{E'}$ étant leurs groupes symétriques, on a :*\n\n$$E \\text{ équipotent à } E' \\Rightarrow S_E \\simeq S_{E'} ;$$\n\n*en particulier :*\n\n$$(E \\text{ fini et } \\card E = n) \\Rightarrow S_E \\simeq S_n.$$"
+      },
+      {
+        "tag": "ProofBlock",
+        "sha256": "8c6e8b1540332e09144ee9360f006a77bf52cc3a058af01012725b7b633e2b84",
+        "text": "Dire que $E$ est équipotent à $E'$, c’est-à-dire qu’il existe une bijection $f$ de $E$ sur $E'$.\n\nSoit $\\sigma \\in S_E$, le diagramme :\n\n$$E' \\xrightarrow{f^{-1}} E \\xrightarrow{\\sigma} E \\xrightarrow{f} E'$$\n\nmontre que $f \\circ \\sigma \\circ f^{-1} \\in S_{E'}$.\n\nConsidérons alors l’application\n\n$$\n\\begin{aligned}\n\\varphi : S_E &\\to S_{E'} \\\\\n\\sigma &\\mapsto f \\circ \\sigma \\circ f^{-1}.\n\\end{aligned}\n$$\n\n$\\varphi$ *est injective*, car $\\varphi(\\sigma) = \\varphi(\\sigma')$ implique\n\n$$f \\circ \\sigma \\circ f^{-1}(x') = f \\circ \\sigma' \\circ f^{-1}(x'), \\quad \\forall x' \\in E' ;$$\n\n$f$ étant injective, on en déduit que\n\n$$\\sigma \\circ f^{-1}(x') = \\sigma' \\circ f^{-1}(x'), \\quad \\forall x' \\in E',$$\n\ndonc $\\sigma \\circ f^{-1} = \\sigma' \\circ f^{-1}$ ;\n\npar suite, $\\sigma \\circ f^{-1} \\circ f = \\sigma' \\circ f^{-1} \\circ f$, d’où $\\sigma = \\sigma'$.\n\n$\\varphi$ *est surjective* ; en effet, étant donné $\\tau \\in S_{E'}$, si l’on pose $\\sigma = f^{-1} \\circ \\tau \\circ f$, on a $\\sigma \\in S_E$ et $\\tau = \\varphi(\\sigma)$.\n\nEnfin, $\\varphi$ est un *morphisme* de groupes, car, quels que soient $\\sigma$ et $\\sigma'$ dans $S_E$, on a :\n\n$$\n\\begin{aligned}\n\\varphi(\\sigma \\circ \\sigma') &= f \\circ \\sigma \\circ \\sigma' \\circ f^{-1} \\\\\n\\varphi(\\sigma \\circ \\sigma') &= (f \\circ \\sigma \\circ f^{-1}) \\circ (f \\circ \\sigma' \\circ f^{-1}) \\\\\n\\varphi(\\sigma \\circ \\sigma') &= \\varphi(\\sigma) \\circ \\varphi(\\sigma') ;\n\\end{aligned}\n$$\n\non en conclut que $\\varphi$ est un *isomorphisme* de groupes.\n\nDans le cas particulier où $E$ est fini et $\\card E = n$, posons $E = \\{x_1, x_2, \\dots, x_n\\}$. La bijection $f : i \\mapsto x_i$ de $\\{1, 2, \\dots, n\\}$ <PageRef :page=\"50\" /> sur $E$ induit, comme plus haut, l’isomorphisme $\\varphi$ de $S_n$ sur $S_E$ tel que pour tout $\\sigma \\in S_n$,\n\n$$\\varphi(\\sigma)(x_i) = x_{\\sigma(i)}, \\quad \\forall x_i \\in E.$$\n\nOn peut alors *identifier* $S_E$ à $S_n$, en notant $\\sigma$ l’élément de $S_E$ égal à $\\varphi(\\sigma)$."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "36bb0fd8bdd9a1aed5f30257696f999825af8f7d33164d9f56cc169279d38b1f",
+        "text": "$G$ étant un groupe, à tout $g \\in G$, on associe l’application\n\n$$\n\\begin{aligned}\n\\tau_g : G &\\to G \\\\\nx &\\mapsto gx.\n\\end{aligned}\n$$\n\n$\\tau_g$ s’appelle la *translation à gauche* de $G$, définie par $g$.\n\nOn remarque que $\\tau_e = \\id_G$.\n\nPosons $T_G = \\{\\tau_g ; g \\in G\\}$ ; on a $T_G \\neq \\varnothing$ ; montrons que *$T_G$ est un sous-ensemble du groupe symétrique $S_G$.*\n\nPour tout $g \\in G$, l’injectivité de $\\tau_g$ résulte de la règle de simplification à gauche ; d’autre part, quels que soient $g$ et $y$ dans $G$, il existe $x \\in G$ tel que $y = gx$, d’où la surjectivité de $\\tau_g$. On a donc $T_G \\subseteq S_G$."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "cd9e3bb5498e25b865f44a36135a33fca19b5bd31c3a4cee89dd30c2d387b73f",
+        "text": "$1^\\circ$ Pour $g \\neq e$, $\\tau_g$ n’est pas un automorphisme de $G$, car pour $x$ et $y$ quelconques dans $G$, on a, en général, $gxy \\neq gxgy$.\n\n$2^\\circ$ Si $G$ est noté additivement, $\\tau_g$ est telle que, pour tout $x \\in G$, $\\tau_g(x) = g + x$.\n\n$3^\\circ$ On peut définir de façon analogue la notion de *translation à droite* $\\delta_g$, telle que pour tout $x \\in G$, $\\delta_g(x) = xg$.\n\nL’ensemble $T'_G$ des translations à droite de $G$ est aussi une partie non vide de $S_G$."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "51d5c78177f15c5a1e6ad8f009cb08e331452bd31c9375ce9b0a7b594c0450c5",
+        "text": "*Pour tout groupe $G$, on a*\n\n$$T_G \\leqslant S_G \\quad \\text{et} \\quad G \\simeq T_G.$$"
+      },
+      {
+        "tag": "ProofBlock",
+        "sha256": "a611283163da3229dc493acd713b3b4681f03f6499f0dbb22282a2b575d0e7a5",
+        "text": "On a montré précédemment que $T_G$ est une partie non vide de $S_G$. Soient $\\tau_{g_1}$ et $\\tau_{g_2}$ dans $T_G$.\n\nPour tout $x \\in G$, $\\tau_{g_1} \\circ \\tau_{g_2}(x) = g_1 g_2 x = \\tau_{g_1 g_2}(x)$, donc $\\tau_{g_1} \\circ \\tau_{g_2} \\in T_G$.\n\n<PageRef :page=\"51\" />\n\nD’autre part, pour tout $g$ et tout $x$ dans $G$, on a :\n\n$$\\tau_g \\circ \\tau_{g^{-1}}(x) = \\tau_e(x) = x,$$\n\nd’où $(\\tau_g)^{-1} = \\tau_{g^{-1}} \\in T_G$ ;\n\non en conclut que *$T_G$ est un sous-groupe de $S_G$.*\n\nConsidérons l’application\n\n$$\n\\begin{aligned}\n\\tau : G &\\to T_G \\\\\ng &\\mapsto \\tau_g\n\\end{aligned}\n$$\n\n$\\tau$ est surjective, par définition, et\n\n$$\\tau_g = \\tau_{g'} \\Leftrightarrow gx = g'x, \\quad \\forall x \\in G,$$\n\nd’où $\\tau_g = \\tau_{g'} \\Rightarrow g = g'$ ;\n\n$\\tau$ est donc injective, par suite $\\tau$ est une bijection.\n\nOn a vu plus haut que $\\tau_{g_1 g_2} = \\tau_{g_1} \\circ \\tau_{g_2}$, quels que soient $g_1$ et $g_2$ dans $G$, donc $\\tau$ est un morphisme de groupes.\n\nD’après la proposition (1.66) $\\tau$ est un *isomorphisme* de groupes."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "d6602310c18a22539a31a60cd767d74491710e360535da3a560d76384ba9ccc0",
+        "text": "*Tout groupe est isomorphe à un sous-groupe du groupe de ses permutations.*\n\n*En particulier, tout groupe fini d’ordre $n$ est isomorphe à un sous-groupe du groupe symétrique $S_n$.*"
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "088a4f6aece1e38d8f30371040f971c64ca9d997ee11f29cfa6a174d949f0abd",
+        "text": "Soient deux groupes $G$ et $G'$.\n\n$1^\\circ$ Une application $f : G \\to G'$ est appelée *monomorphisme de groupes*, si :\n\n- *a)* $f \\in \\operatorname{Hom}(G, G')$ et\n- *b)* quel que soit le groupe $\\Gamma$, la propriété suivante est vérifiée :\n\n$$(u \\text{ et } v \\text{ dans } \\operatorname{Hom}(\\Gamma, G) \\text{ et } f \\circ u = f \\circ v) \\Rightarrow u = v.$$\n\n<PageRef :page=\"52\" />\n\n$2^\\circ$ Une application $f : G \\to G'$ est appelée *épimorphisme de groupes*, si :\n\n- *a)* $f \\in \\operatorname{Hom}(G, G')$ et\n- *b)* quel que soit le groupe $\\Gamma$, on a la propriété :\n\n$$(u \\text{ et } v \\text{ dans } \\operatorname{Hom}(G', \\Gamma) \\text{ et } u \\circ f = v \\circ f) \\Rightarrow u = v.$$"
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "e2f7378e11097711b069e83d99be3d0b3dad264ac34720fe63751b45ceddad19",
+        "text": "*Pour une application $f$ d’un groupe $G$ dans un groupe $G'$, on a :*\n\n- $1^\\circ$ *$f$ morphisme injectif $\\Leftrightarrow f$ monomorphisme*\n- $2^\\circ$ *$f$ morphisme surjectif $\\Leftrightarrow f$ épimorphisme.*"
+      },
+      {
+        "tag": "ProofBlock",
+        "sha256": "185750ae136fb4a5e0f6ff342d97303c9dd7710e4819030285a115f4cba97eba",
+        "text": "$1^\\circ$ Supposons $f \\in \\operatorname{Hom}(G, G')$ et $f$ injectif ; soient $\\Gamma$ un groupe et $u, v$ dans $\\operatorname{Hom}(\\Gamma, G)$ tels que $f \\circ u = f \\circ v$.\n\nPour tout $x \\in \\Gamma$, on a $f(u(x)) = f(v(x))$ ; l’injectivité de $f$ implique alors $u = v$, d’où $f$ monomorphisme.\n\nRéciproquement, supposons $f$ monomorphisme et $x, x'$ dans $G$ tels que $f(x) = f(x')$. Considérons le groupe $\\Z$ et les applications $u$ et $v$ de $\\Z$ dans $G$ telles que :\n\n$$\n\\begin{aligned}\nu : \\Z &\\to G, & v : \\Z &\\to G \\\\\nn &\\mapsto x^n & n &\\mapsto x'^n.\n\\end{aligned}\n$$\n\nOn sait que pour $n$ et $m$ dans $\\Z$ on a $x^{m+n} = x^m x^n$ ; $u$ et $v$ sont donc des morphismes de groupes. D’autre part,\n\n$$f \\circ u(n) = f(x^n) = (f(x))^n \\quad \\text{et} \\quad f \\circ v(n) = f(x'^n) = (f(x'))^n ;$$\n\nalors $f(x) = f(x') \\Rightarrow f \\circ u = f \\circ v$ et $f$ monomorphisme implique $u = v$, d’où :\n\n$$x^n = x'^n, \\quad \\text{quel que soit } n \\in \\Z ;$$\n\npour $n = 1$, on obtient $x = x'$, par suite, $f$ est un morphisme injectif.\n\n$2^\\circ$ On suppose que $f$ est un morphisme surjectif de $G$ sur $G'$. Soient $\\Gamma$ un groupe et $u, v$ dans $\\operatorname{Hom}(G', \\Gamma)$ tels que\n\n$$u \\circ f = v \\circ f.$$\n\n<PageRef :page=\"53\" />\n\nSoit $y \\in G'$, $f$ étant surjectif, il existe $x \\in G$ tel que $y = f(x)$, par suite :\n\n$$u(y) = u(f(x)) = v(f(x)) = v(y), \\quad \\text{d’où } u = v ;$$\n\n$f$ est donc un épimorphisme.\n\nRéciproquement, supposons $f$ épimorphisme de $G$ dans $G'$.\n\nPosons $H = \\Im f$ et supposons $H \\neq G'$.\n\nSoit $Q_H = \\{x'H ; x' \\in G'\\}$, où $x'H = \\{x'h ; h \\in H\\}$.\n\nConsidérons l’ensemble $E = Q_H \\cup \\{\\infty\\}$, où $\\infty$ désigne un élément arbitraire n’appartenant pas à $G'$.\n\n$$H = e'H \\Rightarrow H \\in Q_H.$$\n\nSoit $\\tau$ la permutation de $E$ qui échange $H$ et $\\infty$ et qui laisse fixes tous les autres éléments de $E$.\n\nD’autre part, pour tout $g \\in G'$, notons $\\sigma_g$ l’application de $E$ dans $E$ définie par :\n\n$$\n\\begin{cases}\n\\sigma_g(x'H) = gx'H, & \\forall x'H \\in Q_H \\\\\n\\sigma_g(\\infty) = \\infty.\n\\end{cases}\n$$\n\nOn vérifie facilement que $\\sigma_g$ est une permutation de $E$, c’est-à-dire un élément du groupe symétrique $S_E$.\n\nConsidérons alors les applications :\n\n$$\n\\begin{aligned}\n\\sigma : G' &\\to S_E & \\text{et} && \\gamma : G' &\\to S_E \\\\\ng &\\mapsto \\sigma_g &&& g &\\mapsto \\tau \\circ \\sigma_g \\circ \\tau.\n\\end{aligned}\n$$\n\nDes définitions de $\\tau$ et $\\sigma_g$, on déduit aisément que $\\sigma$ et $\\gamma$ sont des morphismes de groupes.\n\nMontrons que l’on a $\\sigma \\circ f = \\gamma \\circ f$.\n\nSoit $x$ dans $G$ ; $f(x) \\in H$, posons $f(x) = h$ ; on a $hH = H$ et\n\n$$\n\\begin{aligned}\n\\sigma \\circ f(x) &= \\sigma_h, & \\gamma \\circ f(x) &= \\tau \\circ \\sigma_h \\circ \\tau \\\\\n\\sigma_h(\\infty) &= \\infty ; & \\tau \\circ \\sigma_h \\circ \\tau(\\infty) &= \\tau \\circ \\sigma_h(H) = \\tau(H) = \\infty. \\\\\n\\sigma_h(H) &= H ; & \\tau \\circ \\sigma_h \\circ \\tau(H) &= \\tau \\circ \\sigma_h(\\infty) = \\tau(\\infty) = H.\n\\end{aligned}\n$$\n\n$$x'H \\neq H \\Rightarrow \\sigma_h(x'H) = hx'H \\quad \\text{et} \\quad \\tau \\circ \\sigma_h \\circ \\tau(x'H) = \\tau \\circ \\sigma_h(x'H) = hx'H,$$\n\n$f$ étant un épimorphisme,\n\n$$\\sigma \\circ f = \\gamma \\circ f \\Rightarrow \\sigma = \\gamma,$$\n\npar suite, pour tout $g \\in G'$, $\\sigma_g = \\tau \\circ \\sigma_g \\circ \\tau$.\n\n<PageRef :page=\"54\" />\n\nSoit $g \\notin H$ dans $G'$ ; on a alors :\n\n$$\\sigma_g(H) = gH \\neq H$$\n\net\n\n$$\\tau \\circ \\sigma_g \\circ \\tau(H) = \\tau \\circ \\sigma_g(\\infty) = \\tau(\\infty) = H,$$\n\nd’où une contradiction ; par suite $\\Im f = H = G'$, donc $f$ est surjectif."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "b8072c7f6290b49fb79d3f2a78a8a8a69b97d06645758f6b30a9730ddda69634",
+        "text": "Les résultats de la proposition (1.80) autorisent, dans le cas des groupes, à appeler :\n\n- *monomorphisme, tout morphisme injectif*\n- et *épimorphisme, tout morphisme surjectif.*"
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "efe6238a20aa6aaaa8f026d3bba52b009d1cb9c199c113aeeb4d55c862c40640",
+        "text": "*Une application $f$ d’un groupe $G$ dans un groupe $G'$ est un isomorphisme de groupes si et seulement si c’est à la fois un monomorphisme et un épimorphisme.*"
+      }
+    ],
+    "docs/chap1/4-produit-direct.md": [
+      {
+        "tag": "MathBlock",
+        "sha256": "08df1aa07710f2a24e7bff33493ad0da14fbde8d58254ae7ca2cbed514e70c10",
+        "text": "Le groupe $G_1 \\times G_2$ est appelé *groupe produit direct* des groupes $G_1$ et $G_2$."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "b79cc917b58215ae00ea5feda19aa95141d1bcfa92e089759a5f37027bfb49d9",
+        "text": "$1^\\circ$ Le groupe $G_1 \\times G_2$ est abélien si et seulement si $G_1$ et $G_2$ sont abéliens.\n\n$2^\\circ$ Les applications :\n\n$$\n\\begin{aligned}\nG_1 &\\to G_1 \\times (e_2) = \\Im q_1 & \\text{et} && G_2 &\\to (e_1) \\times G_2 = \\Im q_2 \\\\\nx_1 &\\mapsto (x_1, e_2) &&& x_2 &\\mapsto (e_1, x_2)\n\\end{aligned}\n$$\n\nsont des isomorphismes de groupes ; on en déduit que *le groupe $G_1 \\times G_2$ contient au moins un sous-groupe isomorphe à $G_1$ et un sous-groupe isomorphe à $G_2$.*\n\n$3^\\circ$\n\n<span id=\"ref-eq-1-24\"></span>\n\n$$p_1 \\circ q_1 = \\id_{G_1} \\quad \\text{et} \\quad p_2 \\circ q_2 = \\id_{G_2} \\tag{24}$$\n\n$4^\\circ$ Pour $x = (x_1, x_2)$ dans $G_1 \\times G_2$, on peut écrire :\n\n<span id=\"ref-eq-1-25\"></span>\n\n$$x = (p_1(x), p_2(x)) \\tag{25}$$\n\n<span id=\"ref-eq-1-26\"></span>\n\n$$x = q_1(x_1)q_2(x_2) = q_2(x_2)q_1(x_1) \\tag{26}$$\n\n$5^\\circ$ Si $G_1$ et $G_2$ sont des groupes finis, compte tenu des propriétés générales des cardinaux [28], on a :\n\n<span id=\"ref-eq-1-27\"></span>\n\n$$o(G_1 \\times G_2) = o(G_1)\\,o(G_2) \\tag{27}$$"
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "682bdf900c26ba650d61aba8ffa4c08cd3d3dbc2a821ad90ab31b9a9f04c8265",
+        "text": "*Soient deux groupes $G_1$ et $G_2$ ; un groupe $G$ est isomorphe au produit direct $G_1 \\times G_2$, si et seulement s’il contient deux sous-groupes $H_1$ et $H_2$ tels que :*\n\n1) $H_i \\simeq G_i$, *pour $i = 1, 2$.*\n2) $\\forall h_1 \\in H_1,\\; \\forall h_2 \\in H_2,\\; h_1 h_2 = h_2 h_1$.\n\n<PageRef :page=\"56\" />\n\n3) $G = H_1 H_2$.\n4) $H_1 \\cap H_2 = (e)$, *$e$ étant l’élément neutre de $G$.*"
+      },
+      {
+        "tag": "ProofBlock",
+        "sha256": "37986e7b4aa2e906fe255d4b1dca90773ef00149f3e2a305461a0155de5d5f0e",
+        "text": "$1^\\circ$ Supposons $G$ isomorphe à $G_1 \\times G_2$ ; sans restreindre la généralité du résultat, on peut supposer $G = G_1 \\times G_2$.\n\n$q_1$ et $q_2$ étant les injections canoniques associées à $G_1 \\times G_2$, posons :\n\n$$H_1 = \\Im q_1, \\qquad H_2 = \\Im q_2.$$\n\nD’après la remarque (1.84) $2^\\circ$, on a\n\n$$H_1 \\simeq G_1 \\quad \\text{et} \\quad H_2 \\simeq G_2.$$\n\nD’autre part, quels que soient $h_1 \\in H_1$ et $h_2 \\in H_2$, il existe $x_1 \\in G_1$ et $x_2 \\in G_2$ tels que\n\n$$h_1 = (x_1, e_2), \\qquad h_2 = (e_1, x_2) ;$$\n\nd’où $(x_1, x_2) = h_1 h_2 = h_2 h_1$.\n\nLe résultat ci-dessus implique que $H_1 H_2$ est un sous-groupe de $G$ (Proposition (1.47)). De plus, d’après la remarque (1.84) $4^\\circ$, tout élément de $G$ appartient à $H_1 H_2$, d’où $G = H_1 H_2$.\n\nEnfin, compte tenu de la définition de $H_1$ et de $H_2$, on a $H_1 \\cap H_2 = (e_1, e_2)$, élément neutre de $G$.\n\n$2^\\circ$ On suppose que $G$ contient deux sous-groupes $H_1, H_2$ satisfaisant aux quatre conditions énoncées.\n\nSoit $g \\in G$ ; les hypothèses impliquent qu’il existe $h_1 \\in H_1$ et $h_2 \\in H_2$ tels que :\n\n$$g = h_1 h_2 = h_2 h_1.$$\n\nMontrons que $g$ s’écrit sous cette forme, de *façon unique* ; supposons qu’il existe $h'_1 \\in H_1$, $h'_2 \\in H_2$ tels que\n\n$$\n\\begin{aligned}\ng &= h'_1 h'_2 = h'_2 h'_1 \\\\\nh_1 h_2 &= h'_1 h'_2 \\Rightarrow h'^{-1}_1 h_1 = h'_2 h_2^{-1},\n\\end{aligned}\n$$\n\nLa condition 4) implique alors $e = h'^{-1}_1 h_1 = h'_2 h_2^{-1}$, d’où $h'_1 = h_1$, $h'_2 = h_2$.\n\n<PageRef :page=\"57\" />\n\nD’après la condition 1), pour $i = 1, 2$, il existe un isomorphisme $\\varphi_i : H_i \\to G_i$. Considérons alors l’application $\\varphi$ suivante :\n\n$$\n\\begin{aligned}\n\\varphi : G &\\to G_1 \\times G_2 \\\\\ng = h_1 h_2 &\\mapsto (\\varphi_1(h_1), \\varphi_2(h_2)).\n\\end{aligned}\n$$\n\nPour $g = h_1 h_2$ et $g' = h'_1 h'_2$ dans $G$, on a\n\n$$gg' = h_1 h_2 h'_1 h'_2 = h_1 h'_1 h_2 h'_2 \\quad (\\text{d’après la condition 2}) ;$$\n\non en déduit facilement que $\\varphi$ *est un morphisme de groupes.*\n\nD’autre part, $\\varphi(h_1 h_2) = (e_1, e_2) \\Rightarrow \\varphi_1(h_1) = e_1$ et $\\varphi_2(h_2) = e_2$ ; or $\\varphi_1$ et $\\varphi_2$ sont des isomorphismes, par suite,\n\n$$\\varphi(h_1 h_2) = (e_1, e_2) \\Rightarrow h_1 = h_2 = e ;$$\n\non en déduit que $\\Ker \\varphi = (e)$, donc $\\varphi$ *est injectif.*\n\nDe plus, si $x = (x_1, x_2) \\in G_1 \\times G_2$, il existe un unique $h_1 \\in H_1$ et un unique $h_2 \\in H_2$ tels que : $x_1 = \\varphi_1(h_1)$ et $x_2 = \\varphi_2(h_2)$ ; par suite, $x = \\varphi(h_1 h_2)$, donc $\\varphi$ *est surjectif.*\n\nEn conclusion : $\\varphi$ est un isomorphisme de $G$ sur $G_1 \\times G_2$."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "4daaa9b9d8b1243d67560994fa55f35a5c601674dd094eee19bdf9365b6a24f7",
+        "text": "Le groupe produit direct $\\Zn{2} \\times \\Zn{2}$ est généralement appelé *groupe de Klein*<BookFootnote num=\"3\" text=\"Félix Klein, mathématicien allemand (1849–1925).\" /> ; d’après les propriétés vues plus haut, c’est un groupe *abélien fini d’ordre $4$*. Considérons alors le groupe $V$ défini par la table (11). Dans $V$, posons $H_1 = \\langle a \\rangle = \\{e, a\\}$ et $H_2 = \\langle b \\rangle = \\{e, b\\}$. On remarque que $H_1$ et $H_2$ sont isomorphes à $\\Zn{2}$. D’autre part, $ab = ba = c$, d’où $V = H_1 H_2$ ; de plus $H_1 \\cap H_2 = (e)$ ; compte tenu de la proposition (1.85), on a :\n\n$$V \\simeq \\Zn{2} \\times \\Zn{2}$$\n\nD’après la remarque (1.68) $1^\\circ$, $V$ est non cyclique, donc le *groupe de Klein est non cyclique.*"
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "9f93f7530ec1a41ef93651b7ddd4b1ff4c8387a473f21d072633b2d39cc68f29",
+        "text": "*Soit $\\{G_i\\}_{1 \\leqslant i \\leqslant n}$ une famille finie de $n$ groupes ; un groupe $G$ est isomorphe au groupe produit direct $\\displaystyle\\prod_{1 \\leqslant i \\leqslant n} G_i$, si et seulement s’il contient une famille de $n$ sous-groupes $H_i$ ($1 \\leqslant i \\leqslant n$) tels que :*\n\n1) $H_i \\simeq G_i$, $\\forall i\\; (1 \\leqslant i \\leqslant n)$.\n2) $\\forall (i, j)\\; (1 \\leqslant i < j \\leqslant n),\\; \\forall h_i \\in H_i,\\; \\forall h_j \\in H_j,\\; h_i h_j = h_j h_i$.\n3) $G = H_1 H_2 \\dots H_n$.\n4) $H_i \\cap H_1 H_2 \\dots H_{i-1} H_{i+1} \\dots H_n = (e),\\; \\forall i\\; (1 \\leqslant i \\leqslant n)$, *$e$ étant l’élément unité de $G$.*"
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "08706f8b54db4d20b5bfb260ddac55575e6a2b8ab2007a646092d617f20e15a9",
+        "text": "*Si $(G, +)$ est un groupe abélien et si $\\{G_i\\}_{1 \\leqslant i \\leqslant n}$ est une famille finie de $n$ groupes abéliens, alors $G$ est isomorphe au produit direct $\\displaystyle\\prod_{1 \\leqslant i \\leqslant n} G_i$, si et seulement s’il existe une famille de sous-groupes $\\{H_i\\}_{1 \\leqslant i \\leqslant n}$ tels que $H_i \\simeq G_i$, pour tout $i$ ($1 \\leqslant i \\leqslant n$), et*\n\n$$G = \\bigoplus_{1 \\leqslant i \\leqslant n} H_i.$$"
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "8c20f9f639264ff0044328d520e0ab8639fedb8b2efc3640e920a115b5ea0c2e",
+        "text": "Les remarques (1.84) $1^\\circ$ $2^\\circ$ $3^\\circ$ se généralisent au cas d’une famille quelconque $\\{G_i\\}_{i \\in I}$ de groupes ; en particulier, pour tout $i \\in I$, on a :\n\n<span id=\"ref-eq-1-28\"></span>\n\n$$p_i \\circ q_i = \\id_{G_i} \\tag{28}$$\n\net quel que soit $x \\in \\displaystyle\\prod_{i \\in I} G_i$, on peut écrire\n\n<span id=\"ref-eq-1-29\"></span>\n\n$$x = (p_i(x))_{i \\in I} \\tag{29}$$\n\nPar contre, si $I$ est infini, la formule (26) et la proposition (1.88) *ne peuvent pas être généralisées*, puisque, dans un groupe, seul le produit d’un nombre fini d’éléments a un sens."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "bd86b577fad007069cc8e04528316465020fdf2a63b0ec564d7f7879e34496ab",
+        "text": "*Soient $I$ un ensemble non vide, $\\{G_i\\}_{i \\in I}$ une famille de groupes et $\\{p_i\\}_{i \\in I}$ la famille des projections canoniques associées au groupe produit direct $\\displaystyle\\prod_{i \\in I} G_i$.*\n\n*Etant donné un groupe $G$, quelle que soit la famille $\\{f_i\\}_{i \\in I}$ de morphismes de groupes telle que, pour tout $i \\in I$, $f_i \\in \\operatorname{Hom}(G, G_i)$, il existe un unique morphisme $h \\in \\operatorname{Hom}\\!\\left(G, \\displaystyle\\prod_{i \\in I} G_i\\right)$ tel que, quel que soit $i \\in I$, $p_i \\circ h = f_i$.*"
+      },
+      {
+        "tag": "ProofBlock",
+        "sha256": "206d2588b13121924dcbca7f06a331023f226f2079355d57c4d35214461f6479",
+        "text": "Nous ferons la démonstration dans le cas où $I = \\{1, 2\\}$ ; la méthode se généralise sans peine au cas où $I$ est un ensemble non vide quelconque. Le problème peut être schématisé par le diagramme ci-dessous :\n\n<div class=\"katex-block-wrap\">\n  <svg viewBox=\"0 0 340 160\" width=\"320\" role=\"img\" aria-label=\"Diagramme commutatif du produit direct de deux groupes\" style=\"display:block;margin:0.5rem auto;color:var(--jc-text);\">\n    <defs>\n      <marker id=\"diag-arrow-2\" viewBox=\"0 0 10 10\" refX=\"8\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\">\n        <path d=\"M 0 1 L 10 5 L 0 9 z\" fill=\"currentColor\" />\n      </marker>\n    </defs>\n    <text x=\"170\" y=\"25\" text-anchor=\"middle\" fill=\"currentColor\" font-family=\"KaTeX_Main, Georgia, serif\" font-size=\"16\">G</text>\n    <text x=\"45\" y=\"138\" text-anchor=\"middle\" fill=\"currentColor\" font-family=\"KaTeX_Main, Georgia, serif\" font-size=\"16\">G<tspan font-size=\"10\" dy=\"4\">1</tspan></text>\n    <text x=\"170\" y=\"138\" text-anchor=\"middle\" fill=\"currentColor\" font-family=\"KaTeX_Main, Georgia, serif\" font-size=\"16\">G<tspan font-size=\"10\" dy=\"4\">1</tspan><tspan dy=\"-4\"> × G</tspan><tspan font-size=\"10\" dy=\"4\">2</tspan></text>\n    <text x=\"295\" y=\"138\" text-anchor=\"middle\" fill=\"currentColor\" font-family=\"KaTeX_Main, Georgia, serif\" font-size=\"16\">G<tspan font-size=\"10\" dy=\"4\">2</tspan></text>\n    <line x1=\"155\" y1=\"32\" x2=\"55\" y2=\"119\" stroke=\"currentColor\" stroke-width=\"1.5\" marker-end=\"url(#diag-arrow-2)\" />\n    <text x=\"93\" y=\"68\" text-anchor=\"middle\" fill=\"currentColor\" font-family=\"KaTeX_Math, Georgia, serif\" font-style=\"italic\" font-size=\"14\">f<tspan font-size=\"10\" dy=\"3\">1</tspan></text>\n    <line x1=\"185\" y1=\"32\" x2=\"285\" y2=\"119\" stroke=\"currentColor\" stroke-width=\"1.5\" marker-end=\"url(#diag-arrow-2)\" />\n    <text x=\"247\" y=\"68\" text-anchor=\"middle\" fill=\"currentColor\" font-family=\"KaTeX_Math, Georgia, serif\" font-style=\"italic\" font-size=\"14\">f<tspan font-size=\"10\" dy=\"3\">2</tspan></text>\n    <line x1=\"170\" y1=\"36\" x2=\"170\" y2=\"115\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-dasharray=\"5,4\" marker-end=\"url(#diag-arrow-2)\" />\n    <text x=\"179\" y=\"82\" text-anchor=\"start\" fill=\"currentColor\" font-family=\"KaTeX_Main, Georgia, serif\" font-size=\"14\">∃!<tspan font-style=\"italic\"> h</tspan></text>\n    <line x1=\"138\" y1=\"133\" x2=\"64\" y2=\"133\" stroke=\"currentColor\" stroke-width=\"1.5\" marker-end=\"url(#diag-arrow-2)\" />\n    <text x=\"101\" y=\"125\" text-anchor=\"middle\" fill=\"currentColor\" font-family=\"KaTeX_Math, Georgia, serif\" font-style=\"italic\" font-size=\"14\">p<tspan font-size=\"10\" dy=\"3\">1</tspan></text>\n    <line x1=\"202\" y1=\"133\" x2=\"276\" y2=\"133\" stroke=\"currentColor\" stroke-width=\"1.5\" marker-end=\"url(#diag-arrow-2)\" />\n    <text x=\"239\" y=\"125\" text-anchor=\"middle\" fill=\"currentColor\" font-family=\"KaTeX_Math, Georgia, serif\" font-style=\"italic\" font-size=\"14\">p<tspan font-size=\"10\" dy=\"3\">2</tspan></text>\n  </svg>\n</div>\n\n$\\{p_1, p_2\\}$, $\\{f_1, f_2\\}$ sont connus, il s’agit de prouver l’existence et l’unicité du morphisme $h$.\n\n*a) Existence de $h$ :* Considérons l’application\n\n$$h : G \\to G_1 \\times G_2$$\n\ndéfinie par :\n\n$$x \\mapsto (f_1(x), f_2(x))$$\n\n$f_1$ et $f_2$ étant des morphismes de groupes, on en déduit facilement que $h \\in \\operatorname{Hom}(G, G_1 \\times G_2)$.\n\n<PageRef :page=\"61\" />\n\nD’autre part, $p_1 \\circ h(x) = f_1(x)$ et $p_2 \\circ h(x) = f_2(x)$, quel que soit $x \\in G$, impliquent :\n\n$$p_1 \\circ h = f_1 \\quad \\text{et} \\quad p_2 \\circ h = f_2.$$\n\n*b) Unicité de $h$ :* Supposons qu’il existe $h' \\in \\operatorname{Hom}(G, G_1 \\times G_2)$ tel que $p_1 \\circ h' = f_1$ et $p_2 \\circ h' = f_2$ ; ces conditions impliquent que pour tout $x \\in G$ on a (formule 25) :\n\n$$h'(x) = (f_1(x), f_2(x)) = h(x),$$\n\nd’où $h' = h$."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "d48979d8c26d822a003346ff4611dc38eeb04360728a415a3c18b89dc76e93fe",
+        "text": "La propriété du produit direct d’une famille de groupes énoncée dans le théorème (1.91) est dite « *universelle* » ; le lecteur pourra trouver dans [54], par exemple, la justification de ce qualificatif, issu de la théorie des catégories, et que nous retrouverons plusieurs fois au cours de cet ouvrage."
+      }
+    ],
+    "docs/chap2/1-classes-lagrange.md": [
+      {
+        "tag": "MathBlock",
+        "sha256": "04e3ea446f7d3dbd312dd97568ba6093125d9f8193bc2c0beed3175e6b6ba237",
+        "text": "*$G$ étant un groupe :*\n\n$1)$ *Pour tout sous-groupe $H$ de $G$, les relations $\\mathscr{R}_H$ et ${}_H\\mathscr{R}$ sont des relations d’équivalence.*\n\n$2)$ $\\begin{aligned}[t]\ny \\equiv x(\\mathscr{R}_H) &\\iff y \\in Hx, \\qquad \\text{\\textit{où }} Hx = \\{hx ; h \\in H\\} ; \\\\\ny \\equiv x({}_H\\mathscr{R}) &\\iff y \\in xH, \\qquad \\text{\\textit{où }} xH = \\{xh ; h \\in H\\}.\n\\end{aligned}$"
+      },
+      {
+        "tag": "ProofBlock",
+        "sha256": "c7131c2f30ee543a2ebc03c62d4d16a6bf0a26ea28c662f6b4ab5b21b73888c7",
+        "text": "Démontrons la propriété pour $\\mathscr{R}_H$.\n\n$1)$ Pour tout $x \\in G$, on a $xx^{-1} = e \\in H$, donc $x \\mathrel{\\mathscr{R}_H} x$.\nSi $xy^{-1} \\in H$, alors $(xy^{-1})^{-1} = yx^{-1} \\in H$, donc $x \\mathrel{\\mathscr{R}_H} y \\implies y \\mathrel{\\mathscr{R}_H} x$.\nEnfin, si $xy^{-1} \\in H$ et $yz^{-1} \\in H$, alors $xy^{-1}yz^{-1} = xz^{-1} \\in H$, d’où $x \\mathrel{\\mathscr{R}_H} y$ et $y \\mathrel{\\mathscr{R}_H} z \\implies x \\mathrel{\\mathscr{R}_H} z$.\n\n<PageRef :page=\"72\" />\n\n$2)$\n$$\\begin{aligned}\ny \\equiv x(\\mathscr{R}_H) &\\iff yx^{-1} \\in H \\\\\nyx^{-1} \\in H &\\iff \\exists h \\in H, \\quad y = hx,\n\\end{aligned}$$\nd’où $y \\equiv x(\\mathscr{R}_H) \\iff y \\in Hx$."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "894bbdf121eaaf2c39b1aaa294b9f5032339acd4b71c71ba369c0f14fe12d5b6",
+        "text": "$H$ étant un sous-groupe d’un groupe $G$, les relations $\\mathscr{R}_H$ et ${}_H\\mathscr{R}$ sont respectivement appelées : *relation d’équivalence à droite et à gauche, modulo $H$ dans $G$*.\n\nPour $x \\in G$, les ensembles $Hx$ et $xH$ sont appelés *classes à droite* et *classes à gauche de $x$ modulo $H$*."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "e60279466a365673cdb81d727fcded414be07057b0a996bdbf666f32398c8a05",
+        "text": "$1^\\circ$ Les conventions « à droite » et « à gauche » adoptées ici sont les plus couramment utilisées par les algébristes, cependant, certains auteurs préfèrent les conventions opposées, c’est en particulier le cas de S. Mac Lane et G. Birkhoff dans [54].\n\n$2^\\circ$ Si le groupe $G$ est noté additivement, $\\mathscr{R}_H$ et ${}_H\\mathscr{R}$ sont définies par :\n\n$$x \\mathrel{\\mathscr{R}_H} y \\iff (x - y) \\in H \\qquad \\text{et} \\qquad x \\mathrel{ {}_H\\mathscr{R} } y \\iff (-x + y) \\in H.$$\n\nLes classes à droite et à gauche modulo $H$ d’un élément $x \\in G$ sont respectivement :\n\n$$H + x = \\{h + x ; h \\in H\\} \\qquad \\text{et} \\qquad x + H = \\{x + h ; h \\in H\\}.$$\n\n$3^\\circ$ Les classes à droite modulo $H$ étant des classes d’équivalence, on a :\n\n$$Hx \\neq Hy \\implies Hx \\cap Hy = \\varnothing$$\n\net si $\\{x_i\\}_{i \\in I}$ est une famille de représentants des classes à droite modulo $H$, *distinctes*, alors la famille $\\{Hx_i\\}_{i \\in I}$ forme une *partition* de $G$ :\n\n$$G = \\bigcup_{i \\in I} Hx_i \\qquad \\text{et} \\qquad Hx_i \\neq Hx_j \\iff i \\neq j.$$\n\nLa même remarque est valable pour les classes à gauche modulo $H$.\n\n<PageRef :page=\"73\" />\n\n$4^\\circ$ Si $H = G$, pour tout $x \\in G$, on a $Gx = xG = G$, donc $\\mathscr{R}_G = {}_G\\mathscr{R}$ est *l’équivalence universelle* dans $G$.\n\nSi $H = (e)$, pour tout $x \\in G$, $\\{x\\}$ est à la fois classe à droite et classe à gauche de $x$ modulo $(e)$, donc $\\mathscr{R}_{(e)} = {}_{(e)}\\mathscr{R}$ est *l’égalité* dans $G$.\n\n$5^\\circ$ Quel que soit $H \\leqslant G$ et quel que soit $h \\in H$, on a $Hh = hH = H$, donc $H$ est à la fois classe à droite et classe à gauche de $h$ modulo $H$ ; en particulier, *$H$ est classe à droite et à gauche de $e$ modulo $H$*.\n\n$6^\\circ$ Si le groupe $G$ est abélien, quel que soit $H \\leqslant G$, et quel que soit $x \\in G$, on a $Hx = xH$, donc $\\mathscr{R}_H = {}_H\\mathscr{R}$.\n\nDans ce cas, deux éléments $x$ et $y$ de $G$, équivalents modulo $\\mathscr{R}_H$ ($= {}_H\\mathscr{R}$), seront dits *équivalents modulo $H$* ; on écrira :\n\n$$x \\equiv y \\; (\\mathrm{mod}\\; H).$$\n\nL’*ensemble quotient* de $G$ par $\\mathscr{R}_H$ ($= {}_H\\mathscr{R}$) sera noté $\\dfrac{G}{H}$ et appelé *quotient de $G$ par $H$*.\n\n$7^\\circ$ Si le groupe $G$ est *non abélien*, alors, pour $H \\neq (e)$, $H \\neq G$ et $x \\notin H$, on a, *en général*, $Hx \\neq xH$, donc $\\mathscr{R}_H \\neq {}_H\\mathscr{R}$.\n\nLes ensembles quotients $\\dfrac{G}{\\mathscr{R}_H}$ et $\\dfrac{G}{ {}_H\\mathscr{R} }$ seront respectivement notés $\\left(\\dfrac{G}{H}\\right)_d$ et $\\left(\\dfrac{G}{H}\\right)_g$."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "e826a46a9a5d30163fbf37e50adf69b403650c4b510c469e834eb84523cc7de7",
+        "text": "Considérons le groupe symétrique $S_3$ qui est engendré par :\n\n$$\\sigma_1 = \\begin{pmatrix} 1 & 2 & 3 \\\\ 2 & 3 & 1 \\end{pmatrix} \\qquad \\text{et} \\qquad \\tau_3 = \\begin{pmatrix} 1 & 2 & 3 \\\\ 2 & 1 & 3 \\end{pmatrix}$$\n\n(voir exemple (1.41)).\n\nPour simplifier l’écriture, posons ici : $\\sigma = \\sigma_1$ et $\\tau = \\tau_3$ ; on a alors $S_3 = \\{e, \\tau, \\sigma, \\sigma^2, \\tau \\circ \\sigma, \\sigma \\circ \\tau\\}$.\n\nSoit $H = \\langle \\tau \\rangle = \\{e, \\tau\\}$. Les classes à droite et à gauche de $S_3$ modulo $H$ sont respectivement :\n\n$$\\left\\{\\begin{aligned}\nH &= \\{e, \\tau\\} \\\\\nH\\sigma &= \\{\\sigma, \\tau \\circ \\sigma\\} \\\\\nH\\sigma^2 &= \\{\\sigma^2, \\tau \\circ \\sigma^2 = \\sigma \\circ \\tau\\}\n\\end{aligned}\\right. \\qquad\n\\left\\{\\begin{aligned}\nH &= \\{e, \\tau\\} \\\\\n\\sigma H &= \\{\\sigma, \\sigma \\circ \\tau\\} \\\\\n\\sigma^2 H &= \\{\\sigma^2, \\sigma^2 \\circ \\tau = \\tau \\circ \\sigma\\}\n\\end{aligned}\\right.$$\n\n$$\\tau \\circ \\sigma \\neq \\sigma \\circ \\tau \\implies H\\sigma \\neq \\sigma H, \\qquad \\text{d’où } \\mathscr{R}_H \\neq {}_H\\mathscr{R}.$$"
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "a567a2cca911bb30d15defdadeb136a5a489cc130d288dfe6a4e8b0e4a7ae314",
+        "text": "Soit $H = n\\Z$ un sous-groupe de $(\\Z, +)$. Le groupe $(\\Z, +)$ étant abélien, on a $\\mathscr{R}_H = {}_H\\mathscr{R}$ et :\n\n$$\\begin{aligned}\nx \\equiv y \\; (\\mathrm{mod}\\; n\\Z) &\\iff (x - y) \\in n\\Z, \\\\\n\\text{d’où} \\qquad x \\equiv y \\; (\\mathrm{mod}\\; n\\Z) &\\iff x \\equiv y \\; (\\mathrm{mod}\\; n)\n\\end{aligned}$$\n\n(voir exemple (1.13)).\n\nAutrement dit, l’équivalence modulo $n\\Z$ coïncide avec la congruence modulo $n$, d’où\n\n$$\\frac{\\Z}{n\\Z} = \\Zn{n}.$$\n\nLe quotient de $\\Z$ par un sous-groupe $n\\Z$ est donc muni d’une structure de groupe, induite par celle de $\\Z$ (exemple (1.13)) ; nous verrons plus loin (proposition (2.24)) qu’il en est de même pour tout quotient d’un groupe *abélien* par l’un quelconque de ses sous-groupes."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "c41152158e6a630fd94115cb19e45a38b9314bf884a2b0fee2560b12e736274b",
+        "text": "*Soient $G$ un groupe et $H$ un sous-groupe de $G$, alors toute classe à droite $Hx$ ($\\textit{resp}^t$ à gauche $xH$) est équipotente à $H$.*"
+      },
+      {
+        "tag": "ProofBlock",
+        "sha256": "688609113ce7758037855b7813dc07d034551770e1c97411d21c9c059fc6f142",
+        "text": "On sait que deux ensembles sont dits équipotents s’il existe une bijection de l’un sur l’autre.\n\nDans le cas présent, on vérifie facilement que l’application\n\n$$\\begin{aligned}\n\\gamma : H &\\to Hx \\\\\nh &\\mapsto hx\n\\end{aligned}$$\n\nest une bijection, d’où le résultat énoncé."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "53dc600bf5754841d0cbcbb3c3b9dcecd5fda1c6dfe3bf3649a6bfc158d87394",
+        "text": "*Dans un groupe $G$, deux classes à droite ou à gauche modulo un sous-groupe $H$ sont équipotentes.*\n\nEn effet, deux ensembles équipotents à un même troisième sont équipotents."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "4200096fce5eba2aaba0d643e69b7025449990e6667750348039b8e24834ed07",
+        "text": "*Si $H$ est un sous-groupe fini d’un groupe quelconque $G$, alors, toute classe à droite $Hx$, ou à gauche $xH$, est un ensemble fini de même cardinal que $H$.*"
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "8c2a02717f1a11bcd0c2f5d6faec62bfd1f0e9e9d84fc9707128717a9f7cf4e5",
+        "text": "*Si $G$ est un groupe fini, alors l’ordre de tout sous-groupe $H$ de $G$ divise l’ordre de $G$.*<BookFootnote num=\"1\" text=\"Joseph-Louis Lagrange (comte de), mathématicien français (1736–1813).\" />"
+      },
+      {
+        "tag": "ProofBlock",
+        "sha256": "d14b58ce2a2ce7a6e6eee2e7238ca5f86bcd8237dc25fa22cb8b84a3263ca413",
+        "text": "Soit $H \\leqslant G$, considérons la famille des classes à droite, *distinctes*, modulo $H$ dans $G$ ; cette famille forme une partition de $G$.\n\n$G$ étant fini, il n’y a qu’un nombre fini de classes à droite distinctes modulo $H$ ; soit $k$ ce nombre.\n\nSi $n = o(G)$ et $m = o(H)$, alors chaque classe à droite modulo $H$ a $m$ éléments, d’où $n = km$ et par suite $m = o(H)$ divise $n = o(G)$."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "a1e7f30611bd362abf59c2ad514ae81c886463d06f5e1cd7f7b4f2e65f8ac3b9",
+        "text": "*Si $G$ est un groupe fini, quel que soit $x \\in G$, l’ordre de $x$ divise l’ordre de $G$.*\n\nEn effet, l’ordre de $x$ est l’ordre du sous-groupe de $G$ engendré par $x$."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "f2d549d0e03f58448ea50cd833f190cfb0b8e9f41586c4c26662cf134a17f893",
+        "text": "*Si $G$ est un groupe fini, pour tout sous-groupe $H$ de $G$, le nombre des classes à droite modulo $H$ est égal au nombre des classes à gauche modulo $H$.*\n\nEn effet, d’après la démonstration du théorème de Lagrange, qui peut aussi être faite en prenant les classes à gauche, le nombre des classes à droite ($\\text{resp}^t$ à gauche) modulo $H$ est égal à $\\dfrac{o(G)}{o(H)}$."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "8266cc21fd6c12865447d417cfb2cf03faaf6c92fec1b0f8eb31ca15d2cdfcc8",
+        "text": "*Pour tout sous-groupe $H$ d’un groupe $G$, les ensembles $\\left(\\dfrac{G}{H}\\right)_d$ et $\\left(\\dfrac{G}{H}\\right)_g$ sont équipotents.*"
+      },
+      {
+        "tag": "ProofBlock",
+        "sha256": "70ec63448109831f6aac16982d593ce70cd1b754a45da80dac0ac18bce1bbee4",
+        "text": "Considérons la correspondance\n\n$$\\begin{aligned}\n\\theta : \\left(\\frac{G}{H}\\right)_d &\\to \\left(\\frac{G}{H}\\right)_g \\\\\nHx &\\mapsto x^{-1}H.\n\\end{aligned}$$\n\n<PageRef :page=\"76\" />\n\n— Montrons que $\\theta$ est une application ; il s’agit de prouver que\n\n$$\\begin{aligned}\n&\\qquad Hx = Hy \\text{ implique } x^{-1}H = y^{-1}H ; \\\\\n\\text{or} \\qquad &Hx = Hy \\iff xy^{-1} \\in H \\\\\n&\\qquad xy^{-1} \\in H \\implies y^{-1} \\in x^{-1}H \\\\\n\\text{et} \\qquad &y^{-1} \\in x^{-1}H \\implies y^{-1}H = x^{-1}H.\n\\end{aligned}$$\n\n— $\\theta$ est injective ; en effet, supposons $\\theta(Hx) = \\theta(Hy)$, c’est-à-dire $x^{-1}H = y^{-1}H$. On a alors $xy^{-1} \\in H$, d’où $Hx = Hy$.\n\n— $\\theta$ est surjective, car pour tout élément $xH$ de $\\left(\\dfrac{G}{H}\\right)_g$ on peut écrire $xH = \\theta(Hx^{-1})$.\n\nEn conclusion : $\\theta$ est une bijection, d’où le théorème."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "04fa8a712a7560b607e98e83ca9b2acffad88db85ba11d19568de8e2d3b75b44",
+        "text": "En théorie des ensembles, l’équipotence de deux ensembles s’exprime par l’égalité de leurs cardinaux. Le résultat du théorème (2.12) se traduit donc par la relation :\n\n<span id=\"ref-eq-2-1\"></span>\n\n$$\\card\\left(\\left(\\frac{G}{H}\\right)_d\\right) = \\card\\left(\\left(\\frac{G}{H}\\right)_g\\right) \\tag{1}$$"
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "3cbcfd6b16b2541524a93f0fbc4496ade4ef4de1fac7723a88102443b2a99150",
+        "text": "Étant donné un sous-groupe $H$ d’un groupe $G$, le cardinal de $\\left(\\dfrac{G}{H}\\right)_d$ $\\left(= \\card\\left(\\left(\\dfrac{G}{H}\\right)_g\\right)\\right)$ s’appelle *l’indice de $H$ dans $G$* et se note $[G : H]$.\n\nSi $[G : H]$ est fini, on dit que $H$ est d’indice fini dans $G$."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "45b59f0e3d12e1333da84a794301bca67a6a942592817def5d25ccab4cc3324e",
+        "text": "*Si $G$ est un groupe fini, alors pour tout sous-groupe $H$ de $G$, on a*\n\n<span id=\"ref-eq-2-2\"></span>\n\n$$o(G) = o(H)[G : H] \\tag{2}$$"
+      },
+      {
+        "tag": "ProofBlock",
+        "sha256": "37a7bb0c946a7740df47af617db5d0a43c7213727c75de8e1f963a4cdc49bd65",
+        "text": "Dans le cas où $G$ est fini, $[G : H]$ est égal au nombre des classes à droite ($\\text{resp}^t$ à gauche) modulo $H$, d’où, d’après la démonstration du théorème de Lagrange, $[G : H] = \\dfrac{o(G)}{o(H)}$."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "81dddeabbad28f784865af9ed99b879904fe7b05557968ec5232b15caf21ee77",
+        "text": "$1^\\circ$ $[G : H]$ peut être fini, sans que ni $G$, ni $H$ ne le soit. Par exemple, dans $(\\Z, +)$ pour tout sous-groupe *non nul* $n\\Z$, on sait que $\\dfrac{\\Z}{n\\Z} = \\Zn{n}$, donc\n\n<span id=\"ref-eq-2-3\"></span>\n\n$$[\\Z : n\\Z] = n \\tag{3}$$\n\n$2^\\circ$ Pour tout groupe $G$, on a\n\n$$[G : G] = 1 \\qquad \\text{et} \\qquad [G : (e)] = \\card G ;$$\n\nen particulier, si $G$ est fini, $[G : (e)] = o(G)$."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "5548d1f556222f864fbd85c438adbbb52a0ade7aeb5f5c08c407daf02dae1749",
+        "text": "*Dans un groupe, l’intersection d’un nombre fini de sous-groupes d’indices finis est un sous-groupe d’indice fini.*<BookFootnote num=\"2\" text=\"Henri-Jules Poincaré, mathématicien français (1854–1912).\" />"
+      },
+      {
+        "tag": "ProofBlock",
+        "sha256": "143901b55aca6291ae6a410526293267a04367b26a140d804b434df039ae49d1",
+        "text": "Soit $\\{H_i\\}_{1 \\leqslant i \\leqslant n}$ une famille finie ($n \\geqslant 2$ dans $\\N$) de sous-groupes d’un groupe $G$, tels que pour tout $i$ ($1 \\leqslant i \\leqslant n$), $[G : H_i]$ est fini. Montrons que $\\left[G : \\bigcap\\limits_{1 \\leqslant i \\leqslant n} H_i\\right]$ est fini.\n\n— Considérons le cas $n = 2$. Pour tout $x \\in G$, on a\n\n$$(H_1 \\cap H_2)x \\subseteq H_1 x \\cap H_2 x.$$\n\nD’autre part, soit $y \\in H_1 x \\cap H_2 x$ ; alors\n\n$$(yx^{-1} \\in H_1 \\text{ et } yx^{-1} \\in H_2) \\implies y \\in (H_1 \\cap H_2)x,$$\n\nd’où\n\n<span id=\"ref-eq-2-4\"></span>\n\n$$(H_1 \\cap H_2)x = H_1 x \\cap H_2 x \\tag{4}$$\n\nPar hypothèse, les classes à droite distinctes modulo $H_1$, et modulo $H_2$, sont en nombres finis, respectivement, $[G : H_1]$ et $[G : H_2]$ et d’après $(4)$ on a\n\n<span id=\"ref-eq-2-5\"></span>\n\n$$[G : H_1 \\cap H_2] \\leqslant [G : H_1][G : H_2] \\tag{5}$$\n\npar suite, $[G : H_1 \\cap H_2]$ est fini.\n\n— En raisonnant par récurrence, on montre alors que la propriété est vraie pour tout $n > 2$."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "13c20478fbab62f74beb0cbb3e792bd6d1feccce9a832f59bbf1e3c6c9463cc9",
+        "text": "*Si $H$ est un sous-groupe d’indice fini dans un groupe $G$ et si $K$ est un sous-groupe de $G$ contenant $H$, alors $K$ est d’indice fini dans $G$ et :*\n\n<span id=\"ref-eq-2-6\"></span>\n\n$$[G : H] = [G : K][K : H] \\tag{6}$$\n\nLa formule $(6)$ sera appelée : *formule des indices*."
+      },
+      {
+        "tag": "ProofBlock",
+        "sha256": "9f01d5750eb8572ffda1e60be2341f662c1f6c35d17f6896b900cc33d9cde406",
+        "text": "Soit $\\{x_i\\}_{i \\in I}$ une famille de représentants des classes à droite distinctes modulo $K$ dans $G$.\n\nLa famille des $\\{Kx_i\\}_{i \\in I}$ forme une partition de $G$ :\n\n$$G = \\bigcup_{i \\in I} Kx_i, \\qquad Kx_i \\neq Kx_j \\iff i \\neq j$$\n\net $\\card(I) = [G : K]$.\n\nSoit $\\{y_\\lambda\\}_{\\lambda \\in \\Lambda}$ une famille de représentants des classes à droite distinctes modulo $H$ dans $K$. On a :\n\n$$K = \\bigcup_{\\lambda \\in \\Lambda} Hy_\\lambda, \\qquad Hy_\\lambda \\neq Hy_\\mu \\iff \\lambda \\neq \\mu$$\n\net $\\card(\\Lambda) = [K : H]$.\n\nSoit $g \\in G$, il existe un unique $i \\in I$ tel que $g \\in Kx_i$.\n\nOn en déduit qu’il existe un unique $a \\in K$ tel que $g = ax_i$.\n\nD’autre part, il existe un unique $\\lambda \\in \\Lambda$ tel que $a \\in Hy_\\lambda$.\n\nOn en déduit que $g \\in Hy_\\lambda x_i$ ; par suite, on a :\n\n$$G = \\bigcup_{(\\lambda, i) \\in \\Lambda \\times I} Hy_\\lambda x_i.$$\n\nDémontrons que la famille des $Hy_\\lambda x_i$, pour $(\\lambda, i) \\in \\Lambda \\times I$ forme une partition de $G$. Supposons $Hy_\\lambda x_i = Hy_\\mu x_j$.\n\n$$\\begin{aligned}\n&\\qquad H \\subseteq K \\implies KH = K ; \\\\\n\\text{or} \\qquad &Hy_\\lambda x_i = Hy_\\mu x_j \\implies KHy_\\lambda x_i = KHy_\\mu x_j. \\\\\n&\\qquad KHy_\\lambda = Ky_\\lambda = K, \\quad \\text{car } y_\\lambda \\in K ; \\quad \\text{de même } KHy_\\mu = K ;\n\\end{aligned}$$\n\n<PageRef :page=\"79\" />\n\non en déduit :\n\n$$Kx_i = Kx_j, \\qquad \\text{d’où } i = j ;$$\n\npar suite, on a\n\n$$Hy_\\lambda = Hy_\\mu, \\qquad \\text{d’où } \\lambda = \\mu.$$\n\nLa famille $\\{y_\\lambda x_i\\}_{(\\lambda, i) \\in \\Lambda \\times I}$ est donc une famille de représentants des classes à droite distinctes de $G$ modulo $H$, d’où :\n\n$$[G : H] = \\card(\\Lambda \\times I).$$\n\nPar hypothèse, $[G : H]$ est fini, par suite, $\\Lambda$ et $I$ sont des *ensembles finis*, en particulier :\n\n$$[G : K] = \\card(I) \\text{ est fini}$$\n\net $\\card(\\Lambda \\times I) = \\card(\\Lambda)\\card(I)$ implique :\n\n$$[G : H] = [G : K][K : H].$$"
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "16d03157b941c53d9c74413a2acec353bbef4e44ecf23589921dfc2306dc7690",
+        "text": "Le théorème $(2.18)$ peut être généralisé dans le sens suivant : si $H$ et $K$ sont deux sous-groupes de $G$ tels que $H \\subseteq K$, alors la formule $(6)$ est valable dès que deux quelconques des indices qui y figurent sont finis et le troisième est alors fini."
+      }
+    ],
+    "docs/chap2/2-quotient-isomorphisme.md": [
+      {
+        "tag": "MathBlock",
+        "sha256": "ed176cfa53c71ca3a15d1538b141ecabbda35ef07562d3dfedae26cc5d147869",
+        "text": "*Une relation d’équivalence $\\mathscr{R}$ définie dans un ensemble $(E, \\cdot)$ est compatible avec la loi $\\cdot$, si et seulement si elle est compatible à droite et à gauche avec cette loi.*"
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "131f64c56e8984a600382b8b0d3735427607de9f2d5974d5101c257b8766fedf",
+        "text": "*Compte tenu des notations ci-dessus, la correspondance $\\lambda : \\overline{E} \\times \\overline{E} \\to \\overline{E}$ définit une loi de composition interne dans $\\overline{E}$,*\n\n$$(\\overline{x}, \\overline{y}) \\mapsto \\overline{x \\cdot y}$$\n\n*si et seulement si $\\mathscr{R}$ est compatible avec la loi $\\cdot$.*"
+      },
+      {
+        "tag": "ProofBlock",
+        "sha256": "935740195a93a7dfb753344aee0841efb05ac7dfab3c46a23d3330e64e539bfb",
+        "text": "$\\lambda$ définit une loi de composition interne dans $\\overline{E}$ si et seulement si $\\lambda$ est une *application*, c’est-à-dire, si et seulement si, quels que soient $\\overline{x}, \\overline{x}', \\overline{y}, \\overline{y}'$ dans $\\overline{E}$ :\n\n<span id=\"ref-eq-2-10\"></span>\n\n$$(\\overline{x} = \\overline{x}' \\text{ et } \\overline{y} = \\overline{y}') \\implies \\overline{x \\cdot y} = \\overline{x' \\cdot y'} \\tag{10}$$\n\nor la relation $(10)$ équivaut à $(8)$, d’où la propriété énoncée."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "0dcc17d72b97f97c0400df1a508c41d1ccd5515b50f6a4409aa6dbcaea8fb48f",
+        "text": "$1^\\circ$ Les définitions de l’addition et de la multiplication dans $\\Zn{n}$ (exemple $(1.13)$ et exercice 21, chap. $\\mathrm{I}^{\\text{er}}$) sont une illustration de la proposition $(2.21)$.\n\n$2^\\circ$ La formule $(9)$ implique que si, dans $E$, la loi $\\cdot$ est associative ou commutative, il en est de même de la loi quotient <PageRef :page=\"81\" /> dans $\\overline{E}$ ; de plus, si $e$ est élément neutre dans $(E, \\cdot)$, alors $\\overline{e}$ est élément neutre dans $(\\overline{E}, \\cdot)$ et si $x \\in E$ admet un symétrique $x^{-1}$ dans $E$, $\\overline{x}$ est symétrisable dans $\\overline{E}$ et $\\overline{x}^{-1} = \\overline{x^{-1}}$."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "b7f64cda78f161092011f4d952eb1e0d34ec4eec7c0932ba024f23f4f09cdc7d",
+        "text": "*Pour tout sous-groupe $H$ d’un groupe $G$, la relation d’équivalence $\\mathscr{R}_H$ ($\\textit{resp}^t$ ${}_H\\mathscr{R}$) est compatible à droite ($\\textit{resp}^t$ à gauche) avec la loi de composition de $G$.*\n\n*Réciproquement, si $\\mathscr{R}$ est une relation d’équivalence définie dans un groupe $G$, compatible à droite ($\\textit{resp}^t$ à gauche) avec la loi de composition du groupe, alors il existe un unique sous-groupe $H$ de $G$ tel que $\\mathscr{R} = \\mathscr{R}_H$ ($\\textit{resp}^t$ $\\mathscr{R} = {}_H\\mathscr{R}$).*"
+      },
+      {
+        "tag": "ProofBlock",
+        "sha256": "3e8ea020625b862390c6abefb2074b8af660bcffdc3b692c8c123d8497794a92",
+        "text": "$1^\\circ$ $H$ étant un sous-groupe de $G$, supposons $x$ et $y$ dans $G$, tels que $x \\mathrel{\\mathscr{R}_H} y$ et soit $a \\in G$.\n\n$$\\begin{aligned}\n&\\qquad x \\mathrel{\\mathscr{R}_H} y \\iff xy^{-1} \\in H ; \\\\\n\\text{or} \\qquad &(xa)(ya)^{-1} = x(aa^{-1})y^{-1} = xy^{-1}, \\\\\n\\text{d’où} \\qquad &(x \\mathrel{\\mathscr{R}_H} y \\text{ et } a \\in G) \\implies xa \\mathrel{\\mathscr{R}_H} ya.\n\\end{aligned}$$\n\n$2^\\circ$ Réciproquement, $\\mathscr{R}$ étant une relation d’équivalence définie dans $G$ et compatible à droite avec la loi de composition du groupe, désignons par $H$ la classe d’équivalence de $e$ modulo $\\mathscr{R}$ et montrons que $H$ est un sous-groupe de $G$. $e \\in H \\implies H \\neq \\varnothing$ ; pour $x$ et $y$ dans $H$, on a $x \\mathrel{\\mathscr{R}} e$ et $y \\mathrel{\\mathscr{R}} e$ ; la compatibilité à droite de $\\mathscr{R}$ avec la loi de composition de $G$ implique alors : $xy^{-1} \\mathrel{\\mathscr{R}} y^{-1}$ et $e \\mathrel{\\mathscr{R}} y^{-1}$, donc $xy^{-1} \\mathrel{\\mathscr{R}} e$ et par suite $xy^{-1} \\in H$.\n\nVérifions maintenant que $\\mathscr{R} = \\mathscr{R}_H$.\n\nSupposons $x \\mathrel{\\mathscr{R}} y$ ; la compatibilité à droite de $\\mathscr{R}$ avec la loi de composition de $G$ implique $xy^{-1} \\mathrel{\\mathscr{R}} e$, d’où $xy^{-1} \\in H$ ; on en déduit : $\\mathscr{R} \\subseteq \\mathscr{R}_H$.\n\n<PageRef :page=\"82\" />\n\nSupposons $x \\mathrel{\\mathscr{R}_H} y$, c’est-à-dire $xy^{-1} \\in H$.\n\n$$\\begin{aligned}\n&\\qquad xy^{-1} \\in H \\iff xy^{-1} \\mathrel{\\mathscr{R}} e \\\\\n\\text{et} \\qquad &xy^{-1} \\mathrel{\\mathscr{R}} e \\implies x \\mathrel{\\mathscr{R}} y,\n\\end{aligned}$$\n\npar multiplication à droite par $y$, d’où $\\mathscr{R}_H \\subseteq \\mathscr{R}$ ; on en conclut que $\\mathscr{R} = \\mathscr{R}_H$."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "e605c4fb3235af43f709f1576846abe3011c9fab4d2a9bcca17ec7756e849e58",
+        "text": "*Si $G$ est un groupe abélien, pour tout sous-groupe $H$ de $G$, la relation d’équivalence $\\mathscr{R}_H = {}_H\\mathscr{R}$ est compatible avec la loi de composition de $G$ et l’ensemble $\\dfrac{G}{H}$ muni de la loi de composition quotient de celle de $G$ par $\\mathscr{R}_H$ ($= {}_H\\mathscr{R}$) est un groupe abélien.*"
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "b789161221595af5ab8eefe38e559943441904392079515e55157ba2fa318065",
+        "text": "$1^\\circ$ $G$ étant abélien, pour tout $\\overline{x} \\in \\dfrac{G}{H}$, on a $\\overline{x} = Hx = xH$.\n\nLa formule $(11)$ peut donc s’écrire sous la forme :\n\n<span id=\"ref-eq-2-12\"></span>\n\n$$(Hx)(Hy) = Hxy \\qquad (\\text{ou } (xH)(yH) = xyH) \\tag{12}$$\n\nEn notation additive, $(11)$ et $(12)$ deviennent :\n\n<span id=\"ref-eq-2-11-prime\"></span>\n\n$$\\overline{x} + \\overline{y} = \\overline{x + y} \\tag{11'}$$\n\n<span id=\"ref-eq-2-12-prime\"></span>\n\n$$\\begin{aligned}\n(H + x) + (H + y) &= H + (x + y) \\\\\n(\\text{ou } (x + H) + (y + H) &= (x + y) + H)\n\\end{aligned} \\tag{12'}$$\n\n<PageRef :page=\"83\" />\n\n$2^\\circ$ Si $\\pi$ est la surjection canonique : $\\begin{aligned}[t] G &\\to \\dfrac{G}{H} \\\\ x &\\mapsto \\overline{x} \\end{aligned}$, alors, compte tenu de $(11)$, $\\pi$ est un *épimorphisme* de groupes."
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "3b340069ec8daaddcbabf3bd1e7369327fbc76ae3cd2e4e085006879b8758edc",
+        "text": "*Pour tout morphisme $f$ d’un groupe $G$ dans un groupe $G'$, l’ensemble quotient $\\dfrac{G}{\\Ker f}$ est un groupe par rapport à la loi de composition quotient, définie par : $\\overline{x}\\,\\overline{y} = \\overline{xy}$, quels que soient $\\overline{x}$ et $\\overline{y}$ dans $\\dfrac{G}{\\Ker f}$ et la surjection canonique $\\begin{aligned}[t] \\pi : G &\\to \\dfrac{G}{\\Ker f} \\\\ x &\\mapsto \\overline{x} \\end{aligned}$ est un épimorphisme de groupes.*"
+      },
+      {
+        "tag": "MathBlock",
+        "sha256": "8329334305535dc06f4b3ae0ecca869714a9608a867329d6cc952bc525a609ec",
+        "text": "*Pour tout morphisme $f$ d’un groupe $G$ dans un groupe $G'$, on a :*\n\n$$\\frac{G}{\\Ker f} \\simeq \\Im f.$$"
+      },
+      {
+        "tag": "ProofBlock",
+        "sha256": "8e85486439b7f94bd0dd26be3e7fdad6cec3cbb29364bfefdd4fa18639a49a50",
+        "text": "Considérons la correspondance\n\n$$\\begin{aligned}\n\\varphi : \\frac{G}{\\Ker f} &\\to \\Im f \\\\\n\\overline{x} &\\mapsto f(x).\n\\end{aligned}$$\n\n— Montrons que $\\varphi$ est une *application*, c’est-à-dire que $\\overline{x}' = \\overline{x}$ implique $f(x') = f(x)$\n\n$$\\overline{x}' = \\overline{x} \\iff x' \\mathrel{\\mathscr{R}_H} x, \\qquad \\text{où } H = \\Ker f.$$\n\nOr, on a vu plus haut que :\n\n<span id=\"ref-eq-2-13\"></span>\n\n$$(x' \\mathrel{\\mathscr{R}_H} x, \\text{ avec } H = \\Ker f) \\iff f(x') = f(x) \\tag{13}$$\n\ndonc $\\varphi$ est bien une application.\n\n— La définition de $\\varphi$ implique sa surjectivité.\n\n— On remarque que $(13)$ exprime l’injectivité de $\\varphi$.\n\n— Enfin\n\n$$\\varphi(\\overline{x}\\,\\overline{x}') = \\varphi(\\overline{xx'}) = f(xx') = f(x)f(x'),$$\n\nd’où $\\varphi(\\overline{x}\\,\\overline{x}') = \\varphi(\\overline{x})\\,\\varphi(\\overline{x}')$ ;\n\non en conclut que $\\varphi$ est un *isomorphisme* de groupes."
+      }
+    ]
+  },
+  "exercises": {
+    "c1-e01": {
+      "sha256": "fa09d359a8c8187a9a474b91c66a93b9db9bab15815de4e1321890e60a534970"
+    },
+    "c1-e02": {
+      "sha256": "28604619ed8ed885ffd146889c1c960a8bc509ae2013c75cec15205ba8d80244"
+    },
+    "c1-e03": {
+      "sha256": "ab128943b8d7e8b13337b3b53b4f8e34d51d37c138ec0adc24a369fde01d8683"
+    },
+    "c1-e04": {
+      "sha256": "edea48fee71f50602b03f6fb1d44439fb962b7eb70f6983323267fc0317cd284"
+    },
+    "c1-e05": {
+      "sha256": "95b540a759b4be7177807400ba516b34ed71bbb03884776aea27f4fa5b2a6a52"
+    },
+    "c1-e06": {
+      "sha256": "26b13d84fe971987aa111f013f06bfdf75dc7ca1be6aa6052c74ed087471ea57"
+    },
+    "c1-e07": {
+      "sha256": "057c7f23e24606cb4ab74b11ed60dc234e65675632fbe6f2468ef908499db333"
+    },
+    "c1-e08": {
+      "sha256": "77972ce61f6dfd7b3d4dc7d7e99cd1b37312df86e37753161194193aa08afb5f"
+    },
+    "c1-e09": {
+      "sha256": "16fd55998e7f3c0062d1a17c5e658b8cab66c281cf84cdb22b3662461fd934de"
+    },
+    "c1-e10": {
+      "sha256": "322bc919d06c57622637e6d1e96bea119f309b9406afb227156ef4de7452c612"
+    },
+    "c1-e11": {
+      "sha256": "f5d684c76791793e78d68f40acf973925a6e25de603d1f08148be359115d6d12"
+    },
+    "c1-e12": {
+      "sha256": "b58644be94cb0d14d4b0dfa77c6300a57f3c7d3e2b539fdedb97fcacf675bc63"
+    },
+    "c1-e13": {
+      "sha256": "f9dd18c9a03bfcd6cc67053ed3808172aa89b10a29059981bf1cc046c6353d7d"
+    },
+    "c1-e14": {
+      "sha256": "a7ec094c0b941f4642aa1dba5d1d3b186588d2be209c33dae23cb3a46d5b2220"
+    },
+    "c1-e15": {
+      "sha256": "10620c6cef57a43954dc7ff90476ebdfdbf6df71ad42010754dca8fc08c6a2a0"
+    },
+    "c1-e16": {
+      "sha256": "690e79a5892ad0514a63213ebe399c020c22b935c45607ef28e4712a5ad935a1"
+    },
+    "c1-e17": {
+      "sha256": "828a34c99cecec0f8bcc8f8e2deb81939ba1aafdff5f63db5a46178bdb4ad949"
+    },
+    "c1-e18": {
+      "sha256": "05e1ab7baf85816ba395e8f2d4e61a6a98c82d4c74d456d790b8acde07d724a2"
+    },
+    "c1-e19": {
+      "sha256": "9a614b14dc14eb95d9ba27966e7e790c1dc366d939a244a9a707cd815d6ecad5"
+    },
+    "c1-e20": {
+      "sha256": "d1d13319fb830c2566cfe3230d05c6e6c1130e2098533a784ee20e97163f5641"
+    },
+    "c1-e21": {
+      "sha256": "068bfc139d963b207450180105df62b076b48a80cbe1d6456501d6de2d0ea322"
+    },
+    "c1-e22": {
+      "sha256": "52650cdbe7631dcb2c9fbf244f068143834726a000599481b4c65dc51f40a038"
+    },
+    "c1-e23": {
+      "sha256": "7b4b052f7bd416c4ebcbb8265f8deaa4809a13643dbc3a6acc8248f1017d05a2"
+    },
+    "c1-e24": {
+      "sha256": "86430bc68c1da28a8f6338d17fd7f9335228179728eeada03720ca49fffe74ae"
+    },
+    "c1-e25": {
+      "sha256": "2891a6ce12388516b4279c6bc523ac9a2d34009e2e12ab4fca6da16aaa64cf12"
+    },
+    "c1-e26": {
+      "sha256": "7b24db13e6bfa76895aee42a72a81699fd8e5988b708d738beb7beebbcbef1ed"
+    },
+    "c1-e27": {
+      "sha256": "4656e78dbe22f5c605ac19ebddfae85f7788c203f6731578426dd8a703315303"
+    },
+    "c1-e28": {
+      "sha256": "cb38e3ad48725160378a1c3a88ad6217b7df66f391dba1f007c3418c3e4b71d3"
+    },
+    "c1-e29": {
+      "sha256": "1a5622ef81d1fbac9d80a3dbeb8ac40b7617aaa0ba6632d6517113998613889f"
+    },
+    "c1-e30": {
+      "sha256": "c3cf198da4329c2f7d464ae8808d751893645b777b0b07bc471bc949ef4427c6"
+    },
+    "c1-e31": {
+      "sha256": "9b6871ba15b36af48367b61abcbf207364d9f02ffe0ded15eb87e73f71d33559"
+    },
+    "c1-e32": {
+      "sha256": "c474974a4f73cfc3e2a4170e84e4b9bca984a00a9be8f0f4d32f1c51cff476f1"
+    },
+    "c1-e33": {
+      "sha256": "3f053b64531e863c75a4b8e9cc16bf56f108c2e083ecbaeea3f60313256590b5"
+    },
+    "c2-e01": {
+      "sha256": "3cb8b80f6513faea519ea4640ba3c7f6f14f4d22d5a490bea137becb6e96fbc8"
+    },
+    "c2-e02": {
+      "sha256": "5d88ac973cd6e99e76cb1242d37a86a9261d04c185da3373f5d84a08e9e7e05d"
+    },
+    "c2-e03": {
+      "sha256": "adc12f5f555cf3ef641c2a0d285f6580f93875301d3259271c410d0e347c713d"
+    },
+    "c2-e04": {
+      "sha256": "c9b2470009e1ce05bfd82a0a34795c334f124ebd80e03e1a24569d66a165e9ae"
+    },
+    "c2-e05": {
+      "sha256": "89c6962310aa6e11b6a7e662218394497f9715269d5d785322c75adba3858020"
+    },
+    "c2-e06": {
+      "sha256": "9f0668981116b173eabe5b291debfbfa1e7cd3b3af38d56a4c6b0645d748c85a"
+    },
+    "c2-e07": {
+      "sha256": "4343850c336fd2802cbc6887c08c007acbd33e00d47ccfe6494df8d4163ae6ec"
+    },
+    "c2-e08": {
+      "sha256": "2e7447a380ede30ff1cd0bab9d68c790d5d7bbcb7539c75c3877f68d1aab9190"
+    },
+    "c2-e09": {
+      "sha256": "cbb55ceacbf839e4770368490f99eeb20b4d112c35e57686165df5e81551ac2f"
+    },
+    "c2-e10": {
+      "sha256": "5d3e193f2e8338ec6e81f7d2e83e473b504469aa9afb9003dcf4c2be90a6ccc4"
+    }
+  }
+}
